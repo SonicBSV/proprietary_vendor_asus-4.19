@@ -46,7 +46,7 @@ android_app_import {
 	name: "CACertService",
 	owner: "asus",
 	apk: "proprietary/vendor/app/CACertService/CACertService.apk",
-	presigned: true,
+	certificate: "platform",
 	dex_preopt: {
 		enabled: false,
 	},
