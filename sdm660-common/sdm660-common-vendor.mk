@@ -685,7 +685,6 @@ PRODUCT_PACKAGES += \
     TimeService \
     DeviceStatisticsService \
     QtiTelephonyService \
-    imssettings \
     remoteSimLockAuthentication \
     remotesimlockservice \
     uceShimService \
