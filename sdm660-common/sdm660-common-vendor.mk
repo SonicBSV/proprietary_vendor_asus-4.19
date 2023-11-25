@@ -6,25 +6,25 @@ PRODUCT_SOONG_NAMESPACES += \
     vendor/asus/sdm660-common
 
 PRODUCT_COPY_FILES += \
+    vendor/asus/sdm660-common/proprietary/product/etc/permissions/lpa.xml:$(TARGET_COPY_OUT_PRODUCT)/etc/permissions/lpa.xml \
+    vendor/asus/sdm660-common/proprietary/product/etc/permissions/RemoteSimlock.xml:$(TARGET_COPY_OUT_PRODUCT)/etc/permissions/RemoteSimlock.xml \
+    vendor/asus/sdm660-common/proprietary/product/etc/permissions/RemoteSimlockManager.xml:$(TARGET_COPY_OUT_PRODUCT)/etc/permissions/RemoteSimlockManager.xml \
+    vendor/asus/sdm660-common/proprietary/product/etc/permissions/UimGba.xml:$(TARGET_COPY_OUT_PRODUCT)/etc/permissions/UimGba.xml \
+    vendor/asus/sdm660-common/proprietary/product/etc/permissions/UimGbaManager.xml:$(TARGET_COPY_OUT_PRODUCT)/etc/permissions/UimGbaManager.xml \
+    vendor/asus/sdm660-common/proprietary/product/etc/permissions/uimremoteclient.xml:$(TARGET_COPY_OUT_PRODUCT)/etc/permissions/uimremoteclient.xml \
+    vendor/asus/sdm660-common/proprietary/product/etc/permissions/uimremoteserver.xml:$(TARGET_COPY_OUT_PRODUCT)/etc/permissions/uimremoteserver.xml \
+    vendor/asus/sdm660-common/proprietary/product/etc/permissions/UimService.xml:$(TARGET_COPY_OUT_PRODUCT)/etc/permissions/UimService.xml \
     vendor/asus/sdm660-common/proprietary/system_ext/etc/cdma_call_conf.xml:$(TARGET_COPY_OUT_SYSTEM_EXT)/etc/cdma_call_conf.xml \
-    vendor/asus/sdm660-common/proprietary/system_ext/etc/permissions/RemoteSimlock.xml:$(TARGET_COPY_OUT_SYSTEM_EXT)/etc/permissions/RemoteSimlock.xml \
-    vendor/asus/sdm660-common/proprietary/system_ext/etc/permissions/RemoteSimlockManager.xml:$(TARGET_COPY_OUT_SYSTEM_EXT)/etc/permissions/RemoteSimlockManager.xml \
-    vendor/asus/sdm660-common/proprietary/system_ext/etc/permissions/UimGba.xml:$(TARGET_COPY_OUT_SYSTEM_EXT)/etc/permissions/UimGba.xml \
-    vendor/asus/sdm660-common/proprietary/system_ext/etc/permissions/UimGbaManager.xml:$(TARGET_COPY_OUT_SYSTEM_EXT)/etc/permissions/UimGbaManager.xml \
-    vendor/asus/sdm660-common/proprietary/system_ext/etc/permissions/UimService.xml:$(TARGET_COPY_OUT_SYSTEM_EXT)/etc/permissions/UimService.xml \
     vendor/asus/sdm660-common/proprietary/system_ext/etc/permissions/audiosphere.xml:$(TARGET_COPY_OUT_SYSTEM_EXT)/etc/permissions/audiosphere.xml \
     vendor/asus/sdm660-common/proprietary/system_ext/etc/permissions/com.qti.dpmframework.xml:$(TARGET_COPY_OUT_SYSTEM_EXT)/etc/permissions/com.qti.dpmframework.xml \
     vendor/asus/sdm660-common/proprietary/system_ext/etc/permissions/com.qualcomm.qti.imscmservice-V2.0-java.xml:$(TARGET_COPY_OUT_SYSTEM_EXT)/etc/permissions/com.qualcomm.qti.imscmservice-V2.0-java.xml \
     vendor/asus/sdm660-common/proprietary/system_ext/etc/permissions/com.qualcomm.qti.imscmservice-V2.1-java.xml:$(TARGET_COPY_OUT_SYSTEM_EXT)/etc/permissions/com.qualcomm.qti.imscmservice-V2.1-java.xml \
     vendor/asus/sdm660-common/proprietary/system_ext/etc/permissions/com.qualcomm.qti.imscmservice-V2.2-java.xml:$(TARGET_COPY_OUT_SYSTEM_EXT)/etc/permissions/com.qualcomm.qti.imscmservice-V2.2-java.xml \
     vendor/asus/sdm660-common/proprietary/system_ext/etc/permissions/dpmapi.xml:$(TARGET_COPY_OUT_SYSTEM_EXT)/etc/permissions/dpmapi.xml \
-    vendor/asus/sdm660-common/proprietary/system_ext/etc/permissions/lpa.xml:$(TARGET_COPY_OUT_SYSTEM_EXT)/etc/permissions/lpa.xml \
     vendor/asus/sdm660-common/proprietary/system_ext/etc/permissions/qcrilhook.xml:$(TARGET_COPY_OUT_SYSTEM_EXT)/etc/permissions/qcrilhook.xml \
     vendor/asus/sdm660-common/proprietary/system_ext/etc/permissions/qti_libpermissions.xml:$(TARGET_COPY_OUT_SYSTEM_EXT)/etc/permissions/qti_libpermissions.xml \
     vendor/asus/sdm660-common/proprietary/system_ext/etc/permissions/qti_permissions.xml:$(TARGET_COPY_OUT_SYSTEM_EXT)/etc/permissions/qti_permissions.xml \
     vendor/asus/sdm660-common/proprietary/system_ext/etc/permissions/telephony_system-ext_privapp-permissions-qti.xml:$(TARGET_COPY_OUT_SYSTEM_EXT)/etc/permissions/telephony_system-ext_privapp-permissions-qti.xml \
-    vendor/asus/sdm660-common/proprietary/system_ext/etc/permissions/uimremoteclient.xml:$(TARGET_COPY_OUT_SYSTEM_EXT)/etc/permissions/uimremoteclient.xml \
-    vendor/asus/sdm660-common/proprietary/system_ext/etc/permissions/uimremoteserver.xml:$(TARGET_COPY_OUT_SYSTEM_EXT)/etc/permissions/uimremoteserver.xml \
     vendor/asus/sdm660-common/proprietary/system_ext/etc/spn-conf.xml:$(TARGET_COPY_OUT_SYSTEM_EXT)/etc/spn-conf.xml \
     vendor/asus/sdm660-common/proprietary/system_ext/etc/sysconfig/qti_whitelist_system_ext.xml:$(TARGET_COPY_OUT_SYSTEM_EXT)/etc/sysconfig/qti_whitelist_system_ext.xml \
     vendor/asus/sdm660-common/proprietary/system_ext/lib64/com.qualcomm.qti.dpm.api@1.0.so:$(TARGET_COPY_OUT_SYSTEM_EXT)/lib64/com.qualcomm.qti.dpm.api@1.0.so \
@@ -678,20 +678,24 @@ PRODUCT_PACKAGES += \
     CneApp \
     IWlanService \
     TimeService \
-    DeviceStatisticsService \
-    QtiTelephonyService \
-    imssettings \
-    remoteSimLockAuthentication \
-    remotesimlockservice \
-    uceShimService \
-    uimgbaservice \
-    uimlpaservice \
     uimremoteclient \
     uimremoteserver \
     xdivert \
+    QtiTelephonyService \
+    uceShimService \
+    datastatusnotification \
+    DeviceStatisticsService \
     ims \
     qcrilmsgtunnel \
     tcmclient \
+    remotesimlockmanagerlibrary \
+    uimgbalibrary \
+    uimgbamanagerlibrary \
+    uimlpalibrary \
+    uimremoteclientlibrary \
+    uimremoteserverlibrary \
+    uimremotesimlocklibrary \
+    uimservicelibrary \
     ActivityExt \
     audiosphere \
     com.qti.dpmframework \
@@ -710,14 +714,6 @@ PRODUCT_PACKAGES += \
     dpmapi \
     qcrilhook \
     qti-telephony-common \
-    remotesimlockmanagerlibrary \
-    uimgbalibrary \
-    uimgbamanagerlibrary \
-    uimlpalibrary \
-    uimremoteclientlibrary \
-    uimremoteserverlibrary \
-    uimremotesimlocklibrary \
-    uimservicelibrary \
     vendor.qti.data.factory-V1.0-java \
     vendor.qti.data.factory-V2.0-java \
     vendor.qti.data.factory-V2.1-java \

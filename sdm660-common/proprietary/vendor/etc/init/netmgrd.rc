@@ -9,7 +9,7 @@ on boot
 
     #Assign TCP buffer thresholds to be ceiling value of technology maximums
     #Increased technology maximums should be reflected here.
-    write /proc/sys/net/core/rmem_max  16777216
+    write /proc/sys/net/core/rmem_max  8388608
     write /proc/sys/net/core/wmem_max  8388608
 
     #Load rmnet_core driver
@@ -21,8 +21,8 @@ on boot
 # msm specific files that need to be created on /data
 on post-fs-data
     #Create NETMGR daemon log dir
-    mkdir /data/vendor/netmgr 0770 radio radio
-    chmod 0770 /data/vendor/netmgr
+    mkdir /data/vendor/netmgr 0771 radio radio
+    chmod 0771 /data/vendor/netmgr
 
     # Create netmgr recovery folder
     mkdir /data/vendor/netmgr/recovery 0700 radio radio
