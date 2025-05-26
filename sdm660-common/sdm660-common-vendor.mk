@@ -551,6 +551,7 @@ PRODUCT_COPY_FILES += \
 
 PRODUCT_PACKAGES += \
     libthermalclient \
+    libthermalioctl \
     libtime_genoff \
     CACertService \
     CneApp \
