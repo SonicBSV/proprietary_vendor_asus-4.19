@@ -706,6 +706,7 @@ PRODUCT_PACKAGES += \
     libkeymasterdeviceutils \
     libkeymasterprovision \
     libkeymasterutils \
+    liblistensoundmodel2.qti \
     libllvm-glnext \
     libllvm-qcom \
     libmdsprpc \
