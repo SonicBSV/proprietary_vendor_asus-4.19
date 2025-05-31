@@ -566,6 +566,7 @@ PRODUCT_PACKAGES += \
     uimremoteclient \
     uimremoteserver \
     xdivert \
+    datastatusnotification \
     ims \
     tcmclient \
     ActivityExt \
