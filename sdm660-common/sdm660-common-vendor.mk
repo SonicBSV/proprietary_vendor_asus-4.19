@@ -733,4 +733,5 @@ PRODUCT_PACKAGES += \
     libqcbassboost \
     libqcreverb \
     libqcvirt \
-    libshoebox
+    libshoebox \
+    libspatialaudio
