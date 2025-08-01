@@ -24,10 +24,12 @@ PRODUCT_COPY_FILES += \
     vendor/asus/X01BD/proprietary/vendor/etc/acdbdata/QRD/QRD_Speaker_cal.acdb:$(TARGET_COPY_OUT_VENDOR)/etc/acdbdata/QRD/QRD_Speaker_cal.acdb \
     vendor/asus/X01BD/proprietary/vendor/etc/acdbdata/QRD/QRD_workspaceFile.qwsp:$(TARGET_COPY_OUT_VENDOR)/etc/acdbdata/QRD/QRD_workspaceFile.qwsp \
     vendor/asus/X01BD/proprietary/vendor/etc/acdbdata/adsp_avs_config.acdb:$(TARGET_COPY_OUT_VENDOR)/etc/acdbdata/adsp_avs_config.acdb \
+    vendor/asus/X01BD/proprietary/vendor/etc/camera/ar1337_chromatix.xml:$(TARGET_COPY_OUT_VENDOR)/etc/camera/ar1337_chromatix.xml \
     vendor/asus/X01BD/proprietary/vendor/etc/camera/camera_config.xml:$(TARGET_COPY_OUT_VENDOR)/etc/camera/camera_config.xml \
     vendor/asus/X01BD/proprietary/vendor/etc/camera/gc5025_ofilm_13m_chromatix.xml:$(TARGET_COPY_OUT_VENDOR)/etc/camera/gc5025_ofilm_13m_chromatix.xml \
     vendor/asus/X01BD/proprietary/vendor/etc/camera/imx486_chromatix.xml:$(TARGET_COPY_OUT_VENDOR)/etc/camera/imx486_chromatix.xml \
     vendor/asus/X01BD/proprietary/vendor/etc/camera/ov13855_chromatix.xml:$(TARGET_COPY_OUT_VENDOR)/etc/camera/ov13855_chromatix.xml \
+    vendor/asus/X01BD/proprietary/vendor/etc/camera/s5k5e9yu05_chromatix.xml:$(TARGET_COPY_OUT_VENDOR)/etc/camera/s5k5e9yu05_chromatix.xml \
     vendor/asus/X01BD/proprietary/vendor/etc/sensors/sensor_def_qcomdev.conf:$(TARGET_COPY_OUT_VENDOR)/etc/sensors/sensor_def_qcomdev.conf \
     vendor/asus/X01BD/proprietary/vendor/firmware/Himax_firmware.bin:$(TARGET_COPY_OUT_VENDOR)/firmware/Himax_firmware.bin \
     vendor/asus/X01BD/proprietary/vendor/firmware/a512_zap.b00:$(TARGET_COPY_OUT_VENDOR)/firmware/a512_zap.b00 \
@@ -66,11 +68,37 @@ PRODUCT_PACKAGES += \
     vendor.qti.hardware.fingerprint@1.0 \
     libactuator_imx486_holitech_12m \
     libarcsoft_dualcam_refocus \
-    libchromatix_csidtg_common \
-    libchromatix_csidtg_cpp_preview \
-    libchromatix_csidtg_postproc \
-    libchromatix_csidtg_preview \
-    libchromatix_csidtg_zsl_preview \
+    libchromatix_ar1337_common \
+    libchromatix_ar1337_cpp_ds_chromatix \
+    libchromatix_ar1337_cpp_hfr_120 \
+    libchromatix_ar1337_cpp_hfr_60 \
+    libchromatix_ar1337_cpp_hfr_90 \
+    libchromatix_ar1337_cpp_liveshot \
+    libchromatix_ar1337_cpp_preview \
+    libchromatix_ar1337_cpp_snapshot \
+    libchromatix_ar1337_cpp_us_chromatix \
+    libchromatix_ar1337_cpp_video \
+    libchromatix_ar1337_cpp_video_full \
+    libchromatix_ar1337_default_preview_bu64297 \
+    libchromatix_ar1337_default_video \
+    libchromatix_ar1337_default_video_bu64297 \
+    libchromatix_ar1337_front_bokeh_cpp_preview \
+    libchromatix_ar1337_front_bokeh_cpp_snapshot \
+    libchromatix_ar1337_front_bokeh_preview \
+    libchromatix_ar1337_front_bokeh_snapshot \
+    libchromatix_ar1337_front_bokeh_zsl_preview_bu64297 \
+    libchromatix_ar1337_hfr_120 \
+    libchromatix_ar1337_hfr_120_bu64297 \
+    libchromatix_ar1337_hfr_60 \
+    libchromatix_ar1337_hfr_60_bu64297 \
+    libchromatix_ar1337_hfr_90 \
+    libchromatix_ar1337_hfr_90_bu64297 \
+    libchromatix_ar1337_postproc \
+    libchromatix_ar1337_preview \
+    libchromatix_ar1337_snapshot \
+    libchromatix_ar1337_video_full \
+    libchromatix_ar1337_zsl_preview_bu64297 \
+    libchromatix_ar1337_zsl_video_bu64297 \
     libchromatix_gc5025_ofilm_13m_common \
     libchromatix_gc5025_ofilm_13m_cpp_ds_chromatix \
     libchromatix_gc5025_ofilm_13m_cpp_hfr_120 \
@@ -155,6 +183,28 @@ PRODUCT_PACKAGES += \
     libchromatix_ov13855_video_full \
     libchromatix_ov13855_zsl_preview_bu64297 \
     libchromatix_ov13855_zsl_video_bu64297 \
+    libchromatix_s5k5e9yu05_common \
+    libchromatix_s5k5e9yu05_cpp_hfr_120 \
+    libchromatix_s5k5e9yu05_cpp_hfr_60 \
+    libchromatix_s5k5e9yu05_cpp_hfr_90 \
+    libchromatix_s5k5e9yu05_cpp_liveshot \
+    libchromatix_s5k5e9yu05_cpp_preview \
+    libchromatix_s5k5e9yu05_cpp_snapshot \
+    libchromatix_s5k5e9yu05_cpp_video \
+    libchromatix_s5k5e9yu05_default_preview_3a \
+    libchromatix_s5k5e9yu05_default_video \
+    libchromatix_s5k5e9yu05_default_video_3a \
+    libchromatix_s5k5e9yu05_hfr_120 \
+    libchromatix_s5k5e9yu05_hfr_120_3a \
+    libchromatix_s5k5e9yu05_hfr_60 \
+    libchromatix_s5k5e9yu05_hfr_60_3a \
+    libchromatix_s5k5e9yu05_hfr_90 \
+    libchromatix_s5k5e9yu05_hfr_90_3a \
+    libchromatix_s5k5e9yu05_postproc \
+    libchromatix_s5k5e9yu05_preview \
+    libchromatix_s5k5e9yu05_snapshot \
+    libchromatix_s5k5e9yu05_zsl_preview_3a \
+    libchromatix_s5k5e9yu05_zsl_video_3a \
     libdepthmapwrapper \
     libflash_pmic \
     libjpegdhw \
@@ -176,9 +226,10 @@ PRODUCT_PACKAGES += \
     libmmcamera2_stats_algorithm \
     libmmcamera2_stats_lib \
     libmmcamera2_stats_modules \
+    libmmcamera_ar1337 \
+    libmmcamera_ar1337_eeprom \
     libmmcamera_arcsoftbokeh_lib \
     libmmcamera_bokeh \
-    libmmcamera_csidtg \
     libmmcamera_dbg \
     libmmcamera_depth_map \
     libmmcamera_dummyalgo \
@@ -251,6 +302,8 @@ PRODUCT_PACKAGES += \
     libmmcamera_ppbase_module \
     libmmcamera_ppeiscore \
     libmmcamera_quadracfa \
+    libmmcamera_s5k5e9_slave_back_p24c64e_eeprom \
+    libmmcamera_s5k5e9yu05 \
     libmmcamera_stillmore_lib \
     libmmcamera_sw2d_lib \
     libmmcamera_thread_services \
