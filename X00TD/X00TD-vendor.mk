@@ -522,26 +522,6 @@ PRODUCT_PACKAGES += \
     libchromatix_ov13855_chicony_rear_video_full \
     libchromatix_ov13855_chicony_rear_zsl_preview_bu64297 \
     libchromatix_ov13855_chicony_rear_zsl_video_bu64297 \
-    libchromatix_ov13855_common \
-    libchromatix_ov13855_cpp_ds_chromatix \
-    libchromatix_ov13855_cpp_hfr_120 \
-    libchromatix_ov13855_cpp_hfr_60 \
-    libchromatix_ov13855_cpp_hfr_90 \
-    libchromatix_ov13855_cpp_liveshot \
-    libchromatix_ov13855_cpp_preview \
-    libchromatix_ov13855_cpp_snapshot \
-    libchromatix_ov13855_cpp_us_chromatix \
-    libchromatix_ov13855_cpp_video \
-    libchromatix_ov13855_cpp_video_full \
-    libchromatix_ov13855_default_preview_bu64297 \
-    libchromatix_ov13855_default_video \
-    libchromatix_ov13855_default_video_bu64297 \
-    libchromatix_ov13855_hfr_120 \
-    libchromatix_ov13855_hfr_120_bu64297 \
-    libchromatix_ov13855_hfr_60 \
-    libchromatix_ov13855_hfr_60_bu64297 \
-    libchromatix_ov13855_hfr_90 \
-    libchromatix_ov13855_hfr_90_bu64297 \
     libchromatix_ov13855_holitech_13m_common \
     libchromatix_ov13855_holitech_13m_cpp_ds_chromatix \
     libchromatix_ov13855_holitech_13m_cpp_hfr_120 \
@@ -572,12 +552,6 @@ PRODUCT_PACKAGES += \
     libchromatix_ov13855_holitech_13m_video_full \
     libchromatix_ov13855_holitech_13m_zsl_preview_bu64297 \
     libchromatix_ov13855_holitech_13m_zsl_video_bu64297 \
-    libchromatix_ov13855_postproc \
-    libchromatix_ov13855_preview \
-    libchromatix_ov13855_snapshot \
-    libchromatix_ov13855_video_full \
-    libchromatix_ov13855_zsl_preview_bu64297 \
-    libchromatix_ov13855_zsl_video_bu64297 \
     libchromatix_ov16880_qtech_front_common \
     libchromatix_ov16880_qtech_front_cpp_ds_chromatix \
     libchromatix_ov16880_qtech_front_cpp_hfr_120 \
@@ -665,10 +639,6 @@ PRODUCT_PACKAGES += \
     libchromatix_ov16885_ofilm_16m_video_full \
     libchromatix_ov16885_ofilm_16m_zsl_preview_bu64297 \
     libchromatix_ov16885_ofilm_16m_zsl_video_bu64297 \
-    libchromatix_ov8856_a3_default_preview \
-    libchromatix_ov8856_a3_default_video \
-    libchromatix_ov8856_a3_hfr_60 \
-    libchromatix_ov8856_a3_hfr_90 \
     libchromatix_ov8856_chicony_front_a3_default_preview \
     libchromatix_ov8856_chicony_front_a3_default_video \
     libchromatix_ov8856_chicony_front_a3_hfr_120 \
@@ -695,24 +665,6 @@ PRODUCT_PACKAGES += \
     libchromatix_ov8856_chicony_front_snapshot \
     libchromatix_ov8856_chicony_front_zsl_preview \
     libchromatix_ov8856_chicony_front_zsl_video \
-    libchromatix_ov8856_common \
-    libchromatix_ov8856_cpp_ds_chromatix \
-    libchromatix_ov8856_cpp_hfr_60 \
-    libchromatix_ov8856_cpp_hfr_90 \
-    libchromatix_ov8856_cpp_liveshot \
-    libchromatix_ov8856_cpp_preview \
-    libchromatix_ov8856_cpp_snapshot \
-    libchromatix_ov8856_cpp_us_chromatix \
-    libchromatix_ov8856_cpp_video \
-    libchromatix_ov8856_default_video \
-    libchromatix_ov8856_hfr_60 \
-    libchromatix_ov8856_hfr_90 \
-    libchromatix_ov8856_liveshot \
-    libchromatix_ov8856_postproc \
-    libchromatix_ov8856_preview \
-    libchromatix_ov8856_snapshot \
-    libchromatix_ov8856_zsl_preview \
-    libchromatix_ov8856_zsl_video \
     libdepthmapwrapper \
     libflash_pmic \
     libjpegdhw \
@@ -735,12 +687,10 @@ PRODUCT_PACKAGES += \
     libmmcamera2_stats_lib \
     libmmcamera2_stats_modules \
     libmmcamera_arcsoftbokeh_lib \
-    libmmcamera_atmel_at24c32e_eeprom \
     libmmcamera_bokeh \
     libmmcamera_dbg \
     libmmcamera_depth_map \
     libmmcamera_dummyalgo \
-    libmmcamera_dw9761b_2d_eeprom \
     libmmcamera_eebinparse \
     libmmcamera_eeprom_util \
     libmmcamera_eztune_module \
@@ -808,11 +758,6 @@ PRODUCT_PACKAGES += \
     libmmcamera_isp_sce40 \
     libmmcamera_isp_snr47 \
     libmmcamera_isp_sub_module \
-    libmmcamera_le2464c_eeprom \
-    libmmcamera_le2464c_master_eeprom \
-    libmmcamera_m24c64s_eeprom \
-    libmmcamera_onsemi_cat24c16_eeprom \
-    libmmcamera_onsemi_cat24c32_eeprom \
     libmmcamera_ov13855 \
     libmmcamera_ov13855_chicony_rear \
     libmmcamera_ov13855_chicony_rear_fm24c64d_eeprom \
@@ -836,21 +781,12 @@ PRODUCT_PACKAGES += \
     libmmcamera_pdafcamif \
     libmmcamera_ppbase_module \
     libmmcamera_ppeiscore \
-    libmmcamera_qtech_f3l8yam_eeprom \
-    libmmcamera_qtech_f5670bq_eeprom \
     libmmcamera_quadracfa \
-    libmmcamera_rohm_brcg064gwz_3_eeprom \
     libmmcamera_stillmore_lib \
-    libmmcamera_sunny_8865_eeprom \
-    libmmcamera_sunny_ov13855_eeprom \
-    libmmcamera_sunny_q13v06k_eeprom \
-    libmmcamera_sunny_q5v41b_eeprom \
     libmmcamera_sw2d_lib \
     libmmcamera_thread_services \
     libmmcamera_tintless_algo \
     libmmcamera_tintless_bg_pca_algo \
-    libmmcamera_truly_cma481_eeprom \
-    libmmcamera_truly_cmb433_eeprom \
     libmmcamera_tuning \
     libmmcamera_tuning_lookup \
     libmmjpeg \
