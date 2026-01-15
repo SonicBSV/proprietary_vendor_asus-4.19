@@ -7,6 +7,7 @@ PRODUCT_SOONG_NAMESPACES += \
 
 PRODUCT_COPY_FILES += \
     vendor/asus/X00TD/proprietary/vendor/bin/qfp-daemon:$(TARGET_COPY_OUT_VENDOR)/bin/qfp-daemon \
+    vendor/asus/X00TD/proprietary/vendor/bin/sensors.qti:$(TARGET_COPY_OUT_VENDOR)/bin/sensors.qti \
     vendor/asus/X00TD/proprietary/vendor/etc/acdbdata/MTP/MTP_Bluetooth_cal.acdb:$(TARGET_COPY_OUT_VENDOR)/etc/acdbdata/MTP/MTP_Bluetooth_cal.acdb \
     vendor/asus/X00TD/proprietary/vendor/etc/acdbdata/MTP/MTP_General_cal.acdb:$(TARGET_COPY_OUT_VENDOR)/etc/acdbdata/MTP/MTP_General_cal.acdb \
     vendor/asus/X00TD/proprietary/vendor/etc/acdbdata/MTP/MTP_Global_cal.acdb:$(TARGET_COPY_OUT_VENDOR)/etc/acdbdata/MTP/MTP_Global_cal.acdb \
@@ -25,8 +26,6 @@ PRODUCT_COPY_FILES += \
     vendor/asus/X00TD/proprietary/vendor/etc/acdbdata/QRD/QRD_workspaceFile.qwsp:$(TARGET_COPY_OUT_VENDOR)/etc/acdbdata/QRD/QRD_workspaceFile.qwsp \
     vendor/asus/X00TD/proprietary/vendor/etc/acdbdata/adsp_avs_config.acdb:$(TARGET_COPY_OUT_VENDOR)/etc/acdbdata/adsp_avs_config.acdb \
     vendor/asus/X00TD/proprietary/vendor/etc/camera/camera_config.xml:$(TARGET_COPY_OUT_VENDOR)/etc/camera/camera_config.xml \
-    vendor/asus/X00TD/proprietary/vendor/etc/camera/csidtg_camera.xml:$(TARGET_COPY_OUT_VENDOR)/etc/camera/csidtg_camera.xml \
-    vendor/asus/X00TD/proprietary/vendor/etc/camera/csidtg_chromatix.xml:$(TARGET_COPY_OUT_VENDOR)/etc/camera/csidtg_chromatix.xml \
     vendor/asus/X00TD/proprietary/vendor/etc/camera/gc5025_ofilm_13m_chromatix.xml:$(TARGET_COPY_OUT_VENDOR)/etc/camera/gc5025_ofilm_13m_chromatix.xml \
     vendor/asus/X00TD/proprietary/vendor/etc/camera/gc5025_ofilm_16m_chromatix.xml:$(TARGET_COPY_OUT_VENDOR)/etc/camera/gc5025_ofilm_16m_chromatix.xml \
     vendor/asus/X00TD/proprietary/vendor/etc/camera/hi1333_ofilm_13m_chromatix.xml:$(TARGET_COPY_OUT_VENDOR)/etc/camera/hi1333_ofilm_13m_chromatix.xml \
@@ -35,13 +34,11 @@ PRODUCT_COPY_FILES += \
     vendor/asus/X00TD/proprietary/vendor/etc/camera/hi846_kingcome_front_chromatix.xml:$(TARGET_COPY_OUT_VENDOR)/etc/camera/hi846_kingcome_front_chromatix.xml \
     vendor/asus/X00TD/proprietary/vendor/etc/camera/hi846_tsp_front_chromatix.xml:$(TARGET_COPY_OUT_VENDOR)/etc/camera/hi846_tsp_front_chromatix.xml \
     vendor/asus/X00TD/proprietary/vendor/etc/camera/ov13855_chicony_rear_chromatix.xml:$(TARGET_COPY_OUT_VENDOR)/etc/camera/ov13855_chicony_rear_chromatix.xml \
-    vendor/asus/X00TD/proprietary/vendor/etc/camera/ov13855_chromatix.xml:$(TARGET_COPY_OUT_VENDOR)/etc/camera/ov13855_chromatix.xml \
     vendor/asus/X00TD/proprietary/vendor/etc/camera/ov13855_holitech_13m_chromatix.xml:$(TARGET_COPY_OUT_VENDOR)/etc/camera/ov13855_holitech_13m_chromatix.xml \
     vendor/asus/X00TD/proprietary/vendor/etc/camera/ov16880_qtech_front_chromatix.xml:$(TARGET_COPY_OUT_VENDOR)/etc/camera/ov16880_qtech_front_chromatix.xml \
     vendor/asus/X00TD/proprietary/vendor/etc/camera/ov16885_holitech_16m_chromatix.xml:$(TARGET_COPY_OUT_VENDOR)/etc/camera/ov16885_holitech_16m_chromatix.xml \
     vendor/asus/X00TD/proprietary/vendor/etc/camera/ov16885_ofilm_16m_chromatix.xml:$(TARGET_COPY_OUT_VENDOR)/etc/camera/ov16885_ofilm_16m_chromatix.xml \
     vendor/asus/X00TD/proprietary/vendor/etc/camera/ov8856_chicony_front_chromatix.xml:$(TARGET_COPY_OUT_VENDOR)/etc/camera/ov8856_chicony_front_chromatix.xml \
-    vendor/asus/X00TD/proprietary/vendor/etc/camera/ov8856_chromatix.xml:$(TARGET_COPY_OUT_VENDOR)/etc/camera/ov8856_chromatix.xml \
     vendor/asus/X00TD/proprietary/product/etc/permissions/qti_fingerprint_interface.xml:$(TARGET_COPY_OUT_PRODUCT)/etc/permissions/qti_fingerprint_interface.xml \
     vendor/asus/X00TD/proprietary/vendor/etc/sensors/sensor_def_qcomdev.conf:$(TARGET_COPY_OUT_VENDOR)/etc/sensors/sensor_def_qcomdev.conf \
     vendor/asus/X00TD/proprietary/vendor/firmware/a512_zap.b00:$(TARGET_COPY_OUT_VENDOR)/firmware/a512_zap.b00 \
@@ -51,6 +48,238 @@ PRODUCT_COPY_FILES += \
     vendor/asus/X00TD/proprietary/vendor/firmware/a512_zap.mdt:$(TARGET_COPY_OUT_VENDOR)/firmware/a512_zap.mdt \
     vendor/asus/X00TD/proprietary/vendor/firmware/a530_pfp.fw:$(TARGET_COPY_OUT_VENDOR)/firmware/a530_pfp.fw \
     vendor/asus/X00TD/proprietary/vendor/firmware/a530_pm4.fw:$(TARGET_COPY_OUT_VENDOR)/firmware/a530_pm4.fw \
+    vendor/asus/X00TD/proprietary/vendor/firmware/a530_gpmu.fw2:$(TARGET_COPY_OUT_VENDOR)/firmware/a530_gpmu.fw2 \
+    vendor/asus/X00TD/proprietary/vendor/firmware/apbtfw10.tlv:$(TARGET_COPY_OUT_VENDOR)/firmware/apbtfw10.tlv \
+    vendor/asus/X00TD/proprietary/vendor/firmware/apbtfw11.tlv:$(TARGET_COPY_OUT_VENDOR)/firmware/apbtfw11.tlv \
+    vendor/asus/X00TD/proprietary/vendor/firmware/apnv10.bin:$(TARGET_COPY_OUT_VENDOR)/firmware/apnv10.bin \
+    vendor/asus/X00TD/proprietary/vendor/firmware/apnv11.bin:$(TARGET_COPY_OUT_VENDOR)/firmware/apnv11.bin \
+    vendor/asus/X00TD/proprietary/vendor/firmware/bdwlan.102:$(TARGET_COPY_OUT_VENDOR)/firmware/bdwlan.102 \
+    vendor/asus/X00TD/proprietary/vendor/firmware/bdwlan.104:$(TARGET_COPY_OUT_VENDOR)/firmware/bdwlan.104 \
+    vendor/asus/X00TD/proprietary/vendor/firmware/bdwlan.105:$(TARGET_COPY_OUT_VENDOR)/firmware/bdwlan.105 \
+    vendor/asus/X00TD/proprietary/vendor/firmware/bdwlan.106:$(TARGET_COPY_OUT_VENDOR)/firmware/bdwlan.106 \
+    vendor/asus/X00TD/proprietary/vendor/firmware/bdwlan.107:$(TARGET_COPY_OUT_VENDOR)/firmware/bdwlan.107 \
+    vendor/asus/X00TD/proprietary/vendor/firmware/bdwlan.108:$(TARGET_COPY_OUT_VENDOR)/firmware/bdwlan.108 \
+    vendor/asus/X00TD/proprietary/vendor/firmware/bdwlan.109:$(TARGET_COPY_OUT_VENDOR)/firmware/bdwlan.109 \
+    vendor/asus/X00TD/proprietary/vendor/firmware/bdwlan.b0a:$(TARGET_COPY_OUT_VENDOR)/firmware/bdwlan.b0a \
+    vendor/asus/X00TD/proprietary/vendor/firmware/bdwlan.b0b:$(TARGET_COPY_OUT_VENDOR)/firmware/bdwlan.b0b \
+    vendor/asus/X00TD/proprietary/vendor/firmware/bdwlan.b0d:$(TARGET_COPY_OUT_VENDOR)/firmware/bdwlan.b0d \
+    vendor/asus/X00TD/proprietary/vendor/firmware/bdwlan.b0e:$(TARGET_COPY_OUT_VENDOR)/firmware/bdwlan.b0e \
+    vendor/asus/X00TD/proprietary/vendor/firmware/bdwlan.b0f:$(TARGET_COPY_OUT_VENDOR)/firmware/bdwlan.b0f \
+    vendor/asus/X00TD/proprietary/vendor/firmware/bdwlan.b04:$(TARGET_COPY_OUT_VENDOR)/firmware/bdwlan.b04 \
+    vendor/asus/X00TD/proprietary/vendor/firmware/bdwlan.b07:$(TARGET_COPY_OUT_VENDOR)/firmware/bdwlan.b07 \
+    vendor/asus/X00TD/proprietary/vendor/firmware/bdwlan.b09:$(TARGET_COPY_OUT_VENDOR)/firmware/bdwlan.b09 \
+    vendor/asus/X00TD/proprietary/vendor/firmware/bdwlan.b14:$(TARGET_COPY_OUT_VENDOR)/firmware/bdwlan.b14 \
+    vendor/asus/X00TD/proprietary/vendor/firmware/bdwlan.b30:$(TARGET_COPY_OUT_VENDOR)/firmware/bdwlan.b30 \
+    vendor/asus/X00TD/proprietary/vendor/firmware/bdwlan.b31:$(TARGET_COPY_OUT_VENDOR)/firmware/bdwlan.b31 \
+    vendor/asus/X00TD/proprietary/vendor/firmware/bdwlan.b32:$(TARGET_COPY_OUT_VENDOR)/firmware/bdwlan.b32 \
+    vendor/asus/X00TD/proprietary/vendor/firmware/bdwlan.b33:$(TARGET_COPY_OUT_VENDOR)/firmware/bdwlan.b33 \
+    vendor/asus/X00TD/proprietary/vendor/firmware/bdwlan.b34:$(TARGET_COPY_OUT_VENDOR)/firmware/bdwlan.b34 \
+    vendor/asus/X00TD/proprietary/vendor/firmware/bdwlan.b35:$(TARGET_COPY_OUT_VENDOR)/firmware/bdwlan.b35 \
+    vendor/asus/X00TD/proprietary/vendor/firmware/bdwlan.b36:$(TARGET_COPY_OUT_VENDOR)/firmware/bdwlan.b36 \
+    vendor/asus/X00TD/proprietary/vendor/firmware/bdwlan.b37:$(TARGET_COPY_OUT_VENDOR)/firmware/bdwlan.b37 \
+    vendor/asus/X00TD/proprietary/vendor/firmware/bdwlan.bin:$(TARGET_COPY_OUT_VENDOR)/firmware/bdwlan.bin \
+    vendor/asus/X00TD/proprietary/vendor/firmware/cdfinger.b00:$(TARGET_COPY_OUT_VENDOR)/firmware/cdfinger.b00 \
+    vendor/asus/X00TD/proprietary/vendor/firmware/cdfinger.b01:$(TARGET_COPY_OUT_VENDOR)/firmware/cdfinger.b01 \
+    vendor/asus/X00TD/proprietary/vendor/firmware/cdfinger.b02:$(TARGET_COPY_OUT_VENDOR)/firmware/cdfinger.b02 \
+    vendor/asus/X00TD/proprietary/vendor/firmware/cdfinger.b03:$(TARGET_COPY_OUT_VENDOR)/firmware/cdfinger.b03 \
+    vendor/asus/X00TD/proprietary/vendor/firmware/cdfinger.b04:$(TARGET_COPY_OUT_VENDOR)/firmware/cdfinger.b04 \
+    vendor/asus/X00TD/proprietary/vendor/firmware/cdfinger.b05:$(TARGET_COPY_OUT_VENDOR)/firmware/cdfinger.b05 \
+    vendor/asus/X00TD/proprietary/vendor/firmware/cdfinger.b06:$(TARGET_COPY_OUT_VENDOR)/firmware/cdfinger.b06 \
+    vendor/asus/X00TD/proprietary/vendor/firmware/cdfinger.b07:$(TARGET_COPY_OUT_VENDOR)/firmware/cdfinger.b07 \
+    vendor/asus/X00TD/proprietary/vendor/firmware/cdfinger.mdt:$(TARGET_COPY_OUT_VENDOR)/firmware/cdfinger.mdt \
+    vendor/asus/X00TD/proprietary/vendor/firmware/cmnlib.b00:$(TARGET_COPY_OUT_VENDOR)/firmware/cmnlib.b00 \
+    vendor/asus/X00TD/proprietary/vendor/firmware/cmnlib.b01:$(TARGET_COPY_OUT_VENDOR)/firmware/cmnlib.b01 \
+    vendor/asus/X00TD/proprietary/vendor/firmware/cmnlib.b02:$(TARGET_COPY_OUT_VENDOR)/firmware/cmnlib.b02 \
+    vendor/asus/X00TD/proprietary/vendor/firmware/cmnlib.b03:$(TARGET_COPY_OUT_VENDOR)/firmware/cmnlib.b03 \
+    vendor/asus/X00TD/proprietary/vendor/firmware/cmnlib.b04:$(TARGET_COPY_OUT_VENDOR)/firmware/cmnlib.b04 \
+    vendor/asus/X00TD/proprietary/vendor/firmware/cmnlib.b05:$(TARGET_COPY_OUT_VENDOR)/firmware/cmnlib.b05 \
+    vendor/asus/X00TD/proprietary/vendor/firmware/cmnlib.b06:$(TARGET_COPY_OUT_VENDOR)/firmware/cmnlib.b06 \
+    vendor/asus/X00TD/proprietary/vendor/firmware/cmnlib.mbn:$(TARGET_COPY_OUT_VENDOR)/firmware/cmnlib.mbn \
+    vendor/asus/X00TD/proprietary/vendor/firmware/cmnlib.mdt:$(TARGET_COPY_OUT_VENDOR)/firmware/cmnlib.mdt \
+    vendor/asus/X00TD/proprietary/vendor/firmware/cmnlib64.b00:$(TARGET_COPY_OUT_VENDOR)/firmware/cmnlib64.b00 \
+    vendor/asus/X00TD/proprietary/vendor/firmware/cmnlib64.b01:$(TARGET_COPY_OUT_VENDOR)/firmware/cmnlib64.b01 \
+    vendor/asus/X00TD/proprietary/vendor/firmware/cmnlib64.b02:$(TARGET_COPY_OUT_VENDOR)/firmware/cmnlib64.b02 \
+    vendor/asus/X00TD/proprietary/vendor/firmware/cmnlib64.b03:$(TARGET_COPY_OUT_VENDOR)/firmware/cmnlib64.b03 \
+    vendor/asus/X00TD/proprietary/vendor/firmware/cmnlib64.b04:$(TARGET_COPY_OUT_VENDOR)/firmware/cmnlib64.b04 \
+    vendor/asus/X00TD/proprietary/vendor/firmware/cmnlib64.b05:$(TARGET_COPY_OUT_VENDOR)/firmware/cmnlib64.b05 \
+    vendor/asus/X00TD/proprietary/vendor/firmware/cmnlib64.b06:$(TARGET_COPY_OUT_VENDOR)/firmware/cmnlib64.b06 \
+    vendor/asus/X00TD/proprietary/vendor/firmware/cmnlib64.mbn:$(TARGET_COPY_OUT_VENDOR)/firmware/cmnlib64.mbn \
+    vendor/asus/X00TD/proprietary/vendor/firmware/cmnlib64.mdt:$(TARGET_COPY_OUT_VENDOR)/firmware/cmnlib64.mdt \
+    vendor/asus/X00TD/proprietary/vendor/firmware/cpe_9335.b08:$(TARGET_COPY_OUT_VENDOR)/firmware/cpe_9335.b08 \
+    vendor/asus/X00TD/proprietary/vendor/firmware/cpe_9335.b09:$(TARGET_COPY_OUT_VENDOR)/firmware/cpe_9335.b09 \
+    vendor/asus/X00TD/proprietary/vendor/firmware/cpe_9335.b11:$(TARGET_COPY_OUT_VENDOR)/firmware/cpe_9335.b11 \
+    vendor/asus/X00TD/proprietary/vendor/firmware/cpe_9335.b14:$(TARGET_COPY_OUT_VENDOR)/firmware/cpe_9335.b14 \
+    vendor/asus/X00TD/proprietary/vendor/firmware/cpe_9335.b16:$(TARGET_COPY_OUT_VENDOR)/firmware/cpe_9335.b16 \
+    vendor/asus/X00TD/proprietary/vendor/firmware/cpe_9335.b18:$(TARGET_COPY_OUT_VENDOR)/firmware/cpe_9335.b18 \
+    vendor/asus/X00TD/proprietary/vendor/firmware/cpe_9335.b19:$(TARGET_COPY_OUT_VENDOR)/firmware/cpe_9335.b19 \
+    vendor/asus/X00TD/proprietary/vendor/firmware/cpe_9335.b20:$(TARGET_COPY_OUT_VENDOR)/firmware/cpe_9335.b20 \
+    vendor/asus/X00TD/proprietary/vendor/firmware/cpe_9335.b22:$(TARGET_COPY_OUT_VENDOR)/firmware/cpe_9335.b22 \
+    vendor/asus/X00TD/proprietary/vendor/firmware/cpe_9335.b24:$(TARGET_COPY_OUT_VENDOR)/firmware/cpe_9335.b24 \
+    vendor/asus/X00TD/proprietary/vendor/firmware/cpe_9335.b26:$(TARGET_COPY_OUT_VENDOR)/firmware/cpe_9335.b26 \
+    vendor/asus/X00TD/proprietary/vendor/firmware/cpe_9335.b28:$(TARGET_COPY_OUT_VENDOR)/firmware/cpe_9335.b28 \
+    vendor/asus/X00TD/proprietary/vendor/firmware/cpe_9335.b29:$(TARGET_COPY_OUT_VENDOR)/firmware/cpe_9335.b29 \
+    vendor/asus/X00TD/proprietary/vendor/firmware/cpe_9335.mdt:$(TARGET_COPY_OUT_VENDOR)/firmware/cpe_9335.mdt \
+    vendor/asus/X00TD/proprietary/vendor/firmware/cpe_9340.b01:$(TARGET_COPY_OUT_VENDOR)/firmware/cpe_9340.b01 \
+    vendor/asus/X00TD/proprietary/vendor/firmware/cpe_9340.b03:$(TARGET_COPY_OUT_VENDOR)/firmware/cpe_9340.b03 \
+    vendor/asus/X00TD/proprietary/vendor/firmware/cpe_9340.b05:$(TARGET_COPY_OUT_VENDOR)/firmware/cpe_9340.b05 \
+    vendor/asus/X00TD/proprietary/vendor/firmware/cpe_9340.b06:$(TARGET_COPY_OUT_VENDOR)/firmware/cpe_9340.b06 \
+    vendor/asus/X00TD/proprietary/vendor/firmware/cpe_9340.b07:$(TARGET_COPY_OUT_VENDOR)/firmware/cpe_9340.b07 \
+    vendor/asus/X00TD/proprietary/vendor/firmware/cpe_9340.b09:$(TARGET_COPY_OUT_VENDOR)/firmware/cpe_9340.b09 \
+    vendor/asus/X00TD/proprietary/vendor/firmware/cpe_9340.b11:$(TARGET_COPY_OUT_VENDOR)/firmware/cpe_9340.b11 \
+    vendor/asus/X00TD/proprietary/vendor/firmware/cpe_9340.b13:$(TARGET_COPY_OUT_VENDOR)/firmware/cpe_9340.b13 \
+    vendor/asus/X00TD/proprietary/vendor/firmware/cpe_9340.b15:$(TARGET_COPY_OUT_VENDOR)/firmware/cpe_9340.b15 \
+    vendor/asus/X00TD/proprietary/vendor/firmware/cpe_9340.b16:$(TARGET_COPY_OUT_VENDOR)/firmware/cpe_9340.b16 \
+    vendor/asus/X00TD/proprietary/vendor/firmware/cpe_9340.b18:$(TARGET_COPY_OUT_VENDOR)/firmware/cpe_9340.b18 \
+    vendor/asus/X00TD/proprietary/vendor/firmware/cpe_9340.b20:$(TARGET_COPY_OUT_VENDOR)/firmware/cpe_9340.b20 \
+    vendor/asus/X00TD/proprietary/vendor/firmware/cpe_9340.mdt:$(TARGET_COPY_OUT_VENDOR)/firmware/cpe_9340.mdt \
+    vendor/asus/X00TD/proprietary/vendor/firmware/crbtfw11.tlv:$(TARGET_COPY_OUT_VENDOR)/firmware/crbtfw11.tlv \
+    vendor/asus/X00TD/proprietary/vendor/firmware/crbtfw20.tlv:$(TARGET_COPY_OUT_VENDOR)/firmware/crbtfw20.tlv \
+    vendor/asus/X00TD/proprietary/vendor/firmware/crbtfw21.tlv:$(TARGET_COPY_OUT_VENDOR)/firmware/crbtfw21.tlv \
+    vendor/asus/X00TD/proprietary/vendor/firmware/crnv11.bin:$(TARGET_COPY_OUT_VENDOR)/firmware/crnv11.bin \
+    vendor/asus/X00TD/proprietary/vendor/firmware/crnv20.bin:$(TARGET_COPY_OUT_VENDOR)/firmware/crnv20.bin \
+    vendor/asus/X00TD/proprietary/vendor/firmware/crnv21.bin:$(TARGET_COPY_OUT_VENDOR)/firmware/crnv21.bin \
+    vendor/asus/X00TD/proprietary/vendor/firmware/data.msc:$(TARGET_COPY_OUT_VENDOR)/firmware/data.msc \
+    vendor/asus/X00TD/proprietary/vendor/firmware/dhsecapp.b00:$(TARGET_COPY_OUT_VENDOR)/firmware/dhsecapp.b00 \
+    vendor/asus/X00TD/proprietary/vendor/firmware/dhsecapp.b01:$(TARGET_COPY_OUT_VENDOR)/firmware/dhsecapp.b01 \
+    vendor/asus/X00TD/proprietary/vendor/firmware/dhsecapp.b02:$(TARGET_COPY_OUT_VENDOR)/firmware/dhsecapp.b02 \
+    vendor/asus/X00TD/proprietary/vendor/firmware/dhsecapp.b03:$(TARGET_COPY_OUT_VENDOR)/firmware/dhsecapp.b03 \
+    vendor/asus/X00TD/proprietary/vendor/firmware/dhsecapp.b04:$(TARGET_COPY_OUT_VENDOR)/firmware/dhsecapp.b04 \
+    vendor/asus/X00TD/proprietary/vendor/firmware/dhsecapp.b05:$(TARGET_COPY_OUT_VENDOR)/firmware/dhsecapp.b05 \
+    vendor/asus/X00TD/proprietary/vendor/firmware/dhsecapp.b06:$(TARGET_COPY_OUT_VENDOR)/firmware/dhsecapp.b06 \
+    vendor/asus/X00TD/proprietary/vendor/firmware/dhsecapp.b07:$(TARGET_COPY_OUT_VENDOR)/firmware/dhsecapp.b07 \
+    vendor/asus/X00TD/proprietary/vendor/firmware/dhsecapp.mdt:$(TARGET_COPY_OUT_VENDOR)/firmware/dhsecapp.mdt \
+    vendor/asus/X00TD/proprietary/vendor/firmware/fp998eas.b00:$(TARGET_COPY_OUT_VENDOR)/firmware/fp998eas.b00 \
+    vendor/asus/X00TD/proprietary/vendor/firmware/fp998eas.b01:$(TARGET_COPY_OUT_VENDOR)/firmware/fp998eas.b01 \
+    vendor/asus/X00TD/proprietary/vendor/firmware/fp998eas.b02:$(TARGET_COPY_OUT_VENDOR)/firmware/fp998eas.b02 \
+    vendor/asus/X00TD/proprietary/vendor/firmware/fp998eas.b03:$(TARGET_COPY_OUT_VENDOR)/firmware/fp998eas.b03 \
+    vendor/asus/X00TD/proprietary/vendor/firmware/fp998eas.b04:$(TARGET_COPY_OUT_VENDOR)/firmware/fp998eas.b04 \
+    vendor/asus/X00TD/proprietary/vendor/firmware/fp998eas.b05:$(TARGET_COPY_OUT_VENDOR)/firmware/fp998eas.b05 \
+    vendor/asus/X00TD/proprietary/vendor/firmware/fp998eas.b06:$(TARGET_COPY_OUT_VENDOR)/firmware/fp998eas.b06 \
+    vendor/asus/X00TD/proprietary/vendor/firmware/fp998eas.b07:$(TARGET_COPY_OUT_VENDOR)/firmware/fp998eas.b07 \
+    vendor/asus/X00TD/proprietary/vendor/firmware/fp998eas.mdt:$(TARGET_COPY_OUT_VENDOR)/firmware/fp998eas.mdt \
+    vendor/asus/X00TD/proprietary/vendor/firmware/goodixfp.b00:$(TARGET_COPY_OUT_VENDOR)/firmware/goodixfp.b00 \
+    vendor/asus/X00TD/proprietary/vendor/firmware/goodixfp.b01:$(TARGET_COPY_OUT_VENDOR)/firmware/goodixfp.b01 \
+    vendor/asus/X00TD/proprietary/vendor/firmware/goodixfp.b02:$(TARGET_COPY_OUT_VENDOR)/firmware/goodixfp.b02 \
+    vendor/asus/X00TD/proprietary/vendor/firmware/goodixfp.b03:$(TARGET_COPY_OUT_VENDOR)/firmware/goodixfp.b03 \
+    vendor/asus/X00TD/proprietary/vendor/firmware/goodixfp.b04:$(TARGET_COPY_OUT_VENDOR)/firmware/goodixfp.b04 \
+    vendor/asus/X00TD/proprietary/vendor/firmware/goodixfp.b05:$(TARGET_COPY_OUT_VENDOR)/firmware/goodixfp.b05 \
+    vendor/asus/X00TD/proprietary/vendor/firmware/goodixfp.b06:$(TARGET_COPY_OUT_VENDOR)/firmware/goodixfp.b06 \
+    vendor/asus/X00TD/proprietary/vendor/firmware/goodixfp.b07:$(TARGET_COPY_OUT_VENDOR)/firmware/goodixfp.b07 \
+    vendor/asus/X00TD/proprietary/vendor/firmware/goodixfp.mdt:$(TARGET_COPY_OUT_VENDOR)/firmware/goodixfp.mdt \
+    vendor/asus/X00TD/proprietary/vendor/firmware/gptest.b00:$(TARGET_COPY_OUT_VENDOR)/firmware/gptest.b00 \
+    vendor/asus/X00TD/proprietary/vendor/firmware/gptest.b01:$(TARGET_COPY_OUT_VENDOR)/firmware/gptest.b01 \
+    vendor/asus/X00TD/proprietary/vendor/firmware/gptest.b02:$(TARGET_COPY_OUT_VENDOR)/firmware/gptest.b02 \
+    vendor/asus/X00TD/proprietary/vendor/firmware/gptest.b03:$(TARGET_COPY_OUT_VENDOR)/firmware/gptest.b03 \
+    vendor/asus/X00TD/proprietary/vendor/firmware/gptest.b04:$(TARGET_COPY_OUT_VENDOR)/firmware/gptest.b04 \
+    vendor/asus/X00TD/proprietary/vendor/firmware/gptest.b05:$(TARGET_COPY_OUT_VENDOR)/firmware/gptest.b05 \
+    vendor/asus/X00TD/proprietary/vendor/firmware/gptest.b06:$(TARGET_COPY_OUT_VENDOR)/firmware/gptest.b06 \
+    vendor/asus/X00TD/proprietary/vendor/firmware/gptest.b07:$(TARGET_COPY_OUT_VENDOR)/firmware/gptest.b07 \
+    vendor/asus/X00TD/proprietary/vendor/firmware/gptest.mdt:$(TARGET_COPY_OUT_VENDOR)/firmware/gptest.mdt \
+    vendor/asus/X00TD/proprietary/vendor/firmware/haventkn.b00:$(TARGET_COPY_OUT_VENDOR)/firmware/haventkn.b00 \
+    vendor/asus/X00TD/proprietary/vendor/firmware/haventkn.b01:$(TARGET_COPY_OUT_VENDOR)/firmware/haventkn.b01 \
+    vendor/asus/X00TD/proprietary/vendor/firmware/haventkn.b02:$(TARGET_COPY_OUT_VENDOR)/firmware/haventkn.b02 \
+    vendor/asus/X00TD/proprietary/vendor/firmware/haventkn.b03:$(TARGET_COPY_OUT_VENDOR)/firmware/haventkn.b03 \
+    vendor/asus/X00TD/proprietary/vendor/firmware/haventkn.b04:$(TARGET_COPY_OUT_VENDOR)/firmware/haventkn.b04 \
+    vendor/asus/X00TD/proprietary/vendor/firmware/haventkn.b05:$(TARGET_COPY_OUT_VENDOR)/firmware/haventkn.b05 \
+    vendor/asus/X00TD/proprietary/vendor/firmware/haventkn.b06:$(TARGET_COPY_OUT_VENDOR)/firmware/haventkn.b06 \
+    vendor/asus/X00TD/proprietary/vendor/firmware/haventkn.b07:$(TARGET_COPY_OUT_VENDOR)/firmware/haventkn.b07 \
+    vendor/asus/X00TD/proprietary/vendor/firmware/haventkn.mdt:$(TARGET_COPY_OUT_VENDOR)/firmware/haventkn.mdt \
+    vendor/asus/X00TD/proprietary/vendor/firmware/hyp.mbn:$(TARGET_COPY_OUT_VENDOR)/firmware/hyp.mbn \
+    vendor/asus/X00TD/proprietary/vendor/firmware/iris.b00:$(TARGET_COPY_OUT_VENDOR)/firmware/iris.b00 \
+    vendor/asus/X00TD/proprietary/vendor/firmware/iris.b01:$(TARGET_COPY_OUT_VENDOR)/firmware/iris.b01 \
+    vendor/asus/X00TD/proprietary/vendor/firmware/iris.b02:$(TARGET_COPY_OUT_VENDOR)/firmware/iris.b02 \
+    vendor/asus/X00TD/proprietary/vendor/firmware/iris.b03:$(TARGET_COPY_OUT_VENDOR)/firmware/iris.b03 \
+    vendor/asus/X00TD/proprietary/vendor/firmware/iris.b04:$(TARGET_COPY_OUT_VENDOR)/firmware/iris.b04 \
+    vendor/asus/X00TD/proprietary/vendor/firmware/iris.b05:$(TARGET_COPY_OUT_VENDOR)/firmware/iris.b05 \
+    vendor/asus/X00TD/proprietary/vendor/firmware/iris.b06:$(TARGET_COPY_OUT_VENDOR)/firmware/iris.b06 \
+    vendor/asus/X00TD/proprietary/vendor/firmware/iris.b07:$(TARGET_COPY_OUT_VENDOR)/firmware/iris.b07 \
+    vendor/asus/X00TD/proprietary/vendor/firmware/iris.mdt:$(TARGET_COPY_OUT_VENDOR)/firmware/iris.mdt \
+    vendor/asus/X00TD/proprietary/vendor/firmware/isdbtmm.b00:$(TARGET_COPY_OUT_VENDOR)/firmware/isdbtmm.b00 \
+    vendor/asus/X00TD/proprietary/vendor/firmware/isdbtmm.b01:$(TARGET_COPY_OUT_VENDOR)/firmware/isdbtmm.b01 \
+    vendor/asus/X00TD/proprietary/vendor/firmware/isdbtmm.b02:$(TARGET_COPY_OUT_VENDOR)/firmware/isdbtmm.b02 \
+    vendor/asus/X00TD/proprietary/vendor/firmware/isdbtmm.b03:$(TARGET_COPY_OUT_VENDOR)/firmware/isdbtmm.b03 \
+    vendor/asus/X00TD/proprietary/vendor/firmware/isdbtmm.b04:$(TARGET_COPY_OUT_VENDOR)/firmware/isdbtmm.b04 \
+    vendor/asus/X00TD/proprietary/vendor/firmware/isdbtmm.b05:$(TARGET_COPY_OUT_VENDOR)/firmware/isdbtmm.b05 \
+    vendor/asus/X00TD/proprietary/vendor/firmware/isdbtmm.b06:$(TARGET_COPY_OUT_VENDOR)/firmware/isdbtmm.b06 \
+    vendor/asus/X00TD/proprietary/vendor/firmware/isdbtmm.b07:$(TARGET_COPY_OUT_VENDOR)/firmware/isdbtmm.b07 \
+    vendor/asus/X00TD/proprietary/vendor/firmware/isdbtmm.mdt:$(TARGET_COPY_OUT_VENDOR)/firmware/isdbtmm.mdt \
+    vendor/asus/X00TD/proprietary/vendor/firmware/mba.mbn:$(TARGET_COPY_OUT_VENDOR)/firmware/mba.mbn \
+    vendor/asus/X00TD/proprietary/vendor/firmware/mdtpseca.b00:$(TARGET_COPY_OUT_VENDOR)/firmware/mdtpseca.b00 \
+    vendor/asus/X00TD/proprietary/vendor/firmware/mdtpseca.b01:$(TARGET_COPY_OUT_VENDOR)/firmware/mdtpseca.b01 \
+    vendor/asus/X00TD/proprietary/vendor/firmware/mdtpseca.b02:$(TARGET_COPY_OUT_VENDOR)/firmware/mdtpseca.b02 \
+    vendor/asus/X00TD/proprietary/vendor/firmware/mdtpseca.b03:$(TARGET_COPY_OUT_VENDOR)/firmware/mdtpseca.b03 \
+    vendor/asus/X00TD/proprietary/vendor/firmware/mdtpseca.b04:$(TARGET_COPY_OUT_VENDOR)/firmware/mdtpseca.b04 \
+    vendor/asus/X00TD/proprietary/vendor/firmware/mdtpseca.b05:$(TARGET_COPY_OUT_VENDOR)/firmware/mdtpseca.b05 \
+    vendor/asus/X00TD/proprietary/vendor/firmware/mdtpseca.b06:$(TARGET_COPY_OUT_VENDOR)/firmware/mdtpseca.b06 \
+    vendor/asus/X00TD/proprietary/vendor/firmware/mdtpseca.b07:$(TARGET_COPY_OUT_VENDOR)/firmware/mdtpseca.b07 \
+    vendor/asus/X00TD/proprietary/vendor/firmware/mdtpseca.mdt:$(TARGET_COPY_OUT_VENDOR)/firmware/mdtpseca.mdt \
+    vendor/asus/X00TD/proprietary/vendor/firmware/modem.b00:$(TARGET_COPY_OUT_VENDOR)/firmware/modem.b00 \
+    vendor/asus/X00TD/proprietary/vendor/firmware/modem.b01:$(TARGET_COPY_OUT_VENDOR)/firmware/modem.b01 \
+    vendor/asus/X00TD/proprietary/vendor/firmware/modem.b02:$(TARGET_COPY_OUT_VENDOR)/firmware/modem.b02 \
+    vendor/asus/X00TD/proprietary/vendor/firmware/modem.b03:$(TARGET_COPY_OUT_VENDOR)/firmware/modem.b03 \
+    vendor/asus/X00TD/proprietary/vendor/firmware/modem.b04:$(TARGET_COPY_OUT_VENDOR)/firmware/modem.b04 \
+    vendor/asus/X00TD/proprietary/vendor/firmware/modem.b05:$(TARGET_COPY_OUT_VENDOR)/firmware/modem.b05 \
+    vendor/asus/X00TD/proprietary/vendor/firmware/modem.b06:$(TARGET_COPY_OUT_VENDOR)/firmware/modem.b06 \
+    vendor/asus/X00TD/proprietary/vendor/firmware/modem.b07:$(TARGET_COPY_OUT_VENDOR)/firmware/modem.b07 \
+    vendor/asus/X00TD/proprietary/vendor/firmware/modem.b08:$(TARGET_COPY_OUT_VENDOR)/firmware/modem.b08 \
+    vendor/asus/X00TD/proprietary/vendor/firmware/modem.b09:$(TARGET_COPY_OUT_VENDOR)/firmware/modem.b09 \
+    vendor/asus/X00TD/proprietary/vendor/firmware/modem.b10:$(TARGET_COPY_OUT_VENDOR)/firmware/modem.b10 \
+    vendor/asus/X00TD/proprietary/vendor/firmware/modem.b11:$(TARGET_COPY_OUT_VENDOR)/firmware/modem.b11 \
+    vendor/asus/X00TD/proprietary/vendor/firmware/modem.b12:$(TARGET_COPY_OUT_VENDOR)/firmware/modem.b12 \
+    vendor/asus/X00TD/proprietary/vendor/firmware/modem.b13:$(TARGET_COPY_OUT_VENDOR)/firmware/modem.b13 \
+    vendor/asus/X00TD/proprietary/vendor/firmware/modem.b14:$(TARGET_COPY_OUT_VENDOR)/firmware/modem.b14 \
+    vendor/asus/X00TD/proprietary/vendor/firmware/modem.b16:$(TARGET_COPY_OUT_VENDOR)/firmware/modem.b16 \
+    vendor/asus/X00TD/proprietary/vendor/firmware/modem.b17:$(TARGET_COPY_OUT_VENDOR)/firmware/modem.b17 \
+    vendor/asus/X00TD/proprietary/vendor/firmware/modem.b18:$(TARGET_COPY_OUT_VENDOR)/firmware/modem.b18 \
+    vendor/asus/X00TD/proprietary/vendor/firmware/modem.b20:$(TARGET_COPY_OUT_VENDOR)/firmware/modem.b20 \
+    vendor/asus/X00TD/proprietary/vendor/firmware/modem.b21:$(TARGET_COPY_OUT_VENDOR)/firmware/modem.b21 \
+    vendor/asus/X00TD/proprietary/vendor/firmware/modem.b22:$(TARGET_COPY_OUT_VENDOR)/firmware/modem.b22 \
+    vendor/asus/X00TD/proprietary/vendor/firmware/modem.b23:$(TARGET_COPY_OUT_VENDOR)/firmware/modem.b23 \
+    vendor/asus/X00TD/proprietary/vendor/firmware/modem.b24:$(TARGET_COPY_OUT_VENDOR)/firmware/modem.b24 \
+    vendor/asus/X00TD/proprietary/vendor/firmware/modem.b25:$(TARGET_COPY_OUT_VENDOR)/firmware/modem.b25 \
+    vendor/asus/X00TD/proprietary/vendor/firmware/modem.b26:$(TARGET_COPY_OUT_VENDOR)/firmware/modem.b26 \
+    vendor/asus/X00TD/proprietary/vendor/firmware/modem.b27:$(TARGET_COPY_OUT_VENDOR)/firmware/modem.b27 \
+    vendor/asus/X00TD/proprietary/vendor/firmware/modem.b28:$(TARGET_COPY_OUT_VENDOR)/firmware/modem.b28 \
+    vendor/asus/X00TD/proprietary/vendor/firmware/modem.mdt:$(TARGET_COPY_OUT_VENDOR)/firmware/modem.mdt \
+    vendor/asus/X00TD/proprietary/vendor/firmware/modemuw.jsn:$(TARGET_COPY_OUT_VENDOR)/firmware/modemuw.jsn \
+    vendor/asus/X00TD/proprietary/vendor/firmware/pmic.elf:$(TARGET_COPY_OUT_VENDOR)/firmware/pmic.elf \
+    vendor/asus/X00TD/proprietary/vendor/firmware/qdsp6m.qdb:$(TARGET_COPY_OUT_VENDOR)/firmware/qdsp6m.qdb \
+    vendor/asus/X00TD/proprietary/vendor/firmware/rpm.mbn:$(TARGET_COPY_OUT_VENDOR)/firmware/rpm.mbn \
+    vendor/asus/X00TD/proprietary/vendor/firmware/securemm.b00:$(TARGET_COPY_OUT_VENDOR)/firmware/securemm.b00 \
+    vendor/asus/X00TD/proprietary/vendor/firmware/securemm.b01:$(TARGET_COPY_OUT_VENDOR)/firmware/securemm.b01 \
+    vendor/asus/X00TD/proprietary/vendor/firmware/securemm.b02:$(TARGET_COPY_OUT_VENDOR)/firmware/securemm.b02 \
+    vendor/asus/X00TD/proprietary/vendor/firmware/securemm.b03:$(TARGET_COPY_OUT_VENDOR)/firmware/securemm.b03 \
+    vendor/asus/X00TD/proprietary/vendor/firmware/securemm.b04:$(TARGET_COPY_OUT_VENDOR)/firmware/securemm.b04 \
+    vendor/asus/X00TD/proprietary/vendor/firmware/securemm.b05:$(TARGET_COPY_OUT_VENDOR)/firmware/securemm.b05 \
+    vendor/asus/X00TD/proprietary/vendor/firmware/securemm.b06:$(TARGET_COPY_OUT_VENDOR)/firmware/securemm.b06 \
+    vendor/asus/X00TD/proprietary/vendor/firmware/securemm.b07:$(TARGET_COPY_OUT_VENDOR)/firmware/securemm.b07 \
+    vendor/asus/X00TD/proprietary/vendor/firmware/securemm.mdt:$(TARGET_COPY_OUT_VENDOR)/firmware/securemm.mdt \
+    vendor/asus/X00TD/proprietary/vendor/firmware/smplap32.b00:$(TARGET_COPY_OUT_VENDOR)/firmware/smplap32.b00 \
+    vendor/asus/X00TD/proprietary/vendor/firmware/smplap32.b01:$(TARGET_COPY_OUT_VENDOR)/firmware/smplap32.b01 \
+    vendor/asus/X00TD/proprietary/vendor/firmware/smplap32.b02:$(TARGET_COPY_OUT_VENDOR)/firmware/smplap32.b02 \
+    vendor/asus/X00TD/proprietary/vendor/firmware/smplap32.b03:$(TARGET_COPY_OUT_VENDOR)/firmware/smplap32.b03 \
+    vendor/asus/X00TD/proprietary/vendor/firmware/smplap32.b04:$(TARGET_COPY_OUT_VENDOR)/firmware/smplap32.b04 \
+    vendor/asus/X00TD/proprietary/vendor/firmware/smplap32.b05:$(TARGET_COPY_OUT_VENDOR)/firmware/smplap32.b05 \
+    vendor/asus/X00TD/proprietary/vendor/firmware/smplap32.b06:$(TARGET_COPY_OUT_VENDOR)/firmware/smplap32.b06 \
+    vendor/asus/X00TD/proprietary/vendor/firmware/smplap32.b07:$(TARGET_COPY_OUT_VENDOR)/firmware/smplap32.b07 \
+    vendor/asus/X00TD/proprietary/vendor/firmware/smplap32.mdt:$(TARGET_COPY_OUT_VENDOR)/firmware/smplap32.mdt \
+    vendor/asus/X00TD/proprietary/vendor/firmware/smplap64.b00:$(TARGET_COPY_OUT_VENDOR)/firmware/smplap64.b00 \
+    vendor/asus/X00TD/proprietary/vendor/firmware/smplap64.b01:$(TARGET_COPY_OUT_VENDOR)/firmware/smplap64.b01 \
+    vendor/asus/X00TD/proprietary/vendor/firmware/smplap64.b02:$(TARGET_COPY_OUT_VENDOR)/firmware/smplap64.b02 \
+    vendor/asus/X00TD/proprietary/vendor/firmware/smplap64.b03:$(TARGET_COPY_OUT_VENDOR)/firmware/smplap64.b03 \
+    vendor/asus/X00TD/proprietary/vendor/firmware/smplap64.b04:$(TARGET_COPY_OUT_VENDOR)/firmware/smplap64.b04 \
+    vendor/asus/X00TD/proprietary/vendor/firmware/smplap64.b05:$(TARGET_COPY_OUT_VENDOR)/firmware/smplap64.b05 \
+    vendor/asus/X00TD/proprietary/vendor/firmware/smplap64.b06:$(TARGET_COPY_OUT_VENDOR)/firmware/smplap64.b06 \
+    vendor/asus/X00TD/proprietary/vendor/firmware/smplap64.b07:$(TARGET_COPY_OUT_VENDOR)/firmware/smplap64.b07 \
+    vendor/asus/X00TD/proprietary/vendor/firmware/smplap64.mdt:$(TARGET_COPY_OUT_VENDOR)/firmware/smplap64.mdt \
+    vendor/asus/X00TD/proprietary/vendor/firmware/venus.b00:$(TARGET_COPY_OUT_VENDOR)/firmware/venus.b00 \
+    vendor/asus/X00TD/proprietary/vendor/firmware/venus.b01:$(TARGET_COPY_OUT_VENDOR)/firmware/venus.b01 \
+    vendor/asus/X00TD/proprietary/vendor/firmware/venus.b02:$(TARGET_COPY_OUT_VENDOR)/firmware/venus.b02 \
+    vendor/asus/X00TD/proprietary/vendor/firmware/venus.b03:$(TARGET_COPY_OUT_VENDOR)/firmware/venus.b03 \
+    vendor/asus/X00TD/proprietary/vendor/firmware/venus.b04:$(TARGET_COPY_OUT_VENDOR)/firmware/venus.b04 \
+    vendor/asus/X00TD/proprietary/vendor/firmware/venus.mdt:$(TARGET_COPY_OUT_VENDOR)/firmware/venus.mdt \
+    vendor/asus/X00TD/proprietary/vendor/firmware/wlanmdsp.mbn:$(TARGET_COPY_OUT_VENDOR)/firmware/wlanmdsp.mbn \
+    vendor/asus/X00TD/proprietary/vendor/firmware/xbl.elf:$(TARGET_COPY_OUT_VENDOR)/firmware/xbl.elf \
     vendor/asus/X00TD/proprietary/vendor/firmware/cpp_firmware_v1_12_0.fw:$(TARGET_COPY_OUT_VENDOR)/firmware/cpp_firmware_v1_12_0.fw \
     vendor/asus/X00TD/proprietary/vendor/firmware/cppf.b00:$(TARGET_COPY_OUT_VENDOR)/firmware/cppf.b00 \
     vendor/asus/X00TD/proprietary/vendor/firmware/cppf.b01:$(TARGET_COPY_OUT_VENDOR)/firmware/cppf.b01 \
@@ -63,7 +292,6 @@ PRODUCT_COPY_FILES += \
     vendor/asus/X00TD/proprietary/vendor/firmware/cppf.mdt:$(TARGET_COPY_OUT_VENDOR)/firmware/cppf.mdt \
     vendor/asus/X00TD/proprietary/vendor/firmware/novatek_ts_fw_dj.bin:$(TARGET_COPY_OUT_VENDOR)/firmware/novatek_ts_fw_dj.bin \
     vendor/asus/X00TD/proprietary/vendor/firmware/novatek_ts_fw_txd.bin:$(TARGET_COPY_OUT_VENDOR)/firmware/novatek_ts_fw_txd.bin \
-    vendor/asus/X00TD/proprietary/vendor/firmware/startup_fw_update.img:$(TARGET_COPY_OUT_VENDOR)/firmware/startup_fw_update.img \
     vendor/asus/X00TD/proprietary/vendor/firmware/tfa98xx.cnt:$(TARGET_COPY_OUT_VENDOR)/firmware/tfa98xx.cnt \
     vendor/asus/X00TD/proprietary/vendor/firmware/widevine.b00:$(TARGET_COPY_OUT_VENDOR)/firmware/widevine.b00 \
     vendor/asus/X00TD/proprietary/vendor/firmware/widevine.b01:$(TARGET_COPY_OUT_VENDOR)/firmware/widevine.b01 \
@@ -74,20 +302,12 @@ PRODUCT_COPY_FILES += \
     vendor/asus/X00TD/proprietary/vendor/firmware/widevine.b06:$(TARGET_COPY_OUT_VENDOR)/firmware/widevine.b06 \
     vendor/asus/X00TD/proprietary/vendor/firmware/widevine.b07:$(TARGET_COPY_OUT_VENDOR)/firmware/widevine.b07 \
     vendor/asus/X00TD/proprietary/vendor/firmware/widevine.mdt:$(TARGET_COPY_OUT_VENDOR)/firmware/widevine.mdt \
-    vendor/asus/X00TD/proprietary/vendor/lib/dualcali_dump.bin:$(TARGET_COPY_OUT_VENDOR)/lib/dualcali_dump.bin \
-    vendor/asus/X00TD/proprietary/vendor/lib/libactuator_bu64297.so:$(TARGET_COPY_OUT_VENDOR)/lib/libactuator_bu64297.so \
-    vendor/asus/X00TD/proprietary/vendor/lib/libactuator_dw9714.so:$(TARGET_COPY_OUT_VENDOR)/lib/libactuator_dw9714.so \
     vendor/asus/X00TD/proprietary/vendor/lib/libactuator_hi1333_ofilm_dw9714v.so:$(TARGET_COPY_OUT_VENDOR)/lib/libactuator_hi1333_ofilm_dw9714v.so \
     vendor/asus/X00TD/proprietary/vendor/lib/libactuator_ov13855_chicony_rear_s2034.so:$(TARGET_COPY_OUT_VENDOR)/lib/libactuator_ov13855_chicony_rear_s2034.so \
     vendor/asus/X00TD/proprietary/vendor/lib/libactuator_ov13855_holitech_fp5510a.so:$(TARGET_COPY_OUT_VENDOR)/lib/libactuator_ov13855_holitech_fp5510a.so \
     vendor/asus/X00TD/proprietary/vendor/lib/libactuator_ov16880_qtech_rear_dw9714a.so:$(TARGET_COPY_OUT_VENDOR)/lib/libactuator_ov16880_qtech_rear_dw9714a.so \
     vendor/asus/X00TD/proprietary/vendor/lib/libactuator_ov16885_holitech_16m_fp5510a.so:$(TARGET_COPY_OUT_VENDOR)/lib/libactuator_ov16885_holitech_16m_fp5510a.so \
     vendor/asus/X00TD/proprietary/vendor/lib/libactuator_ov16885_ofilm_16m_dw9714v.so:$(TARGET_COPY_OUT_VENDOR)/lib/libactuator_ov16885_ofilm_16m_dw9714v.so \
-    vendor/asus/X00TD/proprietary/vendor/lib/libchromatix_csidtg_common.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_csidtg_common.so \
-    vendor/asus/X00TD/proprietary/vendor/lib/libchromatix_csidtg_cpp_preview.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_csidtg_cpp_preview.so \
-    vendor/asus/X00TD/proprietary/vendor/lib/libchromatix_csidtg_postproc.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_csidtg_postproc.so \
-    vendor/asus/X00TD/proprietary/vendor/lib/libchromatix_csidtg_preview.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_csidtg_preview.so \
-    vendor/asus/X00TD/proprietary/vendor/lib/libchromatix_csidtg_zsl_preview.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_csidtg_zsl_preview.so \
     vendor/asus/X00TD/proprietary/vendor/lib/libchromatix_gc5025_ofilm_13m_common.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_gc5025_ofilm_13m_common.so \
     vendor/asus/X00TD/proprietary/vendor/lib/libchromatix_gc5025_ofilm_13m_cpp_ds_chromatix.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_gc5025_ofilm_13m_cpp_ds_chromatix.so \
     vendor/asus/X00TD/proprietary/vendor/lib/libchromatix_gc5025_ofilm_13m_cpp_hfr_120.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_gc5025_ofilm_13m_cpp_hfr_120.so \
@@ -299,26 +519,6 @@ PRODUCT_COPY_FILES += \
     vendor/asus/X00TD/proprietary/vendor/lib/libchromatix_ov13855_chicony_rear_video_full.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_ov13855_chicony_rear_video_full.so \
     vendor/asus/X00TD/proprietary/vendor/lib/libchromatix_ov13855_chicony_rear_zsl_preview_bu64297.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_ov13855_chicony_rear_zsl_preview_bu64297.so \
     vendor/asus/X00TD/proprietary/vendor/lib/libchromatix_ov13855_chicony_rear_zsl_video_bu64297.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_ov13855_chicony_rear_zsl_video_bu64297.so \
-    vendor/asus/X00TD/proprietary/vendor/lib/libchromatix_ov13855_common.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_ov13855_common.so \
-    vendor/asus/X00TD/proprietary/vendor/lib/libchromatix_ov13855_cpp_ds_chromatix.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_ov13855_cpp_ds_chromatix.so \
-    vendor/asus/X00TD/proprietary/vendor/lib/libchromatix_ov13855_cpp_hfr_120.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_ov13855_cpp_hfr_120.so \
-    vendor/asus/X00TD/proprietary/vendor/lib/libchromatix_ov13855_cpp_hfr_60.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_ov13855_cpp_hfr_60.so \
-    vendor/asus/X00TD/proprietary/vendor/lib/libchromatix_ov13855_cpp_hfr_90.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_ov13855_cpp_hfr_90.so \
-    vendor/asus/X00TD/proprietary/vendor/lib/libchromatix_ov13855_cpp_liveshot.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_ov13855_cpp_liveshot.so \
-    vendor/asus/X00TD/proprietary/vendor/lib/libchromatix_ov13855_cpp_preview.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_ov13855_cpp_preview.so \
-    vendor/asus/X00TD/proprietary/vendor/lib/libchromatix_ov13855_cpp_snapshot.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_ov13855_cpp_snapshot.so \
-    vendor/asus/X00TD/proprietary/vendor/lib/libchromatix_ov13855_cpp_us_chromatix.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_ov13855_cpp_us_chromatix.so \
-    vendor/asus/X00TD/proprietary/vendor/lib/libchromatix_ov13855_cpp_video.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_ov13855_cpp_video.so \
-    vendor/asus/X00TD/proprietary/vendor/lib/libchromatix_ov13855_cpp_video_full.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_ov13855_cpp_video_full.so \
-    vendor/asus/X00TD/proprietary/vendor/lib/libchromatix_ov13855_default_preview_bu64297.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_ov13855_default_preview_bu64297.so \
-    vendor/asus/X00TD/proprietary/vendor/lib/libchromatix_ov13855_default_video.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_ov13855_default_video.so \
-    vendor/asus/X00TD/proprietary/vendor/lib/libchromatix_ov13855_default_video_bu64297.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_ov13855_default_video_bu64297.so \
-    vendor/asus/X00TD/proprietary/vendor/lib/libchromatix_ov13855_hfr_120.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_ov13855_hfr_120.so \
-    vendor/asus/X00TD/proprietary/vendor/lib/libchromatix_ov13855_hfr_120_bu64297.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_ov13855_hfr_120_bu64297.so \
-    vendor/asus/X00TD/proprietary/vendor/lib/libchromatix_ov13855_hfr_60.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_ov13855_hfr_60.so \
-    vendor/asus/X00TD/proprietary/vendor/lib/libchromatix_ov13855_hfr_60_bu64297.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_ov13855_hfr_60_bu64297.so \
-    vendor/asus/X00TD/proprietary/vendor/lib/libchromatix_ov13855_hfr_90.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_ov13855_hfr_90.so \
-    vendor/asus/X00TD/proprietary/vendor/lib/libchromatix_ov13855_hfr_90_bu64297.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_ov13855_hfr_90_bu64297.so \
     vendor/asus/X00TD/proprietary/vendor/lib/libchromatix_ov13855_holitech_13m_common.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_ov13855_holitech_13m_common.so \
     vendor/asus/X00TD/proprietary/vendor/lib/libchromatix_ov13855_holitech_13m_cpp_ds_chromatix.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_ov13855_holitech_13m_cpp_ds_chromatix.so \
     vendor/asus/X00TD/proprietary/vendor/lib/libchromatix_ov13855_holitech_13m_cpp_hfr_120.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_ov13855_holitech_13m_cpp_hfr_120.so \
@@ -349,12 +549,6 @@ PRODUCT_COPY_FILES += \
     vendor/asus/X00TD/proprietary/vendor/lib/libchromatix_ov13855_holitech_13m_video_full.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_ov13855_holitech_13m_video_full.so \
     vendor/asus/X00TD/proprietary/vendor/lib/libchromatix_ov13855_holitech_13m_zsl_preview_bu64297.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_ov13855_holitech_13m_zsl_preview_bu64297.so \
     vendor/asus/X00TD/proprietary/vendor/lib/libchromatix_ov13855_holitech_13m_zsl_video_bu64297.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_ov13855_holitech_13m_zsl_video_bu64297.so \
-    vendor/asus/X00TD/proprietary/vendor/lib/libchromatix_ov13855_postproc.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_ov13855_postproc.so \
-    vendor/asus/X00TD/proprietary/vendor/lib/libchromatix_ov13855_preview.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_ov13855_preview.so \
-    vendor/asus/X00TD/proprietary/vendor/lib/libchromatix_ov13855_snapshot.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_ov13855_snapshot.so \
-    vendor/asus/X00TD/proprietary/vendor/lib/libchromatix_ov13855_video_full.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_ov13855_video_full.so \
-    vendor/asus/X00TD/proprietary/vendor/lib/libchromatix_ov13855_zsl_preview_bu64297.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_ov13855_zsl_preview_bu64297.so \
-    vendor/asus/X00TD/proprietary/vendor/lib/libchromatix_ov13855_zsl_video_bu64297.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_ov13855_zsl_video_bu64297.so \
     vendor/asus/X00TD/proprietary/vendor/lib/libchromatix_ov16880_qtech_front_common.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_ov16880_qtech_front_common.so \
     vendor/asus/X00TD/proprietary/vendor/lib/libchromatix_ov16880_qtech_front_cpp_ds_chromatix.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_ov16880_qtech_front_cpp_ds_chromatix.so \
     vendor/asus/X00TD/proprietary/vendor/lib/libchromatix_ov16880_qtech_front_cpp_hfr_120.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_ov16880_qtech_front_cpp_hfr_120.so \
@@ -442,10 +636,6 @@ PRODUCT_COPY_FILES += \
     vendor/asus/X00TD/proprietary/vendor/lib/libchromatix_ov16885_ofilm_16m_video_full.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_ov16885_ofilm_16m_video_full.so \
     vendor/asus/X00TD/proprietary/vendor/lib/libchromatix_ov16885_ofilm_16m_zsl_preview_bu64297.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_ov16885_ofilm_16m_zsl_preview_bu64297.so \
     vendor/asus/X00TD/proprietary/vendor/lib/libchromatix_ov16885_ofilm_16m_zsl_video_bu64297.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_ov16885_ofilm_16m_zsl_video_bu64297.so \
-    vendor/asus/X00TD/proprietary/vendor/lib/libchromatix_ov8856_a3_default_preview.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_ov8856_a3_default_preview.so \
-    vendor/asus/X00TD/proprietary/vendor/lib/libchromatix_ov8856_a3_default_video.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_ov8856_a3_default_video.so \
-    vendor/asus/X00TD/proprietary/vendor/lib/libchromatix_ov8856_a3_hfr_60.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_ov8856_a3_hfr_60.so \
-    vendor/asus/X00TD/proprietary/vendor/lib/libchromatix_ov8856_a3_hfr_90.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_ov8856_a3_hfr_90.so \
     vendor/asus/X00TD/proprietary/vendor/lib/libchromatix_ov8856_chicony_front_a3_default_preview.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_ov8856_chicony_front_a3_default_preview.so \
     vendor/asus/X00TD/proprietary/vendor/lib/libchromatix_ov8856_chicony_front_a3_default_video.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_ov8856_chicony_front_a3_default_video.so \
     vendor/asus/X00TD/proprietary/vendor/lib/libchromatix_ov8856_chicony_front_a3_hfr_120.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_ov8856_chicony_front_a3_hfr_120.so \
@@ -472,24 +662,6 @@ PRODUCT_COPY_FILES += \
     vendor/asus/X00TD/proprietary/vendor/lib/libchromatix_ov8856_chicony_front_snapshot.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_ov8856_chicony_front_snapshot.so \
     vendor/asus/X00TD/proprietary/vendor/lib/libchromatix_ov8856_chicony_front_zsl_preview.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_ov8856_chicony_front_zsl_preview.so \
     vendor/asus/X00TD/proprietary/vendor/lib/libchromatix_ov8856_chicony_front_zsl_video.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_ov8856_chicony_front_zsl_video.so \
-    vendor/asus/X00TD/proprietary/vendor/lib/libchromatix_ov8856_common.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_ov8856_common.so \
-    vendor/asus/X00TD/proprietary/vendor/lib/libchromatix_ov8856_cpp_ds_chromatix.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_ov8856_cpp_ds_chromatix.so \
-    vendor/asus/X00TD/proprietary/vendor/lib/libchromatix_ov8856_cpp_hfr_60.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_ov8856_cpp_hfr_60.so \
-    vendor/asus/X00TD/proprietary/vendor/lib/libchromatix_ov8856_cpp_hfr_90.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_ov8856_cpp_hfr_90.so \
-    vendor/asus/X00TD/proprietary/vendor/lib/libchromatix_ov8856_cpp_liveshot.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_ov8856_cpp_liveshot.so \
-    vendor/asus/X00TD/proprietary/vendor/lib/libchromatix_ov8856_cpp_preview.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_ov8856_cpp_preview.so \
-    vendor/asus/X00TD/proprietary/vendor/lib/libchromatix_ov8856_cpp_snapshot.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_ov8856_cpp_snapshot.so \
-    vendor/asus/X00TD/proprietary/vendor/lib/libchromatix_ov8856_cpp_us_chromatix.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_ov8856_cpp_us_chromatix.so \
-    vendor/asus/X00TD/proprietary/vendor/lib/libchromatix_ov8856_cpp_video.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_ov8856_cpp_video.so \
-    vendor/asus/X00TD/proprietary/vendor/lib/libchromatix_ov8856_default_video.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_ov8856_default_video.so \
-    vendor/asus/X00TD/proprietary/vendor/lib/libchromatix_ov8856_hfr_60.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_ov8856_hfr_60.so \
-    vendor/asus/X00TD/proprietary/vendor/lib/libchromatix_ov8856_hfr_90.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_ov8856_hfr_90.so \
-    vendor/asus/X00TD/proprietary/vendor/lib/libchromatix_ov8856_liveshot.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_ov8856_liveshot.so \
-    vendor/asus/X00TD/proprietary/vendor/lib/libchromatix_ov8856_postproc.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_ov8856_postproc.so \
-    vendor/asus/X00TD/proprietary/vendor/lib/libchromatix_ov8856_preview.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_ov8856_preview.so \
-    vendor/asus/X00TD/proprietary/vendor/lib/libchromatix_ov8856_snapshot.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_ov8856_snapshot.so \
-    vendor/asus/X00TD/proprietary/vendor/lib/libchromatix_ov8856_zsl_preview.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_ov8856_zsl_preview.so \
-    vendor/asus/X00TD/proprietary/vendor/lib/libchromatix_ov8856_zsl_video.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_ov8856_zsl_video.so \
     vendor/asus/X00TD/proprietary/vendor/lib/libdepthmapwrapper.so:$(TARGET_COPY_OUT_VENDOR)/lib/libdepthmapwrapper.so \
     vendor/asus/X00TD/proprietary/vendor/lib/libflash_pmic.so:$(TARGET_COPY_OUT_VENDOR)/lib/libflash_pmic.so \
     vendor/asus/X00TD/proprietary/vendor/lib/libjpegdhw.so:$(TARGET_COPY_OUT_VENDOR)/lib/libjpegdhw.so \
@@ -512,14 +684,10 @@ PRODUCT_COPY_FILES += \
     vendor/asus/X00TD/proprietary/vendor/lib/libmmcamera2_stats_algorithm.so:$(TARGET_COPY_OUT_VENDOR)/lib/libmmcamera2_stats_algorithm.so \
     vendor/asus/X00TD/proprietary/vendor/lib/libmmcamera2_stats_lib.so:$(TARGET_COPY_OUT_VENDOR)/lib/libmmcamera2_stats_lib.so \
     vendor/asus/X00TD/proprietary/vendor/lib/libmmcamera2_stats_modules.so:$(TARGET_COPY_OUT_VENDOR)/lib/libmmcamera2_stats_modules.so \
-    vendor/asus/X00TD/proprietary/vendor/lib/libmmcamera_arcsoftbokeh_lib.so:$(TARGET_COPY_OUT_VENDOR)/lib/libmmcamera_arcsoftbokeh_lib.so \
-    vendor/asus/X00TD/proprietary/vendor/lib/libmmcamera_atmel_at24c32e_eeprom.so:$(TARGET_COPY_OUT_VENDOR)/lib/libmmcamera_atmel_at24c32e_eeprom.so \
     vendor/asus/X00TD/proprietary/vendor/lib/libmmcamera_bokeh.so:$(TARGET_COPY_OUT_VENDOR)/lib/libmmcamera_bokeh.so \
-    vendor/asus/X00TD/proprietary/vendor/lib/libmmcamera_csidtg.so:$(TARGET_COPY_OUT_VENDOR)/lib/libmmcamera_csidtg.so \
     vendor/asus/X00TD/proprietary/vendor/lib/libmmcamera_dbg.so:$(TARGET_COPY_OUT_VENDOR)/lib/libmmcamera_dbg.so \
     vendor/asus/X00TD/proprietary/vendor/lib/libmmcamera_depth_map.so:$(TARGET_COPY_OUT_VENDOR)/lib/libmmcamera_depth_map.so \
     vendor/asus/X00TD/proprietary/vendor/lib/libmmcamera_dummyalgo.so:$(TARGET_COPY_OUT_VENDOR)/lib/libmmcamera_dummyalgo.so \
-    vendor/asus/X00TD/proprietary/vendor/lib/libmmcamera_dw9761b_2d_eeprom.so:$(TARGET_COPY_OUT_VENDOR)/lib/libmmcamera_dw9761b_2d_eeprom.so \
     vendor/asus/X00TD/proprietary/vendor/lib/libmmcamera_eebinparse.so:$(TARGET_COPY_OUT_VENDOR)/lib/libmmcamera_eebinparse.so \
     vendor/asus/X00TD/proprietary/vendor/lib/libmmcamera_eeprom_util.so:$(TARGET_COPY_OUT_VENDOR)/lib/libmmcamera_eeprom_util.so \
     vendor/asus/X00TD/proprietary/vendor/lib/libmmcamera_eztune_module.so:$(TARGET_COPY_OUT_VENDOR)/lib/libmmcamera_eztune_module.so \
@@ -587,12 +755,6 @@ PRODUCT_COPY_FILES += \
     vendor/asus/X00TD/proprietary/vendor/lib/libmmcamera_isp_sce40.so:$(TARGET_COPY_OUT_VENDOR)/lib/libmmcamera_isp_sce40.so \
     vendor/asus/X00TD/proprietary/vendor/lib/libmmcamera_isp_snr47.so:$(TARGET_COPY_OUT_VENDOR)/lib/libmmcamera_isp_snr47.so \
     vendor/asus/X00TD/proprietary/vendor/lib/libmmcamera_isp_sub_module.so:$(TARGET_COPY_OUT_VENDOR)/lib/libmmcamera_isp_sub_module.so \
-    vendor/asus/X00TD/proprietary/vendor/lib/libmmcamera_le2464c_eeprom.so:$(TARGET_COPY_OUT_VENDOR)/lib/libmmcamera_le2464c_eeprom.so \
-    vendor/asus/X00TD/proprietary/vendor/lib/libmmcamera_le2464c_master_eeprom.so:$(TARGET_COPY_OUT_VENDOR)/lib/libmmcamera_le2464c_master_eeprom.so \
-    vendor/asus/X00TD/proprietary/vendor/lib/libmmcamera_m24c64s_eeprom.so:$(TARGET_COPY_OUT_VENDOR)/lib/libmmcamera_m24c64s_eeprom.so \
-    vendor/asus/X00TD/proprietary/vendor/lib/libmmcamera_onsemi_cat24c16_eeprom.so:$(TARGET_COPY_OUT_VENDOR)/lib/libmmcamera_onsemi_cat24c16_eeprom.so \
-    vendor/asus/X00TD/proprietary/vendor/lib/libmmcamera_onsemi_cat24c32_eeprom.so:$(TARGET_COPY_OUT_VENDOR)/lib/libmmcamera_onsemi_cat24c32_eeprom.so \
-    vendor/asus/X00TD/proprietary/vendor/lib/libmmcamera_ov13855.so:$(TARGET_COPY_OUT_VENDOR)/lib/libmmcamera_ov13855.so \
     vendor/asus/X00TD/proprietary/vendor/lib/libmmcamera_ov13855_chicony_rear.so:$(TARGET_COPY_OUT_VENDOR)/lib/libmmcamera_ov13855_chicony_rear.so \
     vendor/asus/X00TD/proprietary/vendor/lib/libmmcamera_ov13855_chicony_rear_fm24c64d_eeprom.so:$(TARGET_COPY_OUT_VENDOR)/lib/libmmcamera_ov13855_chicony_rear_fm24c64d_eeprom.so \
     vendor/asus/X00TD/proprietary/vendor/lib/libmmcamera_ov13855_holitech_13m.so:$(TARGET_COPY_OUT_VENDOR)/lib/libmmcamera_ov13855_holitech_13m.so \
@@ -614,34 +776,23 @@ PRODUCT_COPY_FILES += \
     vendor/asus/X00TD/proprietary/vendor/lib/libmmcamera_pdaf.so:$(TARGET_COPY_OUT_VENDOR)/lib/libmmcamera_pdaf.so \
     vendor/asus/X00TD/proprietary/vendor/lib/libmmcamera_pdafcamif.so:$(TARGET_COPY_OUT_VENDOR)/lib/libmmcamera_pdafcamif.so \
     vendor/asus/X00TD/proprietary/vendor/lib/libmmcamera_ppbase_module.so:$(TARGET_COPY_OUT_VENDOR)/lib/libmmcamera_ppbase_module.so \
-    vendor/asus/X00TD/proprietary/vendor/lib/libmmcamera_qtech_f3l8yam_eeprom.so:$(TARGET_COPY_OUT_VENDOR)/lib/libmmcamera_qtech_f3l8yam_eeprom.so \
-    vendor/asus/X00TD/proprietary/vendor/lib/libmmcamera_qtech_f5670bq_eeprom.so:$(TARGET_COPY_OUT_VENDOR)/lib/libmmcamera_qtech_f5670bq_eeprom.so \
+    vendor/asus/X00TD/proprietary/vendor/lib/libmmcamera_ppeiscore.so:$(TARGET_COPY_OUT_VENDOR)/lib/libmmcamera_ppeiscore.so \
     vendor/asus/X00TD/proprietary/vendor/lib/libmmcamera_quadracfa.so:$(TARGET_COPY_OUT_VENDOR)/lib/libmmcamera_quadracfa.so \
-    vendor/asus/X00TD/proprietary/vendor/lib/libmmcamera_rohm_brcg064gwz_3_eeprom.so:$(TARGET_COPY_OUT_VENDOR)/lib/libmmcamera_rohm_brcg064gwz_3_eeprom.so \
     vendor/asus/X00TD/proprietary/vendor/lib/libmmcamera_stillmore_lib.so:$(TARGET_COPY_OUT_VENDOR)/lib/libmmcamera_stillmore_lib.so \
-    vendor/asus/X00TD/proprietary/vendor/lib/libmmcamera_sunny_8865_eeprom.so:$(TARGET_COPY_OUT_VENDOR)/lib/libmmcamera_sunny_8865_eeprom.so \
-    vendor/asus/X00TD/proprietary/vendor/lib/libmmcamera_sunny_ov13855_eeprom.so:$(TARGET_COPY_OUT_VENDOR)/lib/libmmcamera_sunny_ov13855_eeprom.so \
-    vendor/asus/X00TD/proprietary/vendor/lib/libmmcamera_sunny_q13v06k_eeprom.so:$(TARGET_COPY_OUT_VENDOR)/lib/libmmcamera_sunny_q13v06k_eeprom.so \
-    vendor/asus/X00TD/proprietary/vendor/lib/libmmcamera_sunny_q5v41b_eeprom.so:$(TARGET_COPY_OUT_VENDOR)/lib/libmmcamera_sunny_q5v41b_eeprom.so \
     vendor/asus/X00TD/proprietary/vendor/lib/libmmcamera_sw2d_lib.so:$(TARGET_COPY_OUT_VENDOR)/lib/libmmcamera_sw2d_lib.so \
     vendor/asus/X00TD/proprietary/vendor/lib/libmmcamera_thread_services.so:$(TARGET_COPY_OUT_VENDOR)/lib/libmmcamera_thread_services.so \
     vendor/asus/X00TD/proprietary/vendor/lib/libmmcamera_tintless_algo.so:$(TARGET_COPY_OUT_VENDOR)/lib/libmmcamera_tintless_algo.so \
     vendor/asus/X00TD/proprietary/vendor/lib/libmmcamera_tintless_bg_pca_algo.so:$(TARGET_COPY_OUT_VENDOR)/lib/libmmcamera_tintless_bg_pca_algo.so \
-    vendor/asus/X00TD/proprietary/vendor/lib/libmmcamera_truly_cma481_eeprom.so:$(TARGET_COPY_OUT_VENDOR)/lib/libmmcamera_truly_cma481_eeprom.so \
-    vendor/asus/X00TD/proprietary/vendor/lib/libmmcamera_truly_cmb433_eeprom.so:$(TARGET_COPY_OUT_VENDOR)/lib/libmmcamera_truly_cmb433_eeprom.so \
     vendor/asus/X00TD/proprietary/vendor/lib/libmmcamera_tuning.so:$(TARGET_COPY_OUT_VENDOR)/lib/libmmcamera_tuning.so \
     vendor/asus/X00TD/proprietary/vendor/lib/libmmcamera_tuning_lookup.so:$(TARGET_COPY_OUT_VENDOR)/lib/libmmcamera_tuning_lookup.so \
     vendor/asus/X00TD/proprietary/vendor/lib/libmmjpeg.so:$(TARGET_COPY_OUT_VENDOR)/lib/libmmjpeg.so \
     vendor/asus/X00TD/proprietary/vendor/lib/libmmqjpeg_codec.so:$(TARGET_COPY_OUT_VENDOR)/lib/libmmqjpeg_codec.so \
     vendor/asus/X00TD/proprietary/vendor/lib/libmmqjpegdma.so:$(TARGET_COPY_OUT_VENDOR)/lib/libmmqjpegdma.so \
-    vendor/asus/X00TD/proprietary/vendor/lib/libmorpho_video_refiner.so:$(TARGET_COPY_OUT_VENDOR)/lib/libmorpho_video_refiner.so \
-    vendor/asus/X00TD/proprietary/vendor/lib/libmpbase.so:$(TARGET_COPY_OUT_VENDOR)/lib/libmpbase.so \
     vendor/asus/X00TD/proprietary/vendor/lib/libqomx_jpegdec.so:$(TARGET_COPY_OUT_VENDOR)/lib/libqomx_jpegdec.so \
     vendor/asus/X00TD/proprietary/vendor/lib/libqomx_jpegenc.so:$(TARGET_COPY_OUT_VENDOR)/lib/libqomx_jpegenc.so \
     vendor/asus/X00TD/proprietary/vendor/lib/libqomx_jpegenc_pipe.so:$(TARGET_COPY_OUT_VENDOR)/lib/libqomx_jpegenc_pipe.so \
     vendor/asus/X00TD/proprietary/vendor/lib/libremosaic_daemon.so:$(TARGET_COPY_OUT_VENDOR)/lib/libremosaic_daemon.so \
     vendor/asus/X00TD/proprietary/vendor/lib/libseemore.so:$(TARGET_COPY_OUT_VENDOR)/lib/libseemore.so \
-    vendor/asus/X00TD/proprietary/vendor/lib/libvideoutils.so:$(TARGET_COPY_OUT_VENDOR)/lib/libvideoutils.so \
     vendor/asus/X00TD/proprietary/vendor/lib/vendor.qti.hardware.fingerprint@1.0.so:$(TARGET_COPY_OUT_VENDOR)/lib/vendor.qti.hardware.fingerprint@1.0.so \
     vendor/asus/X00TD/proprietary/vendor/lib64/hw/cdfinger.fingerprint.default.so:$(TARGET_COPY_OUT_VENDOR)/lib64/hw/cdfinger.fingerprint.default.so \
     vendor/asus/X00TD/proprietary/vendor/lib64/hw/fingerprint.sdm660.so:$(TARGET_COPY_OUT_VENDOR)/lib64/hw/fingerprint.sdm660.so \
