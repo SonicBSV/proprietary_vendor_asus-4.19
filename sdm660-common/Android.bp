@@ -271,17 +271,6 @@ cc_prebuilt_binary {
 }
 
 cc_prebuilt_binary {
-    name: "msm_irqbalance",
-    owner: "asus",
-    srcs: ["proprietary/vendor/bin/msm_irqbalance"],
-    strip: {
-        none: true,
-    },
-    check_elf_files: false,
-    vendor: true,
-}
-
-cc_prebuilt_binary {
     name: "netmgrd",
     owner: "asus",
     srcs: ["proprietary/vendor/bin/netmgrd"],

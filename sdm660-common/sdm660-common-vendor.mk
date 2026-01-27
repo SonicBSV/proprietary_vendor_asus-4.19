@@ -291,7 +291,6 @@ PRODUCT_PACKAGES += \
     loc_launcher \
     lowi-server \
     mlid \
-    msm_irqbalance \
     netmgrd \
     pd-mapper \
     pm-proxy \
