@@ -66,6 +66,10 @@ PRODUCT_COPY_FILES += \
 PRODUCT_PACKAGES += \
     sensors.ssc \
     vendor.qti.hardware.fingerprint@1.0 \
+    libc++_shared \
+    libdepthcomputation \
+    libeepromcutter \
+    libspectre \
     libactuator_imx486_holitech_12m \
     libchromatix_ar1337_common \
     libchromatix_ar1337_cpp_ds_chromatix \
@@ -247,7 +251,6 @@ PRODUCT_PACKAGES += \
     libmmcamera_imglib_faceproc_adspstub \
     libmmcamera_imx486 \
     libmmcamera_imx486_eeprom \
-    libmmcamera_irs1645 \
     libmmcamera_isp_abf48 \
     libmmcamera_isp_aec_bg_stats47 \
     libmmcamera_isp_bf_stats47 \
