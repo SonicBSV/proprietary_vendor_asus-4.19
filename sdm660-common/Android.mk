@@ -1,13 +1,5 @@
 #
-# Copyright (C) 2024 The LineageOS Project
-#
-# SPDX-License-Identifier: Apache-2.0
+# Automatically generated file. DO NOT MODIFY
 #
 
 LOCAL_PATH := $(call my-dir)
-
-ifeq ($(TARGET_DEVICE),$(filter $(TARGET_DEVICE),X00TD X01BD))
-
-include $(call all-subdir-makefiles,$(LOCAL_PATH))
-
-endif

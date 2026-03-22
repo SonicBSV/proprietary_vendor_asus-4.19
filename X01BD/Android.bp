@@ -4,8 +4,9 @@
 
 soong_namespace {
     imports: [
-        "device/asus/sdm660-common/qcom-caf",
+        "hardware/qcom-caf/sdm660",
         "vendor/asus/sdm660-common",
+        "vendor/qcom/opensource/display",
     ],
 }
 
@@ -20,15 +21,42 @@ cc_prebuilt_library_shared {
             srcs: [
                 "proprietary/vendor/lib/sensors.ssc.so",
             ],
+            shared_libs: [
+                "libutils",
+                "libcutils",
+                "liblog",
+                "libhardware",
+                "libsensor1",
+                "libsensor_reg",
+                "libdiag",
+                "libpower",
+                "libc++",
+                "libc",
+                "libm",
+                "libdl",
+            ],
         },
         android_arm64: {
             srcs: [
                 "proprietary/vendor/lib64/sensors.ssc.so",
             ],
+            shared_libs: [
+                "libutils",
+                "libcutils",
+                "liblog",
+                "libhardware",
+                "libsensor1",
+                "libsensor_reg",
+                "libdiag",
+                "libpower",
+                "libc++",
+                "libc",
+                "libm",
+                "libdl",
+            ],
         },
     },
     compile_multilib: "both",
-    check_elf_files: false,
     prefer: true,
     soc_specific: true,
 }
@@ -81,82 +109,6 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
-    name: "libc++_shared",
-    owner: "asus",
-    strip: {
-        none: true,
-    },
-    target: {
-        android_arm: {
-            srcs: [
-                "proprietary/vendor/lib/libc++_shared.so",
-            ],
-        },
-    },
-    compile_multilib: "32",
-    check_elf_files: false,
-    prefer: true,
-    soc_specific: true,
-}
-
-cc_prebuilt_library_shared {
-    name: "libdepthcomputation",
-    owner: "asus",
-    strip: {
-        none: true,
-    },
-    target: {
-        android_arm: {
-            srcs: [
-                "proprietary/vendor/lib/libdepthcomputation.so",
-            ],
-        },
-    },
-    compile_multilib: "32",
-    check_elf_files: false,
-    prefer: true,
-    soc_specific: true,
-}
-
-cc_prebuilt_library_shared {
-    name: "libeepromcutter",
-    owner: "asus",
-    strip: {
-        none: true,
-    },
-    target: {
-        android_arm: {
-            srcs: [
-                "proprietary/vendor/lib/libeepromcutter.so",
-            ],
-        },
-    },
-    compile_multilib: "32",
-    check_elf_files: false,
-    prefer: true,
-    soc_specific: true,
-}
-
-cc_prebuilt_library_shared {
-    name: "libspectre",
-    owner: "asus",
-    strip: {
-        none: true,
-    },
-    target: {
-        android_arm: {
-            srcs: [
-                "proprietary/vendor/lib/libspectre.so",
-            ],
-        },
-    },
-    compile_multilib: "32",
-    check_elf_files: false,
-    prefer: true,
-    soc_specific: true,
-}
-
-cc_prebuilt_library_shared {
     name: "libactuator_imx486_holitech_12m",
     owner: "asus",
     strip: {
@@ -173,6 +125,85 @@ cc_prebuilt_library_shared {
                 "libc++",
                 "libc",
                 "libm",
+                "libdl",
+            ],
+        },
+    },
+    compile_multilib: "32",
+    prefer: true,
+    soc_specific: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "libadsp_hvx_callback_skel",
+    owner: "asus",
+    strip: {
+        none: true,
+    },
+    target: {
+        android_arm: {
+            srcs: [
+                "proprietary/vendor/lib/libadsp_hvx_callback_skel.so",
+            ],
+            shared_libs: [
+                "libcutils",
+                "liblog",
+                "libmmcamera_dbg",
+                "libcdsprpc",
+                "libadsp_hvx_stub",
+                "libc++",
+                "libc",
+                "libm",
+                "libdl",
+            ],
+        },
+    },
+    compile_multilib: "32",
+    prefer: true,
+    soc_specific: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "libadsp_hvx_stub",
+    owner: "asus",
+    strip: {
+        none: true,
+    },
+    target: {
+        android_arm: {
+            srcs: [
+                "proprietary/vendor/lib/libadsp_hvx_stub.so",
+            ],
+            shared_libs: [
+                "libcutils",
+                "liblog",
+                "libmmcamera_dbg",
+                "libcdsprpc",
+                "libc++",
+                "libc",
+                "libm",
+                "libdl",
+            ],
+        },
+    },
+    compile_multilib: "32",
+    prefer: true,
+    soc_specific: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "libc++_shared",
+    owner: "asus",
+    strip: {
+        none: true,
+    },
+    target: {
+        android_arm: {
+            srcs: [
+                "proprietary/vendor/lib/libc++_shared.so",
+            ],
+            shared_libs: [
+                "libc",
                 "libdl",
             ],
         },
@@ -3745,6 +3776,32 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
+    name: "libdepthcomputation",
+    owner: "asus",
+    strip: {
+        none: true,
+    },
+    target: {
+        android_arm: {
+            srcs: [
+                "proprietary/vendor/lib/libdepthcomputation.so",
+            ],
+            shared_libs: [
+                "liblog",
+                "libspectre",
+                "libm",
+                "libc++_shared",
+                "libdl",
+                "libc",
+            ],
+        },
+    },
+    compile_multilib: "32",
+    prefer: true,
+    soc_specific: true,
+}
+
+cc_prebuilt_library_shared {
     name: "libdepthmapwrapper",
     owner: "asus",
     strip: {
@@ -3755,10 +3812,44 @@ cc_prebuilt_library_shared {
             srcs: [
                 "proprietary/vendor/lib/libdepthmapwrapper.so",
             ],
+            shared_libs: [
+                "liblog",
+                "libdepthcomputation",
+                "libspectre",
+                "libm",
+                "libc++_shared",
+                "libdl",
+                "libc",
+            ],
         },
     },
     compile_multilib: "32",
-    check_elf_files: false,
+    prefer: true,
+    soc_specific: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "libeepromcutter",
+    owner: "asus",
+    strip: {
+        none: true,
+    },
+    target: {
+        android_arm: {
+            srcs: [
+                "proprietary/vendor/lib/libeepromcutter.so",
+            ],
+            shared_libs: [
+                "liblog",
+                "libspectre",
+                "libm",
+                "libc++_shared",
+                "libdl",
+                "libc",
+            ],
+        },
+    },
+    compile_multilib: "32",
     prefer: true,
     soc_specific: true,
 }
@@ -3802,8 +3893,8 @@ cc_prebuilt_library_shared {
             ],
             shared_libs: [
                 "libcutils",
-                "libion",
                 "liblog",
+                "libion",
                 "libc++",
                 "libc",
                 "libm",
@@ -3829,8 +3920,8 @@ cc_prebuilt_library_shared {
             ],
             shared_libs: [
                 "libcutils",
-                "libion",
                 "liblog",
+                "libion",
                 "libc++",
                 "libc",
                 "libm",
@@ -3856,8 +3947,8 @@ cc_prebuilt_library_shared {
             ],
             shared_libs: [
                 "libcutils",
-                "libion",
                 "liblog",
+                "libion",
                 "libc++",
                 "libc",
                 "libm",
@@ -3883,10 +3974,10 @@ cc_prebuilt_library_shared {
             ],
             shared_libs: [
                 "libcutils",
-                "libion",
                 "libmmcamera2_mct",
                 "libmmcamera2_pp_buf_mgr",
                 "libmmcamera_dbg",
+                "libion",
                 "liblog",
                 "libc++",
                 "libc",
@@ -3913,10 +4004,10 @@ cc_prebuilt_library_shared {
             ],
             shared_libs: [
                 "libcutils",
-                "libion",
                 "libmmcamera2_mct",
                 "libmmcamera2_pp_buf_mgr",
                 "libmmcamera_dbg",
+                "libion",
                 "liblog",
                 "libc++",
                 "libc",
@@ -3969,11 +4060,11 @@ cc_prebuilt_library_shared {
             ],
             shared_libs: [
                 "liblog",
-                "libion",
                 "libcutils",
                 "libmmcamera2_mct",
                 "libmmcamera2_isp_modules",
                 "libmmcamera_dbg",
+                "libion",
                 "libc++",
                 "libc",
                 "libm",
@@ -3997,10 +4088,22 @@ cc_prebuilt_library_shared {
             srcs: [
                 "proprietary/vendor/lib/libmmcamera2_imglib_modules.so",
             ],
+            shared_libs: [
+                "liblog",
+                "libcutils",
+                "libmmcamera2_mct",
+                "libmmcamera_imglib",
+                "libmmcamera_dbg",
+                "libion",
+                "libcdsprpc",
+                "libc++",
+                "libc",
+                "libm",
+                "libdl",
+            ],
         },
     },
     compile_multilib: "32",
-    check_elf_files: false,
     prefer: true,
     soc_specific: true,
 }
@@ -4133,9 +4236,9 @@ cc_prebuilt_library_shared {
             ],
             shared_libs: [
                 "libcutils",
-                "libion",
                 "libmmcamera2_mct",
                 "libmmcamera_dbg",
+                "libion",
                 "liblog",
                 "libc++",
                 "libc",
@@ -4163,7 +4266,6 @@ cc_prebuilt_library_shared {
             shared_libs: [
                 "liblog",
                 "libcutils",
-                "libion",
                 "libmmcamera2_cpp_module",
                 "libmmcamera2_mct",
                 "libmmcamera2_imglib_modules",
@@ -4171,6 +4273,7 @@ cc_prebuilt_library_shared {
                 "libmmcamera_eztune_module",
                 "libmmcamera2_c2d_module",
                 "libmmcamera_dbg",
+                "libion",
                 "libc++",
                 "libc",
                 "libm",
@@ -4307,10 +4410,25 @@ cc_prebuilt_library_shared {
             srcs: [
                 "proprietary/vendor/lib/libmmcamera2_stats_modules.so",
             ],
+            shared_libs: [
+                "libcutils",
+                "libmmcamera2_mct",
+                "libmmcamera2_stats_lib",
+                "libmmcamera2_stats_algorithm",
+                "libxml2",
+                "libutils",
+                "libmmcamera_dbg",
+                "libhidlbase",
+                "android.frameworks.sensorservice@1.0",
+                "libsensor1",
+                "libc++",
+                "libc",
+                "libm",
+                "libdl",
+            ],
         },
     },
     compile_multilib: "32",
-    check_elf_files: false,
     prefer: true,
     soc_specific: true,
 }
@@ -4379,10 +4497,26 @@ cc_prebuilt_library_shared {
             srcs: [
                 "proprietary/vendor/lib/libmmcamera_bokeh.so",
             ],
+            shared_libs: [
+                "libcutils",
+                "liblog",
+                "libGLESv2_adreno",
+                "libEGL",
+                "libGLESv2",
+                "libhardware",
+                "libqdMetaData",
+                "libutils",
+                "libui",
+                "libmmcamera_dbg",
+                "libmmcamera_imglib",
+                "libc++",
+                "libc",
+                "libm",
+                "libdl",
+            ],
         },
     },
     compile_multilib: "32",
-    check_elf_files: false,
     prefer: true,
     soc_specific: true,
 }
@@ -4424,10 +4558,22 @@ cc_prebuilt_library_shared {
             srcs: [
                 "proprietary/vendor/lib/libmmcamera_depth_map.so",
             ],
+            shared_libs: [
+                "libdepthmapwrapper",
+                "liblog",
+                "libspectre",
+                "libc++_shared",
+                "libdepthcomputation",
+                "libeepromcutter",
+                "libmmcamera_irs2877_polar_eeprom",
+                "libc++",
+                "libc",
+                "libm",
+                "libdl",
+            ],
         },
     },
     compile_multilib: "32",
-    check_elf_files: false,
     prefer: true,
     soc_specific: true,
 }
@@ -4786,10 +4932,21 @@ cc_prebuilt_library_shared {
             srcs: [
                 "proprietary/vendor/lib/libmmcamera_imglib.so",
             ],
+            shared_libs: [
+                "libcutils",
+                "liblog",
+                "libmmcamera_dbg",
+                "libion",
+                "libcdsprpc",
+                "libfastcvopt",
+                "libc++",
+                "libc",
+                "libm",
+                "libdl",
+            ],
         },
     },
     compile_multilib: "32",
-    check_elf_files: false,
     prefer: true,
     soc_specific: true,
 }
@@ -4805,11 +4962,19 @@ cc_prebuilt_library_shared {
             srcs: [
                 "proprietary/vendor/lib/libmmcamera_imglib_faceproc_adspstub.so",
             ],
+            shared_libs: [
+                "libcdsprpc",
+                "libcutils",
+                "liblog",
+                "libc++",
+                "libc",
+                "libm",
+                "libdl",
+            ],
         },
     },
     compile_multilib: "32",
     prefer: true,
-    check_elf_files: false,
     soc_specific: true,
 }
 
@@ -4854,6 +5019,34 @@ cc_prebuilt_library_shared {
                 "liblog",
                 "libcutils",
                 "libmmcamera_eeprom_util",
+                "libc++",
+                "libc",
+                "libm",
+                "libdl",
+            ],
+        },
+    },
+    compile_multilib: "32",
+    prefer: true,
+    soc_specific: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "libmmcamera_irs2877_polar_eeprom",
+    owner: "asus",
+    strip: {
+        none: true,
+    },
+    target: {
+        android_arm: {
+            srcs: [
+                "proprietary/vendor/lib/libmmcamera_irs2877_polar_eeprom.so",
+            ],
+            shared_libs: [
+                "liblog",
+                "libcutils",
+                "libmmcamera_eeprom_util",
+                "libeepromcutter",
                 "libc++",
                 "libc",
                 "libm",
@@ -6361,10 +6554,26 @@ cc_prebuilt_library_shared {
             srcs: [
                 "proprietary/vendor/lib/libmmcamera_ppeiscore.so",
             ],
+            shared_libs: [
+                "libcutils",
+                "liblog",
+                "libGLESv2_adreno",
+                "libEGL",
+                "libGLESv2",
+                "libhardware",
+                "libqdMetaData",
+                "libutils",
+                "libui",
+                "libmmcamera_dbg",
+                "libmmcamera_imglib",
+                "libc++",
+                "libc",
+                "libm",
+                "libdl",
+            ],
         },
     },
     compile_multilib: "32",
-    check_elf_files: false,
     prefer: true,
     soc_specific: true,
 }
@@ -6487,10 +6696,20 @@ cc_prebuilt_library_shared {
             srcs: [
                 "proprietary/vendor/lib/libmmcamera_sw2d_lib.so",
             ],
+            shared_libs: [
+                "libmmcamera_imglib",
+                "libmmcamera_dbg",
+                "libcutils",
+                "liblog",
+                "libfastcvopt",
+                "libc++",
+                "libc",
+                "libm",
+                "libdl",
+            ],
         },
     },
     compile_multilib: "32",
-    check_elf_files: false,
     prefer: true,
     soc_specific: true,
 }
@@ -6587,10 +6806,28 @@ cc_prebuilt_library_shared {
             srcs: [
                 "proprietary/vendor/lib/libmmcamera_tuning.so",
             ],
+            shared_libs: [
+                "libmmcamera_tuning_lookup",
+                "libmmcamera2_mct",
+                "libmmcamera2_stats_modules",
+                "libmmcamera2_iface_modules",
+                "libmmcamera2_isp_modules",
+                "libmmcamera2_sensor_modules",
+                "libmmcamera2_pproc_modules",
+                "libmmcamera2_imglib_modules",
+                "libmmcamera_eztune_module",
+                "liblog",
+                "libcutils",
+                "libfastcvopt",
+                "libmmcamera_dbg",
+                "libc++",
+                "libc",
+                "libm",
+                "libdl",
+            ],
         },
     },
     compile_multilib: "32",
-    check_elf_files: false,
     prefer: true,
     soc_specific: true,
 }
@@ -6606,11 +6843,19 @@ cc_prebuilt_library_shared {
             srcs: [
                 "proprietary/vendor/lib/libmmcamera_tuning_lookup.so",
             ],
+            shared_libs: [
+                "liblog",
+                "libcutils",
+                "libfastcvopt",
+                "libc++",
+                "libc",
+                "libm",
+                "libdl",
+            ],
         },
     },
     compile_multilib: "32",
     prefer: true,
-    check_elf_files: false,
     soc_specific: true,
 }
 
@@ -6625,10 +6870,19 @@ cc_prebuilt_library_shared {
             srcs: [
                 "proprietary/vendor/lib/libmmjpeg.so",
             ],
+            shared_libs: [
+                "libcutils",
+                "libfastcvopt",
+                "liblog",
+                "libutils",
+                "libc++",
+                "libc",
+                "libm",
+                "libdl",
+            ],
         },
     },
     compile_multilib: "32",
-    check_elf_files: false,
     prefer: true,
     soc_specific: true,
 }
@@ -6644,10 +6898,22 @@ cc_prebuilt_library_shared {
             srcs: [
                 "proprietary/vendor/lib/libmmqjpeg_codec.so",
             ],
+            shared_libs: [
+                "libcutils",
+                "liblog",
+                "libmmjpeg",
+                "libmmqjpegdma",
+                "libfastcvopt",
+                "libcrypto",
+                "libion",
+                "libc++",
+                "libc",
+                "libm",
+                "libdl",
+            ],
         },
     },
     compile_multilib: "32",
-    check_elf_files: false,
     prefer: true,
     soc_specific: true,
 }
@@ -6665,8 +6931,8 @@ cc_prebuilt_library_shared {
             ],
             shared_libs: [
                 "libcutils",
-                "libion",
                 "liblog",
+                "libion",
                 "libc++",
                 "libc",
                 "libm",
@@ -6720,10 +6986,10 @@ cc_prebuilt_library_shared {
             ],
             shared_libs: [
                 "libcutils",
-                "libion",
                 "liblog",
                 "libmmjpeg",
                 "libmmqjpeg_codec",
+                "libion",
                 "libc++",
                 "libc",
                 "libm",
@@ -6749,11 +7015,11 @@ cc_prebuilt_library_shared {
             ],
             shared_libs: [
                 "libcutils",
-                "libion",
                 "liblog",
                 "libmmqjpeg_codec",
                 "libmmjpeg",
                 "libmmqjpegdma",
+                "libion",
                 "libc++",
                 "libc",
                 "libm",
@@ -6818,6 +7084,31 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
+    name: "libspectre",
+    owner: "asus",
+    strip: {
+        none: true,
+    },
+    target: {
+        android_arm: {
+            srcs: [
+                "proprietary/vendor/lib/libspectre.so",
+            ],
+            shared_libs: [
+                "libdl",
+                "liblog",
+                "libm",
+                "libc++_shared",
+                "libc",
+            ],
+        },
+    },
+    compile_multilib: "32",
+    prefer: true,
+    soc_specific: true,
+}
+
+cc_prebuilt_library_shared {
     name: "cdfinger.fingerprint.default",
     owner: "asus",
     strip: {
@@ -6828,12 +7119,20 @@ cc_prebuilt_library_shared {
             srcs: [
                 "proprietary/vendor/lib64/hw/cdfinger.fingerprint.default.so",
             ],
+            shared_libs: [
+                "liblog",
+                "libc",
+                "libcutils",
+                "libutils",
+                "libQSEEComAPI",
+                "libm",
+                "libdl",
+            ],
         },
     },
     compile_multilib: "64",
     relative_install_path: "hw",
     prefer: true,
-    check_elf_files: false,
     soc_specific: true,
 }
 
@@ -6848,11 +7147,25 @@ cc_prebuilt_library_shared {
             srcs: [
                 "proprietary/vendor/lib64/hw/fingerprint.focaltech.default.so",
             ],
+            shared_libs: [
+                "liblog",
+                "libbinder",
+                "libutils",
+                "libcutils",
+                "libc++",
+                "libbase",
+                "libhidlbase",
+                "libhidltransport",
+                "libhwbinder",
+                "libQSEEComAPI",
+                "libc",
+                "libm",
+                "libdl",
+            ],
         },
     },
     compile_multilib: "64",
     relative_install_path: "hw",
-    check_elf_files: false,
     prefer: true,
     soc_specific: true,
 }
@@ -6867,12 +7180,19 @@ dex_import {
 }
 
 cc_prebuilt_binary {
-    name: "sensors.qti",
+    name: "cdsprpcd",
     owner: "asus",
     target: {
         android_arm64: {
             srcs: [
-                "proprietary/vendor/bin/sensors.qti",
+                "proprietary/vendor/bin/cdsprpcd",
+            ],
+            shared_libs: [
+                "liblog",
+                "libc++",
+                "libc",
+                "libm",
+                "libdl",
             ],
         },
     },
@@ -6881,6 +7201,37 @@ cc_prebuilt_binary {
         none: true,
     },
     prefer: true,
-    check_elf_files: false,
+    soc_specific: true,
+}
+
+cc_prebuilt_binary {
+    name: "sensors.qti",
+    owner: "asus",
+    target: {
+        android_arm64: {
+            srcs: [
+                "proprietary/vendor/bin/sensors.qti",
+            ],
+            shared_libs: [
+                "libdiag",
+                "liblog",
+                "libcutils",
+                "libqmi_common_so",
+                "libqmi_cci",
+                "libqmi_encdec",
+                "libqmi_csi",
+                "libsensor1",
+                "libc++",
+                "libc",
+                "libm",
+                "libdl",
+            ],
+        },
+    },
+    compile_multilib: "64",
+    strip: {
+        none: true,
+    },
+    prefer: true,
     soc_specific: true,
 }
