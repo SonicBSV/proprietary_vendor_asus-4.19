@@ -697,9 +697,6 @@ PRODUCT_PACKAGES += \
     qti \
     rmt_storage \
     ssgqmigd \
-    ssr_diag \
-    ssr_setup \
-    subsystem_ramdump \
     tftp_server \
     time_daemon \
     xtra-daemon
