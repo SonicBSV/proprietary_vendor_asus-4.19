@@ -1,0 +1,27 @@
+#  @file    vendor.qti.hardware.perf@2.2-service.rc
+#  @brief   Defination perf service
+#
+#  DESCRIPTION
+#  ---------------------------------------------------------------------------
+#       Copyright (c) 2019-2020 Qualcomm Technologies, Inc.
+#       All Rights Reserved.
+#       Confidential and Proprietary - Qualcomm Technologies, Inc.
+#  ---------------------------------------------------------------------------
+service vendor.perf-hal-2-2 /vendor/bin/hw/vendor.qti.hardware.perf@2.2-service
+    class hal
+    user root
+    group root readproc oem_2907 system
+    socket perfd seqpacket 0666 root system
+    task_profiles ServiceCapacityLow
+    capabilities SYS_NICE
+    ioprio rt 4
+    writepid /dev/cpuset/system-background/tasks
+
+on property:vendor.post_boot.parsed=1
+    # CPU input boost
+    write /sys/devices/system/cpu/cpu_boost/input_boost_freq "0:1200000 4:1400000"
+    write /sys/devices/system/cpu/cpu_boost/input_boost_ms 120
+
+on property:sys.boot_completed=1
+    # Sched boost enable
+    write /proc/sys/kernel/sched_boost 1
