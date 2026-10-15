@@ -6854,6 +6854,44 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
+    name: "libxtwifi_server_protocol",
+    owner: "asus",
+    strip: {
+        none: true,
+    },
+    target: {
+        android_arm64: {
+            srcs: [
+                "proprietary/vendor/lib64/libxtwifi_server_protocol.so",
+            ],
+        },
+    },
+    compile_multilib: "64",
+    check_elf_files: false,
+    prefer: true,
+    soc_specific: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "libxtwifi_server_protocol_uri_v3",
+    owner: "asus",
+    strip: {
+        none: true,
+    },
+    target: {
+        android_arm64: {
+            srcs: [
+                "proprietary/vendor/lib64/libxtwifi_server_protocol_uri_v3.so",
+            ],
+        },
+    },
+    compile_multilib: "64",
+    check_elf_files: false,
+    prefer: true,
+    soc_specific: true,
+}
+
+cc_prebuilt_library_shared {
     name: "qcrilHalMarshal",
     owner: "asus",
     strip: {
@@ -16323,6 +16361,44 @@ cc_prebuilt_binary {
         none: true,
     },
     prefer: true,
+    soc_specific: true,
+}
+
+cc_prebuilt_binary {
+    name: "xtwifi-client",
+    owner: "asus",
+    target: {
+        android_arm64: {
+            srcs: [
+                "proprietary/vendor/bin/xtwifi-client",
+            ],
+        },
+    },
+    compile_multilib: "64",
+    strip: {
+        none: true,
+    },
+    prefer: true,
+    check_elf_files: false,
+    soc_specific: true,
+}
+
+cc_prebuilt_binary {
+    name: "xtwifi-inet-agent",
+    owner: "asus",
+    target: {
+        android_arm64: {
+            srcs: [
+                "proprietary/vendor/bin/xtwifi-inet-agent",
+            ],
+        },
+    },
+    compile_multilib: "64",
+    strip: {
+        none: true,
+    },
+    prefer: true,
+    check_elf_files: false,
     soc_specific: true,
 }
 

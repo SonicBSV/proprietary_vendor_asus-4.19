@@ -297,6 +297,8 @@ PRODUCT_PACKAGES += \
     libwvhidl \
     libxml \
     libxtadapter \
+    libxtwifi_server_protocol \
+    libxtwifi_server_protocol_uri_v3 \
     qcrilHalMarshal \
     qcril_hal_client \
     qcrild_librilutils \
@@ -699,7 +701,9 @@ PRODUCT_PACKAGES += \
     ssgqmigd \
     tftp_server \
     time_daemon \
-    xtra-daemon
+    xtra-daemon \
+    xtwifi-client \
+    xtwifi-inet-agent
 
 PRODUCT_PACKAGES += \
     system_ext_priv-app_ims_lib_arm64_libimscamera_jni_so \
