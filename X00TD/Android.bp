@@ -265,85 +265,6 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
-    name: "libadsp_hvx_callback_skel",
-    owner: "asus",
-    strip: {
-        none: true,
-    },
-    target: {
-        android_arm: {
-            srcs: [
-                "proprietary/vendor/lib/libadsp_hvx_callback_skel.so",
-            ],
-            shared_libs: [
-                "libcutils",
-                "liblog",
-                "libmmcamera_dbg",
-                "libcdsprpc",
-                "libadsp_hvx_stub",
-                "libc++",
-                "libc",
-                "libm",
-                "libdl",
-            ],
-        },
-    },
-    compile_multilib: "32",
-    prefer: true,
-    soc_specific: true,
-}
-
-cc_prebuilt_library_shared {
-    name: "libadsp_hvx_stub",
-    owner: "asus",
-    strip: {
-        none: true,
-    },
-    target: {
-        android_arm: {
-            srcs: [
-                "proprietary/vendor/lib/libadsp_hvx_stub.so",
-            ],
-            shared_libs: [
-                "libcutils",
-                "liblog",
-                "libmmcamera_dbg",
-                "libcdsprpc",
-                "libc++",
-                "libc",
-                "libm",
-                "libdl",
-            ],
-        },
-    },
-    compile_multilib: "32",
-    prefer: true,
-    soc_specific: true,
-}
-
-cc_prebuilt_library_shared {
-    name: "libc++_shared",
-    owner: "asus",
-    strip: {
-        none: true,
-    },
-    target: {
-        android_arm: {
-            srcs: [
-                "proprietary/vendor/lib/libc++_shared.so",
-            ],
-            shared_libs: [
-                "libc",
-                "libdl",
-            ],
-        },
-    },
-    compile_multilib: "32",
-    prefer: true,
-    soc_specific: true,
-}
-
-cc_prebuilt_library_shared {
     name: "libchromatix_gc5025_ofilm_13m_common",
     owner: "asus",
     strip: {
@@ -2043,110 +1964,6 @@ cc_prebuilt_library_shared {
         android_arm: {
             srcs: [
                 "proprietary/vendor/lib/libchromatix_hi1333_ofilm_13m_default_video_bu64297.so",
-            ],
-            shared_libs: [
-                "libcutils",
-                "liblog",
-                "libc++",
-                "libc",
-                "libm",
-                "libdl",
-            ],
-        },
-    },
-    compile_multilib: "32",
-    prefer: true,
-    soc_specific: true,
-}
-
-cc_prebuilt_library_shared {
-    name: "libchromatix_hi1333_ofilm_13m_eis_video_bu64297",
-    owner: "asus",
-    strip: {
-        none: true,
-    },
-    target: {
-        android_arm: {
-            srcs: [
-                "proprietary/vendor/lib/libchromatix_hi1333_ofilm_13m_eis_video_bu64297.so",
-            ],
-            shared_libs: [
-                "libcutils",
-                "liblog",
-                "libc++",
-                "libc",
-                "libm",
-                "libdl",
-            ],
-        },
-    },
-    compile_multilib: "32",
-    prefer: true,
-    soc_specific: true,
-}
-
-cc_prebuilt_library_shared {
-    name: "libchromatix_hi1333_ofilm_13m_hdr",
-    owner: "asus",
-    strip: {
-        none: true,
-    },
-    target: {
-        android_arm: {
-            srcs: [
-                "proprietary/vendor/lib/libchromatix_hi1333_ofilm_13m_hdr.so",
-            ],
-            shared_libs: [
-                "libcutils",
-                "liblog",
-                "libc++",
-                "libc",
-                "libm",
-                "libdl",
-            ],
-        },
-    },
-    compile_multilib: "32",
-    prefer: true,
-    soc_specific: true,
-}
-
-cc_prebuilt_library_shared {
-    name: "libchromatix_hi1333_ofilm_13m_hdr_cpp",
-    owner: "asus",
-    strip: {
-        none: true,
-    },
-    target: {
-        android_arm: {
-            srcs: [
-                "proprietary/vendor/lib/libchromatix_hi1333_ofilm_13m_hdr_cpp.so",
-            ],
-            shared_libs: [
-                "libcutils",
-                "liblog",
-                "libc++",
-                "libc",
-                "libm",
-                "libdl",
-            ],
-        },
-    },
-    compile_multilib: "32",
-    prefer: true,
-    soc_specific: true,
-}
-
-cc_prebuilt_library_shared {
-    name: "libchromatix_hi1333_ofilm_13m_hdr_video_3a",
-    owner: "asus",
-    strip: {
-        none: true,
-    },
-    target: {
-        android_arm: {
-            srcs: [
-                "proprietary/vendor/lib/libchromatix_hi1333_ofilm_13m_hdr_video_3a.so",
             ],
             shared_libs: [
                 "libcutils",
@@ -4894,32 +4711,6 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
-    name: "libchromatix_hi846_tsp_front_eis_video",
-    owner: "asus",
-    strip: {
-        none: true,
-    },
-    target: {
-        android_arm: {
-            srcs: [
-                "proprietary/vendor/lib/libchromatix_hi846_tsp_front_eis_video.so",
-            ],
-            shared_libs: [
-                "libcutils",
-                "liblog",
-                "libc++",
-                "libc",
-                "libm",
-                "libdl",
-            ],
-        },
-    },
-    compile_multilib: "32",
-    prefer: true,
-    soc_specific: true,
-}
-
-cc_prebuilt_library_shared {
     name: "libchromatix_hi846_tsp_front_hfr_120",
     owner: "asus",
     strip: {
@@ -6194,110 +5985,6 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
-    name: "libchromatix_ov13855_holitech_13m_eis_video_bu64297",
-    owner: "asus",
-    strip: {
-        none: true,
-    },
-    target: {
-        android_arm: {
-            srcs: [
-                "proprietary/vendor/lib/libchromatix_ov13855_holitech_13m_eis_video_bu64297.so",
-            ],
-            shared_libs: [
-                "libcutils",
-                "liblog",
-                "libc++",
-                "libc",
-                "libm",
-                "libdl",
-            ],
-        },
-    },
-    compile_multilib: "32",
-    prefer: true,
-    soc_specific: true,
-}
-
-cc_prebuilt_library_shared {
-    name: "libchromatix_ov13855_holitech_13m_hdr",
-    owner: "asus",
-    strip: {
-        none: true,
-    },
-    target: {
-        android_arm: {
-            srcs: [
-                "proprietary/vendor/lib/libchromatix_ov13855_holitech_13m_hdr.so",
-            ],
-            shared_libs: [
-                "libcutils",
-                "liblog",
-                "libc++",
-                "libc",
-                "libm",
-                "libdl",
-            ],
-        },
-    },
-    compile_multilib: "32",
-    prefer: true,
-    soc_specific: true,
-}
-
-cc_prebuilt_library_shared {
-    name: "libchromatix_ov13855_holitech_13m_hdr_3a",
-    owner: "asus",
-    strip: {
-        none: true,
-    },
-    target: {
-        android_arm: {
-            srcs: [
-                "proprietary/vendor/lib/libchromatix_ov13855_holitech_13m_hdr_3a.so",
-            ],
-            shared_libs: [
-                "libcutils",
-                "liblog",
-                "libc++",
-                "libc",
-                "libm",
-                "libdl",
-            ],
-        },
-    },
-    compile_multilib: "32",
-    prefer: true,
-    soc_specific: true,
-}
-
-cc_prebuilt_library_shared {
-    name: "libchromatix_ov13855_holitech_13m_hdr_cpp",
-    owner: "asus",
-    strip: {
-        none: true,
-    },
-    target: {
-        android_arm: {
-            srcs: [
-                "proprietary/vendor/lib/libchromatix_ov13855_holitech_13m_hdr_cpp.so",
-            ],
-            shared_libs: [
-                "libcutils",
-                "liblog",
-                "libc++",
-                "libc",
-                "libm",
-                "libdl",
-            ],
-        },
-    },
-    compile_multilib: "32",
-    prefer: true,
-    soc_specific: true,
-}
-
-cc_prebuilt_library_shared {
     name: "libchromatix_ov13855_holitech_13m_hfr_120",
     owner: "asus",
     strip: {
@@ -6957,32 +6644,6 @@ cc_prebuilt_library_shared {
         android_arm: {
             srcs: [
                 "proprietary/vendor/lib/libchromatix_ov16880_qtech_front_default_video_bu64297.so",
-            ],
-            shared_libs: [
-                "libcutils",
-                "liblog",
-                "libc++",
-                "libc",
-                "libm",
-                "libdl",
-            ],
-        },
-    },
-    compile_multilib: "32",
-    prefer: true,
-    soc_specific: true,
-}
-
-cc_prebuilt_library_shared {
-    name: "libchromatix_ov16880_qtech_front_eis_video_bu64297",
-    owner: "asus",
-    strip: {
-        none: true,
-    },
-    target: {
-        android_arm: {
-            srcs: [
-                "proprietary/vendor/lib/libchromatix_ov16880_qtech_front_eis_video_bu64297.so",
             ],
             shared_libs: [
                 "libcutils",
@@ -7676,110 +7337,6 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
-    name: "libchromatix_ov16885_holitech_16m_eis_video_bu64297",
-    owner: "asus",
-    strip: {
-        none: true,
-    },
-    target: {
-        android_arm: {
-            srcs: [
-                "proprietary/vendor/lib/libchromatix_ov16885_holitech_16m_eis_video_bu64297.so",
-            ],
-            shared_libs: [
-                "libcutils",
-                "liblog",
-                "libc++",
-                "libc",
-                "libm",
-                "libdl",
-            ],
-        },
-    },
-    compile_multilib: "32",
-    prefer: true,
-    soc_specific: true,
-}
-
-cc_prebuilt_library_shared {
-    name: "libchromatix_ov16885_holitech_16m_hdr",
-    owner: "asus",
-    strip: {
-        none: true,
-    },
-    target: {
-        android_arm: {
-            srcs: [
-                "proprietary/vendor/lib/libchromatix_ov16885_holitech_16m_hdr.so",
-            ],
-            shared_libs: [
-                "libcutils",
-                "liblog",
-                "libc++",
-                "libc",
-                "libm",
-                "libdl",
-            ],
-        },
-    },
-    compile_multilib: "32",
-    prefer: true,
-    soc_specific: true,
-}
-
-cc_prebuilt_library_shared {
-    name: "libchromatix_ov16885_holitech_16m_hdr_3a",
-    owner: "asus",
-    strip: {
-        none: true,
-    },
-    target: {
-        android_arm: {
-            srcs: [
-                "proprietary/vendor/lib/libchromatix_ov16885_holitech_16m_hdr_3a.so",
-            ],
-            shared_libs: [
-                "libcutils",
-                "liblog",
-                "libc++",
-                "libc",
-                "libm",
-                "libdl",
-            ],
-        },
-    },
-    compile_multilib: "32",
-    prefer: true,
-    soc_specific: true,
-}
-
-cc_prebuilt_library_shared {
-    name: "libchromatix_ov16885_holitech_16m_hdr_cpp",
-    owner: "asus",
-    strip: {
-        none: true,
-    },
-    target: {
-        android_arm: {
-            srcs: [
-                "proprietary/vendor/lib/libchromatix_ov16885_holitech_16m_hdr_cpp.so",
-            ],
-            shared_libs: [
-                "libcutils",
-                "liblog",
-                "libc++",
-                "libc",
-                "libm",
-                "libdl",
-            ],
-        },
-    },
-    compile_multilib: "32",
-    prefer: true,
-    soc_specific: true,
-}
-
-cc_prebuilt_library_shared {
     name: "libchromatix_ov16885_holitech_16m_hfr_120",
     owner: "asus",
     strip: {
@@ -8439,110 +7996,6 @@ cc_prebuilt_library_shared {
         android_arm: {
             srcs: [
                 "proprietary/vendor/lib/libchromatix_ov16885_ofilm_16m_default_video_bu64297.so",
-            ],
-            shared_libs: [
-                "libcutils",
-                "liblog",
-                "libc++",
-                "libc",
-                "libm",
-                "libdl",
-            ],
-        },
-    },
-    compile_multilib: "32",
-    prefer: true,
-    soc_specific: true,
-}
-
-cc_prebuilt_library_shared {
-    name: "libchromatix_ov16885_ofilm_16m_eis_video_bu64297",
-    owner: "asus",
-    strip: {
-        none: true,
-    },
-    target: {
-        android_arm: {
-            srcs: [
-                "proprietary/vendor/lib/libchromatix_ov16885_ofilm_16m_eis_video_bu64297.so",
-            ],
-            shared_libs: [
-                "libcutils",
-                "liblog",
-                "libc++",
-                "libc",
-                "libm",
-                "libdl",
-            ],
-        },
-    },
-    compile_multilib: "32",
-    prefer: true,
-    soc_specific: true,
-}
-
-cc_prebuilt_library_shared {
-    name: "libchromatix_ov16885_ofilm_16m_hdr",
-    owner: "asus",
-    strip: {
-        none: true,
-    },
-    target: {
-        android_arm: {
-            srcs: [
-                "proprietary/vendor/lib/libchromatix_ov16885_ofilm_16m_hdr.so",
-            ],
-            shared_libs: [
-                "libcutils",
-                "liblog",
-                "libc++",
-                "libc",
-                "libm",
-                "libdl",
-            ],
-        },
-    },
-    compile_multilib: "32",
-    prefer: true,
-    soc_specific: true,
-}
-
-cc_prebuilt_library_shared {
-    name: "libchromatix_ov16885_ofilm_16m_hdr_3a",
-    owner: "asus",
-    strip: {
-        none: true,
-    },
-    target: {
-        android_arm: {
-            srcs: [
-                "proprietary/vendor/lib/libchromatix_ov16885_ofilm_16m_hdr_3a.so",
-            ],
-            shared_libs: [
-                "libcutils",
-                "liblog",
-                "libc++",
-                "libc",
-                "libm",
-                "libdl",
-            ],
-        },
-    },
-    compile_multilib: "32",
-    prefer: true,
-    soc_specific: true,
-}
-
-cc_prebuilt_library_shared {
-    name: "libchromatix_ov16885_ofilm_16m_hdr_cpp",
-    owner: "asus",
-    strip: {
-        none: true,
-    },
-    target: {
-        android_arm: {
-            srcs: [
-                "proprietary/vendor/lib/libchromatix_ov16885_ofilm_16m_hdr_cpp.so",
             ],
             shared_libs: [
                 "libcutils",
@@ -9288,32 +8741,6 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
-    name: "libchromatix_ov8856_chicony_front_eis_video",
-    owner: "asus",
-    strip: {
-        none: true,
-    },
-    target: {
-        android_arm: {
-            srcs: [
-                "proprietary/vendor/lib/libchromatix_ov8856_chicony_front_eis_video.so",
-            ],
-            shared_libs: [
-                "libcutils",
-                "liblog",
-                "libc++",
-                "libc",
-                "libm",
-                "libdl",
-            ],
-        },
-    },
-    compile_multilib: "32",
-    prefer: true,
-    soc_specific: true,
-}
-
-cc_prebuilt_library_shared {
     name: "libchromatix_ov8856_chicony_front_hfr_120",
     owner: "asus",
     strip: {
@@ -9548,32 +8975,6 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
-    name: "libdepthcomputation",
-    owner: "asus",
-    strip: {
-        none: true,
-    },
-    target: {
-        android_arm: {
-            srcs: [
-                "proprietary/vendor/lib/libdepthcomputation.so",
-            ],
-            shared_libs: [
-                "liblog",
-                "libspectre",
-                "libm",
-                "libc++_shared",
-                "libdl",
-                "libc",
-            ],
-        },
-    },
-    compile_multilib: "32",
-    prefer: true,
-    soc_specific: true,
-}
-
-cc_prebuilt_library_shared {
     name: "libdepthmapwrapper",
     owner: "asus",
     strip: {
@@ -9585,37 +8986,9 @@ cc_prebuilt_library_shared {
                 "proprietary/vendor/lib/libdepthmapwrapper.so",
             ],
             shared_libs: [
+                "libcutils",
                 "liblog",
-                "libdepthcomputation",
-                "libspectre",
                 "libm",
-                "libc++_shared",
-                "libdl",
-                "libc",
-            ],
-        },
-    },
-    compile_multilib: "32",
-    prefer: true,
-    soc_specific: true,
-}
-
-cc_prebuilt_library_shared {
-    name: "libeepromcutter",
-    owner: "asus",
-    strip: {
-        none: true,
-    },
-    target: {
-        android_arm: {
-            srcs: [
-                "proprietary/vendor/lib/libeepromcutter.so",
-            ],
-            shared_libs: [
-                "liblog",
-                "libspectre",
-                "libm",
-                "libc++_shared",
                 "libdl",
                 "libc",
             ],
@@ -10183,6 +9556,8 @@ cc_prebuilt_library_shared {
                 "proprietary/vendor/lib/libmmcamera2_stats_modules.so",
             ],
             shared_libs: [
+                "libmmcamera2_is",
+                "libhidltransport",
                 "libcutils",
                 "libmmcamera2_mct",
                 "libmmcamera2_stats_lib",
@@ -10280,11 +9655,6 @@ cc_prebuilt_library_shared {
             shared_libs: [
                 "libdepthmapwrapper",
                 "liblog",
-                "libspectre",
-                "libc++_shared",
-                "libdepthcomputation",
-                "libeepromcutter",
-                "libmmcamera_irs2877_polar_eeprom",
                 "libc++",
                 "libc",
                 "libm",
@@ -10896,34 +10266,6 @@ cc_prebuilt_library_shared {
                 "libcdsprpc",
                 "libcutils",
                 "liblog",
-                "libc++",
-                "libc",
-                "libm",
-                "libdl",
-            ],
-        },
-    },
-    compile_multilib: "32",
-    prefer: true,
-    soc_specific: true,
-}
-
-cc_prebuilt_library_shared {
-    name: "libmmcamera_irs2877_polar_eeprom",
-    owner: "asus",
-    strip: {
-        none: true,
-    },
-    target: {
-        android_arm: {
-            srcs: [
-                "proprietary/vendor/lib/libmmcamera_irs2877_polar_eeprom.so",
-            ],
-            shared_libs: [
-                "liblog",
-                "libcutils",
-                "libmmcamera_eeprom_util",
-                "libeepromcutter",
                 "libc++",
                 "libc",
                 "libm",
@@ -13025,28 +12367,10 @@ cc_prebuilt_library_shared {
             srcs: [
                 "proprietary/vendor/lib/libmmcamera_tuning.so",
             ],
-            shared_libs: [
-                "libmmcamera_tuning_lookup",
-                "libmmcamera2_mct",
-                "libmmcamera2_stats_modules",
-                "libmmcamera2_iface_modules",
-                "libmmcamera2_isp_modules",
-                "libmmcamera2_sensor_modules",
-                "libmmcamera2_pproc_modules",
-                "libmmcamera2_imglib_modules",
-                "libmmcamera_eztune_module",
-                "liblog",
-                "libcutils",
-                "libfastcvopt",
-                "libmmcamera_dbg",
-                "libc++",
-                "libc",
-                "libm",
-                "libdl",
-            ],
         },
     },
     compile_multilib: "32",
+    check_elf_files: false,
     prefer: true,
     soc_specific: true,
 }
@@ -13293,31 +12617,6 @@ cc_prebuilt_library_shared {
                 "libm",
                 "liblog",
                 "libz",
-                "libc",
-            ],
-        },
-    },
-    compile_multilib: "32",
-    prefer: true,
-    soc_specific: true,
-}
-
-cc_prebuilt_library_shared {
-    name: "libspectre",
-    owner: "asus",
-    strip: {
-        none: true,
-    },
-    target: {
-        android_arm: {
-            srcs: [
-                "proprietary/vendor/lib/libspectre.so",
-            ],
-            shared_libs: [
-                "libdl",
-                "liblog",
-                "libm",
-                "libc++_shared",
                 "libc",
             ],
         },

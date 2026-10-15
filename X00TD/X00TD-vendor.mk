@@ -79,9 +79,6 @@ PRODUCT_PACKAGES += \
     libactuator_ov16880_qtech_rear_dw9714a \
     libactuator_ov16885_holitech_16m_fp5510a \
     libactuator_ov16885_ofilm_16m_dw9714v \
-    libadsp_hvx_callback_skel \
-    libadsp_hvx_stub \
-    libc++_shared \
     libchromatix_gc5025_ofilm_13m_common \
     libchromatix_gc5025_ofilm_13m_cpp_ds_chromatix \
     libchromatix_gc5025_ofilm_13m_cpp_hfr_120 \
@@ -148,10 +145,6 @@ PRODUCT_PACKAGES += \
     libchromatix_hi1333_ofilm_13m_default_preview_bu64297 \
     libchromatix_hi1333_ofilm_13m_default_video \
     libchromatix_hi1333_ofilm_13m_default_video_bu64297 \
-    libchromatix_hi1333_ofilm_13m_eis_video_bu64297 \
-    libchromatix_hi1333_ofilm_13m_hdr \
-    libchromatix_hi1333_ofilm_13m_hdr_cpp \
-    libchromatix_hi1333_ofilm_13m_hdr_video_3a \
     libchromatix_hi1333_ofilm_13m_hfr_120 \
     libchromatix_hi1333_ofilm_13m_hfr_120_bu64297 \
     libchromatix_hi1333_ofilm_13m_hfr_60 \
@@ -257,7 +250,6 @@ PRODUCT_PACKAGES += \
     libchromatix_hi846_tsp_front_cpp_us_chromatix \
     libchromatix_hi846_tsp_front_cpp_video \
     libchromatix_hi846_tsp_front_default_video \
-    libchromatix_hi846_tsp_front_eis_video \
     libchromatix_hi846_tsp_front_hfr_120 \
     libchromatix_hi846_tsp_front_hfr_60 \
     libchromatix_hi846_tsp_front_hfr_90 \
@@ -307,10 +299,6 @@ PRODUCT_PACKAGES += \
     libchromatix_ov13855_holitech_13m_default_preview_bu64297 \
     libchromatix_ov13855_holitech_13m_default_video \
     libchromatix_ov13855_holitech_13m_default_video_bu64297 \
-    libchromatix_ov13855_holitech_13m_eis_video_bu64297 \
-    libchromatix_ov13855_holitech_13m_hdr \
-    libchromatix_ov13855_holitech_13m_hdr_3a \
-    libchromatix_ov13855_holitech_13m_hdr_cpp \
     libchromatix_ov13855_holitech_13m_hfr_120 \
     libchromatix_ov13855_holitech_13m_hfr_120_bu64297 \
     libchromatix_ov13855_holitech_13m_hfr_60 \
@@ -337,7 +325,6 @@ PRODUCT_PACKAGES += \
     libchromatix_ov16880_qtech_front_default_preview_bu64297 \
     libchromatix_ov16880_qtech_front_default_video \
     libchromatix_ov16880_qtech_front_default_video_bu64297 \
-    libchromatix_ov16880_qtech_front_eis_video_bu64297 \
     libchromatix_ov16880_qtech_front_hfr_120 \
     libchromatix_ov16880_qtech_front_hfr_120_bu64297 \
     libchromatix_ov16880_qtech_front_hfr_60 \
@@ -364,10 +351,6 @@ PRODUCT_PACKAGES += \
     libchromatix_ov16885_holitech_16m_default_preview_bu64297 \
     libchromatix_ov16885_holitech_16m_default_video \
     libchromatix_ov16885_holitech_16m_default_video_bu64297 \
-    libchromatix_ov16885_holitech_16m_eis_video_bu64297 \
-    libchromatix_ov16885_holitech_16m_hdr \
-    libchromatix_ov16885_holitech_16m_hdr_3a \
-    libchromatix_ov16885_holitech_16m_hdr_cpp \
     libchromatix_ov16885_holitech_16m_hfr_120 \
     libchromatix_ov16885_holitech_16m_hfr_120_bu64297 \
     libchromatix_ov16885_holitech_16m_hfr_60 \
@@ -394,10 +377,6 @@ PRODUCT_PACKAGES += \
     libchromatix_ov16885_ofilm_16m_default_preview_bu64297 \
     libchromatix_ov16885_ofilm_16m_default_video \
     libchromatix_ov16885_ofilm_16m_default_video_bu64297 \
-    libchromatix_ov16885_ofilm_16m_eis_video_bu64297 \
-    libchromatix_ov16885_ofilm_16m_hdr \
-    libchromatix_ov16885_ofilm_16m_hdr_3a \
-    libchromatix_ov16885_ofilm_16m_hdr_cpp \
     libchromatix_ov16885_ofilm_16m_hfr_120 \
     libchromatix_ov16885_ofilm_16m_hfr_120_bu64297 \
     libchromatix_ov16885_ofilm_16m_hfr_60 \
@@ -426,7 +405,6 @@ PRODUCT_PACKAGES += \
     libchromatix_ov8856_chicony_front_cpp_us_chromatix \
     libchromatix_ov8856_chicony_front_cpp_video \
     libchromatix_ov8856_chicony_front_default_video \
-    libchromatix_ov8856_chicony_front_eis_video \
     libchromatix_ov8856_chicony_front_hfr_120 \
     libchromatix_ov8856_chicony_front_hfr_60 \
     libchromatix_ov8856_chicony_front_hfr_90 \
@@ -436,9 +414,7 @@ PRODUCT_PACKAGES += \
     libchromatix_ov8856_chicony_front_snapshot \
     libchromatix_ov8856_chicony_front_zsl_preview \
     libchromatix_ov8856_chicony_front_zsl_video \
-    libdepthcomputation \
     libdepthmapwrapper \
-    libeepromcutter \
     libflash_pmic \
     libjpegdhw \
     libjpegdmahw \
@@ -485,7 +461,6 @@ PRODUCT_PACKAGES += \
     libmmcamera_hvx_grid_sum \
     libmmcamera_imglib \
     libmmcamera_imglib_faceproc_adspstub \
-    libmmcamera_irs2877_polar_eeprom \
     libmmcamera_isp_abf48 \
     libmmcamera_isp_aec_bg_stats47 \
     libmmcamera_isp_bf_stats47 \
@@ -568,7 +543,6 @@ PRODUCT_PACKAGES += \
     libqomx_jpegenc_pipe \
     libremosaic_daemon \
     libseemore \
-    libspectre \
     cdfinger.fingerprint.default \
     fingerprint.sdm660 \
     libgf_ca \
