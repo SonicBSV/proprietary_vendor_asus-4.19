@@ -5,16 +5,23 @@
 PRODUCT_SOONG_NAMESPACES += \
     vendor/asus/X01BD
 
+# ==============================================================
+# Copy Files: Firmware, ACDB Audio, Camera Configs, Init, Sensors
+# ==============================================================
 PRODUCT_COPY_FILES += \
-    vendor/asus/X01BD/proprietary/product/etc/permissions/qti_fingerprint_interface.xml:$(TARGET_COPY_OUT_PRODUCT)/etc/permissions/qti_fingerprint_interface.xml \
-    vendor/asus/X01BD/proprietary/vendor/etc/acdbdata/QRD/NonCE/QRD_NonCE_Bluetooth_cal.acdb:$(TARGET_COPY_OUT_VENDOR)/etc/acdbdata/QRD/NonCE/QRD_NonCE_Bluetooth_cal.acdb \
-    vendor/asus/X01BD/proprietary/vendor/etc/acdbdata/QRD/NonCE/QRD_NonCE_General_cal.acdb:$(TARGET_COPY_OUT_VENDOR)/etc/acdbdata/QRD/NonCE/QRD_NonCE_General_cal.acdb \
-    vendor/asus/X01BD/proprietary/vendor/etc/acdbdata/QRD/NonCE/QRD_NonCE_Global_cal.acdb:$(TARGET_COPY_OUT_VENDOR)/etc/acdbdata/QRD/NonCE/QRD_NonCE_Global_cal.acdb \
-    vendor/asus/X01BD/proprietary/vendor/etc/acdbdata/QRD/NonCE/QRD_NonCE_Handset_cal.acdb:$(TARGET_COPY_OUT_VENDOR)/etc/acdbdata/QRD/NonCE/QRD_NonCE_Handset_cal.acdb \
-    vendor/asus/X01BD/proprietary/vendor/etc/acdbdata/QRD/NonCE/QRD_NonCE_Hdmi_cal.acdb:$(TARGET_COPY_OUT_VENDOR)/etc/acdbdata/QRD/NonCE/QRD_NonCE_Hdmi_cal.acdb \
-    vendor/asus/X01BD/proprietary/vendor/etc/acdbdata/QRD/NonCE/QRD_NonCE_Headset_cal.acdb:$(TARGET_COPY_OUT_VENDOR)/etc/acdbdata/QRD/NonCE/QRD_NonCE_Headset_cal.acdb \
-    vendor/asus/X01BD/proprietary/vendor/etc/acdbdata/QRD/NonCE/QRD_NonCE_Speaker_cal.acdb:$(TARGET_COPY_OUT_VENDOR)/etc/acdbdata/QRD/NonCE/QRD_NonCE_Speaker_cal.acdb \
-    vendor/asus/X01BD/proprietary/vendor/etc/acdbdata/QRD/NonCE/QRD_NonCE_workspaceFile.qwsp:$(TARGET_COPY_OUT_VENDOR)/etc/acdbdata/QRD/NonCE/QRD_NonCE_workspaceFile.qwsp \
+    vendor/asus/X01BD/proprietary/vendor/bin/cdsprpcd:$(TARGET_COPY_OUT_VENDOR)/bin/cdsprpcd \
+    vendor/asus/X01BD/proprietary/product/etc/permissions/qti_fingerprint_interface.xml:$(TARGET_COPY_OUT_PRODUCT)/etc/permissions/qti_fingerprint_interface.xml
+
+# ACDB audio calibration
+PRODUCT_COPY_FILES += \
+    vendor/asus/X01BD/proprietary/vendor/etc/acdbdata/MTP/MTP_Bluetooth_cal.acdb:$(TARGET_COPY_OUT_VENDOR)/etc/acdbdata/MTP/MTP_Bluetooth_cal.acdb \
+    vendor/asus/X01BD/proprietary/vendor/etc/acdbdata/MTP/MTP_General_cal.acdb:$(TARGET_COPY_OUT_VENDOR)/etc/acdbdata/MTP/MTP_General_cal.acdb \
+    vendor/asus/X01BD/proprietary/vendor/etc/acdbdata/MTP/MTP_Global_cal.acdb:$(TARGET_COPY_OUT_VENDOR)/etc/acdbdata/MTP/MTP_Global_cal.acdb \
+    vendor/asus/X01BD/proprietary/vendor/etc/acdbdata/MTP/MTP_Handset_cal.acdb:$(TARGET_COPY_OUT_VENDOR)/etc/acdbdata/MTP/MTP_Handset_cal.acdb \
+    vendor/asus/X01BD/proprietary/vendor/etc/acdbdata/MTP/MTP_Hdmi_cal.acdb:$(TARGET_COPY_OUT_VENDOR)/etc/acdbdata/MTP/MTP_Hdmi_cal.acdb \
+    vendor/asus/X01BD/proprietary/vendor/etc/acdbdata/MTP/MTP_Headset_cal.acdb:$(TARGET_COPY_OUT_VENDOR)/etc/acdbdata/MTP/MTP_Headset_cal.acdb \
+    vendor/asus/X01BD/proprietary/vendor/etc/acdbdata/MTP/MTP_Speaker_cal.acdb:$(TARGET_COPY_OUT_VENDOR)/etc/acdbdata/MTP/MTP_Speaker_cal.acdb \
+    vendor/asus/X01BD/proprietary/vendor/etc/acdbdata/MTP/MTP_workspaceFile.qwsp:$(TARGET_COPY_OUT_VENDOR)/etc/acdbdata/MTP/MTP_workspaceFile.qwsp \
     vendor/asus/X01BD/proprietary/vendor/etc/acdbdata/QRD/QRD_Bluetooth_cal.acdb:$(TARGET_COPY_OUT_VENDOR)/etc/acdbdata/QRD/QRD_Bluetooth_cal.acdb \
     vendor/asus/X01BD/proprietary/vendor/etc/acdbdata/QRD/QRD_General_cal.acdb:$(TARGET_COPY_OUT_VENDOR)/etc/acdbdata/QRD/QRD_General_cal.acdb \
     vendor/asus/X01BD/proprietary/vendor/etc/acdbdata/QRD/QRD_Global_cal.acdb:$(TARGET_COPY_OUT_VENDOR)/etc/acdbdata/QRD/QRD_Global_cal.acdb \
@@ -23,23 +30,36 @@ PRODUCT_COPY_FILES += \
     vendor/asus/X01BD/proprietary/vendor/etc/acdbdata/QRD/QRD_Headset_cal.acdb:$(TARGET_COPY_OUT_VENDOR)/etc/acdbdata/QRD/QRD_Headset_cal.acdb \
     vendor/asus/X01BD/proprietary/vendor/etc/acdbdata/QRD/QRD_Speaker_cal.acdb:$(TARGET_COPY_OUT_VENDOR)/etc/acdbdata/QRD/QRD_Speaker_cal.acdb \
     vendor/asus/X01BD/proprietary/vendor/etc/acdbdata/QRD/QRD_workspaceFile.qwsp:$(TARGET_COPY_OUT_VENDOR)/etc/acdbdata/QRD/QRD_workspaceFile.qwsp \
-    vendor/asus/X01BD/proprietary/vendor/etc/acdbdata/adsp_avs_config.acdb:$(TARGET_COPY_OUT_VENDOR)/etc/acdbdata/adsp_avs_config.acdb \
+    vendor/asus/X01BD/proprietary/vendor/etc/acdbdata/adsp_avs_config.acdb:$(TARGET_COPY_OUT_VENDOR)/etc/acdbdata/adsp_avs_config.acdb
+
+# Camera XML chromatix configurations
+PRODUCT_COPY_FILES += \
     vendor/asus/X01BD/proprietary/vendor/etc/camera/ar1337_chromatix.xml:$(TARGET_COPY_OUT_VENDOR)/etc/camera/ar1337_chromatix.xml \
     vendor/asus/X01BD/proprietary/vendor/etc/camera/camera_config.xml:$(TARGET_COPY_OUT_VENDOR)/etc/camera/camera_config.xml \
     vendor/asus/X01BD/proprietary/vendor/etc/camera/gc5025_ofilm_13m_chromatix.xml:$(TARGET_COPY_OUT_VENDOR)/etc/camera/gc5025_ofilm_13m_chromatix.xml \
+    vendor/asus/X01BD/proprietary/vendor/etc/camera/gc8034_chromatix.xml:$(TARGET_COPY_OUT_VENDOR)/etc/camera/gc8034_chromatix.xml \
+    vendor/asus/X01BD/proprietary/vendor/etc/camera/hi846_kingcome_front_chromatix.xml:$(TARGET_COPY_OUT_VENDOR)/etc/camera/hi846_kingcome_front_chromatix.xml \
     vendor/asus/X01BD/proprietary/vendor/etc/camera/imx486_chromatix.xml:$(TARGET_COPY_OUT_VENDOR)/etc/camera/imx486_chromatix.xml \
+    vendor/asus/X01BD/proprietary/vendor/etc/camera/imx486_qtech_chromatix.xml:$(TARGET_COPY_OUT_VENDOR)/etc/camera/imx486_qtech_chromatix.xml \
     vendor/asus/X01BD/proprietary/vendor/etc/camera/ov13855_chromatix.xml:$(TARGET_COPY_OUT_VENDOR)/etc/camera/ov13855_chromatix.xml \
-    vendor/asus/X01BD/proprietary/vendor/etc/camera/s5k5e9yu05_chromatix.xml:$(TARGET_COPY_OUT_VENDOR)/etc/camera/s5k5e9yu05_chromatix.xml \
-    vendor/asus/X01BD/proprietary/vendor/etc/sensors/sensor_def_qcomdev.conf:$(TARGET_COPY_OUT_VENDOR)/etc/sensors/sensor_def_qcomdev.conf \
+    vendor/asus/X01BD/proprietary/vendor/etc/camera/s5k5e9yu05_chromatix.xml:$(TARGET_COPY_OUT_VENDOR)/etc/camera/s5k5e9yu05_chromatix.xml
+
+# Init and sensor configurations
+PRODUCT_COPY_FILES += \
+    vendor/asus/X01BD/proprietary/vendor/etc/init/vendor.qti.cdsprpc-service.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/vendor.qti.cdsprpc-service.rc \
+    vendor/asus/X01BD/proprietary/vendor/etc/sensors/sensor_def_qcomdev.conf:$(TARGET_COPY_OUT_VENDOR)/etc/sensors/sensor_def_qcomdev.conf
+
+# Firmware binaries
+PRODUCT_COPY_FILES += \
     vendor/asus/X01BD/proprietary/vendor/firmware/Himax_firmware.bin:$(TARGET_COPY_OUT_VENDOR)/firmware/Himax_firmware.bin \
     vendor/asus/X01BD/proprietary/vendor/firmware/a512_zap.b00:$(TARGET_COPY_OUT_VENDOR)/firmware/a512_zap.b00 \
     vendor/asus/X01BD/proprietary/vendor/firmware/a512_zap.b01:$(TARGET_COPY_OUT_VENDOR)/firmware/a512_zap.b01 \
     vendor/asus/X01BD/proprietary/vendor/firmware/a512_zap.b02:$(TARGET_COPY_OUT_VENDOR)/firmware/a512_zap.b02 \
     vendor/asus/X01BD/proprietary/vendor/firmware/a512_zap.elf:$(TARGET_COPY_OUT_VENDOR)/firmware/a512_zap.elf \
     vendor/asus/X01BD/proprietary/vendor/firmware/a512_zap.mdt:$(TARGET_COPY_OUT_VENDOR)/firmware/a512_zap.mdt \
+    vendor/asus/X01BD/proprietary/vendor/firmware/a530_gpmu.fw2:$(TARGET_COPY_OUT_VENDOR)/firmware/a530_gpmu.fw2 \
     vendor/asus/X01BD/proprietary/vendor/firmware/a530_pfp.fw:$(TARGET_COPY_OUT_VENDOR)/firmware/a530_pfp.fw \
     vendor/asus/X01BD/proprietary/vendor/firmware/a530_pm4.fw:$(TARGET_COPY_OUT_VENDOR)/firmware/a530_pm4.fw \
-    vendor/asus/X01BD/proprietary/vendor/firmware/a530_gpmu.fw2:$(TARGET_COPY_OUT_VENDOR)/firmware/a530_gpmu.fw2 \
     vendor/asus/X01BD/proprietary/vendor/firmware/cpp_firmware_v1_12_0.fw:$(TARGET_COPY_OUT_VENDOR)/firmware/cpp_firmware_v1_12_0.fw \
     vendor/asus/X01BD/proprietary/vendor/firmware/cppf.b00:$(TARGET_COPY_OUT_VENDOR)/firmware/cppf.b00 \
     vendor/asus/X01BD/proprietary/vendor/firmware/cppf.b01:$(TARGET_COPY_OUT_VENDOR)/firmware/cppf.b01 \
@@ -63,14 +83,27 @@ PRODUCT_COPY_FILES += \
     vendor/asus/X01BD/proprietary/vendor/firmware/widevine.b07:$(TARGET_COPY_OUT_VENDOR)/firmware/widevine.b07 \
     vendor/asus/X01BD/proprietary/vendor/firmware/widevine.mdt:$(TARGET_COPY_OUT_VENDOR)/firmware/widevine.mdt
 
+
+# ==============================================================
+# Product Packages: HAL modules, Camera libs, Fingerprint, Sensors
+# ==============================================================
+
+# Base system services
 PRODUCT_PACKAGES += \
     sensors.ssc \
+    sensors.qti \
     vendor.qti.hardware.fingerprint@1.0 \
-    libc++_shared \
-    libdepthcomputation \
-    libeepromcutter \
-    libspectre \
+    vendor.qti.hardware.fingerprint-V1.0-java \
+    cdfinger.fingerprint.default \
+    fingerprint.focaltech.default
+
+# Camera Actuators
+PRODUCT_PACKAGES += \
     libactuator_imx486_holitech_12m \
+    libactuator_imx486_qtech_12m
+
+# Camera Chromatix: AR1337 (front)
+PRODUCT_PACKAGES += \
     libchromatix_ar1337_common \
     libchromatix_ar1337_cpp_ds_chromatix \
     libchromatix_ar1337_cpp_hfr_120 \
@@ -101,7 +134,10 @@ PRODUCT_PACKAGES += \
     libchromatix_ar1337_snapshot \
     libchromatix_ar1337_video_full \
     libchromatix_ar1337_zsl_preview_bu64297 \
-    libchromatix_ar1337_zsl_video_bu64297 \
+    libchromatix_ar1337_zsl_video_bu64297
+
+# Camera Chromatix: GC5025 Ofilm (rear)
+PRODUCT_PACKAGES += \
     libchromatix_gc5025_ofilm_13m_common \
     libchromatix_gc5025_ofilm_13m_cpp_ds_chromatix \
     libchromatix_gc5025_ofilm_13m_cpp_hfr_120 \
@@ -127,7 +163,57 @@ PRODUCT_PACKAGES += \
     libchromatix_gc5025_ofilm_13m_snapshot \
     libchromatix_gc5025_ofilm_13m_video_full \
     libchromatix_gc5025_ofilm_13m_zsl_preview_bu64297 \
-    libchromatix_gc5025_ofilm_13m_zsl_video_bu64297 \
+    libchromatix_gc5025_ofilm_13m_zsl_video_bu64297
+
+# Camera Chromatix: GC8034 Kingcome Ares (secondary)
+PRODUCT_PACKAGES += \
+    libchromatix_gc8034_kingcome_ares_common \
+    libchromatix_gc8034_kingcome_ares_cpp_ds_chromatix \
+    libchromatix_gc8034_kingcome_ares_cpp_liveshot \
+    libchromatix_gc8034_kingcome_ares_cpp_preview \
+    libchromatix_gc8034_kingcome_ares_cpp_snapshot \
+    libchromatix_gc8034_kingcome_ares_cpp_us_chromatix \
+    libchromatix_gc8034_kingcome_ares_cpp_video \
+    libchromatix_gc8034_kingcome_ares_default_preview_3a \
+    libchromatix_gc8034_kingcome_ares_default_video \
+    libchromatix_gc8034_kingcome_ares_default_video_3a \
+    libchromatix_gc8034_kingcome_ares_liveshot \
+    libchromatix_gc8034_kingcome_ares_postproc \
+    libchromatix_gc8034_kingcome_ares_preview \
+    libchromatix_gc8034_kingcome_ares_snapshot \
+    libchromatix_gc8034_kingcome_ares_zsl_preview_3a \
+    libchromatix_gc8034_kingcome_ares_zsl_video_3a
+
+# Camera Chromatix: HI846 Kingcome (front)
+PRODUCT_PACKAGES += \
+    libchromatix_hi846_kingcome_front_a3_default_preview \
+    libchromatix_hi846_kingcome_front_a3_default_video \
+    libchromatix_hi846_kingcome_front_a3_hfr_120 \
+    libchromatix_hi846_kingcome_front_a3_hfr_60 \
+    libchromatix_hi846_kingcome_front_a3_hfr_90 \
+    libchromatix_hi846_kingcome_front_common \
+    libchromatix_hi846_kingcome_front_cpp_ds_chromatix \
+    libchromatix_hi846_kingcome_front_cpp_hfr_120 \
+    libchromatix_hi846_kingcome_front_cpp_hfr_60 \
+    libchromatix_hi846_kingcome_front_cpp_hfr_90 \
+    libchromatix_hi846_kingcome_front_cpp_liveshot \
+    libchromatix_hi846_kingcome_front_cpp_preview \
+    libchromatix_hi846_kingcome_front_cpp_snapshot \
+    libchromatix_hi846_kingcome_front_cpp_us_chromatix \
+    libchromatix_hi846_kingcome_front_cpp_video \
+    libchromatix_hi846_kingcome_front_default_video \
+    libchromatix_hi846_kingcome_front_hfr_120 \
+    libchromatix_hi846_kingcome_front_hfr_60 \
+    libchromatix_hi846_kingcome_front_hfr_90 \
+    libchromatix_hi846_kingcome_front_liveshot \
+    libchromatix_hi846_kingcome_front_postproc \
+    libchromatix_hi846_kingcome_front_preview \
+    libchromatix_hi846_kingcome_front_snapshot \
+    libchromatix_hi846_kingcome_front_zsl_preview \
+    libchromatix_hi846_kingcome_front_zsl_video
+
+# Camera Chromatix: IMX486 (main rear)
+PRODUCT_PACKAGES += \
     libchromatix_imx486_bokenh \
     libchromatix_imx486_bokenh_video_3a \
     libchromatix_imx486_common \
@@ -156,7 +242,36 @@ PRODUCT_PACKAGES += \
     libchromatix_imx486_preview \
     libchromatix_imx486_snapshot \
     libchromatix_imx486_zsl_preview_3a \
-    libchromatix_imx486_zsl_video_3a \
+    libchromatix_imx486_zsl_video_3a
+
+# Camera Chromatix: IMX486 Qtech (alt module)
+PRODUCT_PACKAGES += \
+    libchromatix_imx486_qtech_common \
+    libchromatix_imx486_qtech_cpp_hfr_120 \
+    libchromatix_imx486_qtech_cpp_hfr_60 \
+    libchromatix_imx486_qtech_cpp_hfr_90 \
+    libchromatix_imx486_qtech_cpp_liveshot \
+    libchromatix_imx486_qtech_cpp_preview \
+    libchromatix_imx486_qtech_cpp_snapshot \
+    libchromatix_imx486_qtech_cpp_video \
+    libchromatix_imx486_qtech_default_preview_3a \
+    libchromatix_imx486_qtech_default_video \
+    libchromatix_imx486_qtech_default_video_3a \
+    libchromatix_imx486_qtech_hfr_120 \
+    libchromatix_imx486_qtech_hfr_120_3a \
+    libchromatix_imx486_qtech_hfr_60 \
+    libchromatix_imx486_qtech_hfr_60_3a \
+    libchromatix_imx486_qtech_hfr_90 \
+    libchromatix_imx486_qtech_hfr_90_3a \
+    libchromatix_imx486_qtech_liveshot \
+    libchromatix_imx486_qtech_postproc \
+    libchromatix_imx486_qtech_preview \
+    libchromatix_imx486_qtech_snapshot \
+    libchromatix_imx486_qtech_zsl_preview_3a \
+    libchromatix_imx486_qtech_zsl_video_3a
+
+# Camera Chromatix: OV13855 (rear alt)
+PRODUCT_PACKAGES += \
     libchromatix_ov13855_bokeh \
     libchromatix_ov13855_bokeh_bu64297 \
     libchromatix_ov13855_common \
@@ -185,7 +300,10 @@ PRODUCT_PACKAGES += \
     libchromatix_ov13855_snapshot \
     libchromatix_ov13855_video_full \
     libchromatix_ov13855_zsl_preview_bu64297 \
-    libchromatix_ov13855_zsl_video_bu64297 \
+    libchromatix_ov13855_zsl_video_bu64297
+
+# Camera Chromatix: S5K5E9YU05 (secondary)
+PRODUCT_PACKAGES += \
     libchromatix_s5k5e9yu05_common \
     libchromatix_s5k5e9yu05_cpp_hfr_120 \
     libchromatix_s5k5e9yu05_cpp_hfr_60 \
@@ -207,7 +325,10 @@ PRODUCT_PACKAGES += \
     libchromatix_s5k5e9yu05_preview \
     libchromatix_s5k5e9yu05_snapshot \
     libchromatix_s5k5e9yu05_zsl_preview_3a \
-    libchromatix_s5k5e9yu05_zsl_video_3a \
+    libchromatix_s5k5e9yu05_zsl_video_3a
+
+# Camera Core & Support Libraries
+PRODUCT_PACKAGES += \
     libdepthmapwrapper \
     libflash_pmic \
     libjpegdhw \
@@ -228,9 +349,30 @@ PRODUCT_PACKAGES += \
     libmmcamera2_sensor_modules \
     libmmcamera2_stats_algorithm \
     libmmcamera2_stats_lib \
-    libmmcamera2_stats_modules \
+    libmmcamera2_stats_modules
+
+# Camera Sensor Drivers & EEPROMs
+PRODUCT_PACKAGES += \
     libmmcamera_ar1337 \
     libmmcamera_ar1337_eeprom \
+    libmmcamera_gc5025 \
+    libmmcamera_gc5025_ofilm_13m \
+    libmmcamera_gc5025_ofilm_13m_fm24c64d_eeprom \
+    libmmcamera_gc8034 \
+    libmmcamera_gc8034_eeprom \
+    libmmcamera_hi846_holitech_front_eeprom \
+    libmmcamera_hi846_kingcome_front \
+    libmmcamera_imx486 \
+    libmmcamera_imx486_eeprom \
+    libmmcamera_imx486_qtech \
+    libmmcamera_imx486_qtech_eeprom \
+    libmmcamera_ov13855 \
+    libmmcamera_ov13855_eeprom \
+    libmmcamera_s5k5e9_slave_back_p24c64e_eeprom \
+    libmmcamera_s5k5e9yu05
+
+# Camera Algorithm Modules
+PRODUCT_PACKAGES += \
     libmmcamera_bokeh \
     libmmcamera_dbg \
     libmmcamera_depth_map \
@@ -241,16 +383,27 @@ PRODUCT_PACKAGES += \
     libmmcamera_facedetection_lib \
     libmmcamera_faceproc \
     libmmcamera_faceproc2 \
-    libmmcamera_gc5025 \
-    libmmcamera_gc5025_ofilm_13m \
-    libmmcamera_gc5025_ofilm_13m_fm24c64d_eeprom \
     libmmcamera_hdr_gb_lib \
     libmmcamera_hvx_add_constant \
     libmmcamera_hvx_grid_sum \
     libmmcamera_imglib \
     libmmcamera_imglib_faceproc_adspstub \
-    libmmcamera_imx486 \
-    libmmcamera_imx486_eeprom \
+    libmmcamera_paaf_lib \
+    libmmcamera_pdaf \
+    libmmcamera_pdafcamif \
+    libmmcamera_ppbase_module \
+    libmmcamera_ppeiscore \
+    libmmcamera_quadracfa \
+    libmmcamera_stillmore_lib \
+    libmmcamera_sw2d_lib \
+    libmmcamera_thread_services \
+    libmmcamera_tintless_algo \
+    libmmcamera_tintless_bg_pca_algo \
+    libmmcamera_tuning \
+    libmmcamera_tuning_lookup
+
+# Camera ISP Modules
+PRODUCT_PACKAGES += \
     libmmcamera_isp_abf48 \
     libmmcamera_isp_aec_bg_stats47 \
     libmmcamera_isp_bf_stats47 \
@@ -294,24 +447,10 @@ PRODUCT_PACKAGES += \
     libmmcamera_isp_scaler_viewfinder46 \
     libmmcamera_isp_sce40 \
     libmmcamera_isp_snr47 \
-    libmmcamera_isp_sub_module \
-    libmmcamera_ov13855 \
-    libmmcamera_ov13855_eeprom \
-    libmmcamera_paaf_lib \
-    libmmcamera_pdaf \
-    libmmcamera_pdafcamif \
-    libmmcamera_ppbase_module \
-    libmmcamera_ppeiscore \
-    libmmcamera_quadracfa \
-    libmmcamera_s5k5e9_slave_back_p24c64e_eeprom \
-    libmmcamera_s5k5e9yu05 \
-    libmmcamera_stillmore_lib \
-    libmmcamera_sw2d_lib \
-    libmmcamera_thread_services \
-    libmmcamera_tintless_algo \
-    libmmcamera_tintless_bg_pca_algo \
-    libmmcamera_tuning \
-    libmmcamera_tuning_lookup \
+    libmmcamera_isp_sub_module
+
+# JPEG codecs
+PRODUCT_PACKAGES += \
     libmmjpeg \
     libmmqjpeg_codec \
     libmmqjpegdma \
@@ -319,8 +458,4 @@ PRODUCT_PACKAGES += \
     libqomx_jpegenc \
     libqomx_jpegenc_pipe \
     libremosaic_daemon \
-    libseemore \
-    cdfinger.fingerprint.default \
-    fingerprint.focaltech.default \
-    vendor.qti.hardware.fingerprint-V1.0-java \
-    sensors.qti
+    libseemore

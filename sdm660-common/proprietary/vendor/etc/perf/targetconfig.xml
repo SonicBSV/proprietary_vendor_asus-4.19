@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TargetConfig>
+
+    <!-- SDM660 (SocIds 317,324) - оригинальный -->
+    <Config1>
+         <TargetInfo
+             Target="sdm660"
+             NumClusters="2"
+             TotalNumCores="8"
+             SocIds="317,324"
+             SynCore="1"
+             CoreCtlCpu="4"
+             MinCoreOnline="0"
+             CpufreqGov="1" />
+
+         <ClustersInfo Id="0" NumCores="4" Type="little" />
+         <ClustersInfo Id="1" NumCores="4" Type="big" />
+    </Config1>
+
+    <!-- SDM636 (SocIds 345,346) - X00TD/X01BD - ИСПРАВЛЕНО -->
+    <Config2>
+         <TargetInfo
+             Target="sdm636"
+             NumClusters="2"
+             TotalNumCores="8"
+             SocIds="345,346"
+             SynCore="1"
+             CoreCtlCpu="0"
+             MinCoreOnline="0"
+             CpufreqGov="1" />
+
+         <ClustersInfo Id="0" NumCores="4" Type="big" MaxFrequency="1804800" />
+         <ClustersInfo Id="1" NumCores="4" Type="little" MaxFrequency="1612800" />
+    </Config2>
+
+</TargetConfig>

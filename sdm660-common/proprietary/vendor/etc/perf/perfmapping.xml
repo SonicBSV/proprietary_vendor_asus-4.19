@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PerfMapping>
+    <!-- Mappings for SDM660/SDM636 -->
+
+    <!-- Scroll / Interaction (Hint 1041/1080) maps to Vertical Scroll Config -->
+    <Pair HintID="0x00001080" ConfigID="0x00001080" />
+    <Pair HintID="0x00001041" ConfigID="0x00001080" />
+
+    <!-- Launch (Hint 1081) maps to Launch Config -->
+    <Pair HintID="0x00001081" ConfigID="0x00001081" />
+
+    <!-- Animation / Rotation -->
+    <Pair HintID="0x00001090" ConfigID="0x00001090" />
+
+    <!-- Display On/Off -->
+    <Pair HintID="0x00001040" ConfigID="0x00001040" />
+    <Pair HintID="0x00001041" ConfigID="0x00001041" />
+
+    <!-- Package Install -->
+    <Pair HintID="0x00001088" ConfigID="0x00001088" />
+</PerfMapping>

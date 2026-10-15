@@ -81,82 +81,6 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
-    name: "libc++_shared",
-    owner: "asus",
-    strip: {
-        none: true,
-    },
-    target: {
-        android_arm: {
-            srcs: [
-                "proprietary/vendor/lib/libc++_shared.so",
-            ],
-        },
-    },
-    compile_multilib: "32",
-    check_elf_files: false,
-    prefer: true,
-    soc_specific: true,
-}
-
-cc_prebuilt_library_shared {
-    name: "libdepthcomputation",
-    owner: "asus",
-    strip: {
-        none: true,
-    },
-    target: {
-        android_arm: {
-            srcs: [
-                "proprietary/vendor/lib/libdepthcomputation.so",
-            ],
-        },
-    },
-    compile_multilib: "32",
-    check_elf_files: false,
-    prefer: true,
-    soc_specific: true,
-}
-
-cc_prebuilt_library_shared {
-    name: "libeepromcutter",
-    owner: "asus",
-    strip: {
-        none: true,
-    },
-    target: {
-        android_arm: {
-            srcs: [
-                "proprietary/vendor/lib/libeepromcutter.so",
-            ],
-        },
-    },
-    compile_multilib: "32",
-    check_elf_files: false,
-    prefer: true,
-    soc_specific: true,
-}
-
-cc_prebuilt_library_shared {
-    name: "libspectre",
-    owner: "asus",
-    strip: {
-        none: true,
-    },
-    target: {
-        android_arm: {
-            srcs: [
-                "proprietary/vendor/lib/libspectre.so",
-            ],
-        },
-    },
-    compile_multilib: "32",
-    check_elf_files: false,
-    prefer: true,
-    soc_specific: true,
-}
-
-cc_prebuilt_library_shared {
     name: "libactuator_imx486_holitech_12m",
     owner: "asus",
     strip: {
@@ -6883,4 +6807,1226 @@ cc_prebuilt_binary {
     prefer: true,
     check_elf_files: false,
     soc_specific: true,
+}
+
+// ==============================================================
+// Actuators (добавленные)
+// ==============================================================
+cc_prebuilt_library_shared {
+    name: "libactuator_imx486_qtech_12m",
+    owner: "asus",
+    strip: {
+        none: true,
+    },
+    target: {
+        android_arm: {
+            srcs: ["proprietary/vendor/lib/libactuator_imx486_qtech_12m.so"],
+        },
+    },
+    compile_multilib: "32",
+    check_elf_files: false,
+    prefer: true,
+    vendor: true,
+}
+
+// ==============================================================
+// GC8034 Kingcome Ares Chromatix (новый сенсор)
+// ==============================================================
+cc_prebuilt_library_shared {
+    name: "libchromatix_gc8034_kingcome_ares_common",
+    owner: "asus",
+    strip: {
+        none: true,
+    },
+    target: {
+        android_arm: {
+            srcs: ["proprietary/vendor/lib/libchromatix_gc8034_kingcome_ares_common.so"],
+        },
+    },
+    compile_multilib: "32",
+    check_elf_files: false,
+    prefer: true,
+    vendor: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "libchromatix_gc8034_kingcome_ares_cpp_ds_chromatix",
+    owner: "asus",
+    strip: {
+        none: true,
+    },
+    target: {
+        android_arm: {
+            srcs: ["proprietary/vendor/lib/libchromatix_gc8034_kingcome_ares_cpp_ds_chromatix.so"],
+        },
+    },
+    compile_multilib: "32",
+    check_elf_files: false,
+    prefer: true,
+    vendor: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "libchromatix_gc8034_kingcome_ares_cpp_liveshot",
+    owner: "asus",
+    strip: {
+        none: true,
+    },
+    target: {
+        android_arm: {
+            srcs: ["proprietary/vendor/lib/libchromatix_gc8034_kingcome_ares_cpp_liveshot.so"],
+        },
+    },
+    compile_multilib: "32",
+    check_elf_files: false,
+    prefer: true,
+    vendor: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "libchromatix_gc8034_kingcome_ares_cpp_preview",
+    owner: "asus",
+    strip: {
+        none: true,
+    },
+    target: {
+        android_arm: {
+            srcs: ["proprietary/vendor/lib/libchromatix_gc8034_kingcome_ares_cpp_preview.so"],
+        },
+    },
+    compile_multilib: "32",
+    check_elf_files: false,
+    prefer: true,
+    vendor: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "libchromatix_gc8034_kingcome_ares_cpp_snapshot",
+    owner: "asus",
+    strip: {
+        none: true,
+    },
+    target: {
+        android_arm: {
+            srcs: ["proprietary/vendor/lib/libchromatix_gc8034_kingcome_ares_cpp_snapshot.so"],
+        },
+    },
+    compile_multilib: "32",
+    check_elf_files: false,
+    prefer: true,
+    vendor: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "libchromatix_gc8034_kingcome_ares_cpp_us_chromatix",
+    owner: "asus",
+    strip: {
+        none: true,
+    },
+    target: {
+        android_arm: {
+            srcs: ["proprietary/vendor/lib/libchromatix_gc8034_kingcome_ares_cpp_us_chromatix.so"],
+        },
+    },
+    compile_multilib: "32",
+    check_elf_files: false,
+    prefer: true,
+    vendor: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "libchromatix_gc8034_kingcome_ares_cpp_video",
+    owner: "asus",
+    strip: {
+        none: true,
+    },
+    target: {
+        android_arm: {
+            srcs: ["proprietary/vendor/lib/libchromatix_gc8034_kingcome_ares_cpp_video.so"],
+        },
+    },
+    compile_multilib: "32",
+    check_elf_files: false,
+    prefer: true,
+    vendor: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "libchromatix_gc8034_kingcome_ares_default_preview_3a",
+    owner: "asus",
+    strip: {
+        none: true,
+    },
+    target: {
+        android_arm: {
+            srcs: ["proprietary/vendor/lib/libchromatix_gc8034_kingcome_ares_default_preview_3a.so"],
+        },
+    },
+    compile_multilib: "32",
+    check_elf_files: false,
+    prefer: true,
+    vendor: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "libchromatix_gc8034_kingcome_ares_default_video",
+    owner: "asus",
+    strip: {
+        none: true,
+    },
+    target: {
+        android_arm: {
+            srcs: ["proprietary/vendor/lib/libchromatix_gc8034_kingcome_ares_default_video.so"],
+        },
+    },
+    compile_multilib: "32",
+    check_elf_files: false,
+    prefer: true,
+    vendor: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "libchromatix_gc8034_kingcome_ares_default_video_3a",
+    owner: "asus",
+    strip: {
+        none: true,
+    },
+    target: {
+        android_arm: {
+            srcs: ["proprietary/vendor/lib/libchromatix_gc8034_kingcome_ares_default_video_3a.so"],
+        },
+    },
+    compile_multilib: "32",
+    check_elf_files: false,
+    prefer: true,
+    vendor: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "libchromatix_gc8034_kingcome_ares_liveshot",
+    owner: "asus",
+    strip: {
+        none: true,
+    },
+    target: {
+        android_arm: {
+            srcs: ["proprietary/vendor/lib/libchromatix_gc8034_kingcome_ares_liveshot.so"],
+        },
+    },
+    compile_multilib: "32",
+    check_elf_files: false,
+    prefer: true,
+    vendor: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "libchromatix_gc8034_kingcome_ares_postproc",
+    owner: "asus",
+    strip: {
+        none: true,
+    },
+    target: {
+        android_arm: {
+            srcs: ["proprietary/vendor/lib/libchromatix_gc8034_kingcome_ares_postproc.so"],
+        },
+    },
+    compile_multilib: "32",
+    check_elf_files: false,
+    prefer: true,
+    vendor: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "libchromatix_gc8034_kingcome_ares_preview",
+    owner: "asus",
+    strip: {
+        none: true,
+    },
+    target: {
+        android_arm: {
+            srcs: ["proprietary/vendor/lib/libchromatix_gc8034_kingcome_ares_preview.so"],
+        },
+    },
+    compile_multilib: "32",
+    check_elf_files: false,
+    prefer: true,
+    vendor: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "libchromatix_gc8034_kingcome_ares_snapshot",
+    owner: "asus",
+    strip: {
+        none: true,
+    },
+    target: {
+        android_arm: {
+            srcs: ["proprietary/vendor/lib/libchromatix_gc8034_kingcome_ares_snapshot.so"],
+        },
+    },
+    compile_multilib: "32",
+    check_elf_files: false,
+    prefer: true,
+    vendor: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "libchromatix_gc8034_kingcome_ares_zsl_preview_3a",
+    owner: "asus",
+    strip: {
+        none: true,
+    },
+    target: {
+        android_arm: {
+            srcs: ["proprietary/vendor/lib/libchromatix_gc8034_kingcome_ares_zsl_preview_3a.so"],
+        },
+    },
+    compile_multilib: "32",
+    check_elf_files: false,
+    prefer: true,
+    vendor: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "libchromatix_gc8034_kingcome_ares_zsl_video_3a",
+    owner: "asus",
+    strip: {
+        none: true,
+    },
+    target: {
+        android_arm: {
+            srcs: ["proprietary/vendor/lib/libchromatix_gc8034_kingcome_ares_zsl_video_3a.so"],
+        },
+    },
+    compile_multilib: "32",
+    check_elf_files: false,
+    prefer: true,
+    vendor: true,
+}
+
+// ==============================================================
+// HI846 Kingcome Front Chromatix (новый сенсор)
+// ==============================================================
+cc_prebuilt_library_shared {
+    name: "libchromatix_hi846_kingcome_front_a3_default_preview",
+    owner: "asus",
+    strip: {
+        none: true,
+    },
+    target: {
+        android_arm: {
+            srcs: ["proprietary/vendor/lib/libchromatix_hi846_kingcome_front_a3_default_preview.so"],
+        },
+    },
+    compile_multilib: "32",
+    check_elf_files: false,
+    prefer: true,
+    vendor: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "libchromatix_hi846_kingcome_front_a3_default_video",
+    owner: "asus",
+    strip: {
+        none: true,
+    },
+    target: {
+        android_arm: {
+            srcs: ["proprietary/vendor/lib/libchromatix_hi846_kingcome_front_a3_default_video.so"],
+        },
+    },
+    compile_multilib: "32",
+    check_elf_files: false,
+    prefer: true,
+    vendor: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "libchromatix_hi846_kingcome_front_a3_hfr_120",
+    owner: "asus",
+    strip: {
+        none: true,
+    },
+    target: {
+        android_arm: {
+            srcs: ["proprietary/vendor/lib/libchromatix_hi846_kingcome_front_a3_hfr_120.so"],
+        },
+    },
+    compile_multilib: "32",
+    check_elf_files: false,
+    prefer: true,
+    vendor: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "libchromatix_hi846_kingcome_front_a3_hfr_60",
+    owner: "asus",
+    strip: {
+        none: true,
+    },
+    target: {
+        android_arm: {
+            srcs: ["proprietary/vendor/lib/libchromatix_hi846_kingcome_front_a3_hfr_60.so"],
+        },
+    },
+    compile_multilib: "32",
+    check_elf_files: false,
+    prefer: true,
+    vendor: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "libchromatix_hi846_kingcome_front_a3_hfr_90",
+    owner: "asus",
+    strip: {
+        none: true,
+    },
+    target: {
+        android_arm: {
+            srcs: ["proprietary/vendor/lib/libchromatix_hi846_kingcome_front_a3_hfr_90.so"],
+        },
+    },
+    compile_multilib: "32",
+    check_elf_files: false,
+    prefer: true,
+    vendor: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "libchromatix_hi846_kingcome_front_common",
+    owner: "asus",
+    strip: {
+        none: true,
+    },
+    target: {
+        android_arm: {
+            srcs: ["proprietary/vendor/lib/libchromatix_hi846_kingcome_front_common.so"],
+        },
+    },
+    compile_multilib: "32",
+    check_elf_files: false,
+    prefer: true,
+    vendor: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "libchromatix_hi846_kingcome_front_cpp_ds_chromatix",
+    owner: "asus",
+    strip: {
+        none: true,
+    },
+    target: {
+        android_arm: {
+            srcs: ["proprietary/vendor/lib/libchromatix_hi846_kingcome_front_cpp_ds_chromatix.so"],
+        },
+    },
+    compile_multilib: "32",
+    check_elf_files: false,
+    prefer: true,
+    vendor: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "libchromatix_hi846_kingcome_front_cpp_hfr_120",
+    owner: "asus",
+    strip: {
+        none: true,
+    },
+    target: {
+        android_arm: {
+            srcs: ["proprietary/vendor/lib/libchromatix_hi846_kingcome_front_cpp_hfr_120.so"],
+        },
+    },
+    compile_multilib: "32",
+    check_elf_files: false,
+    prefer: true,
+    vendor: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "libchromatix_hi846_kingcome_front_cpp_hfr_60",
+    owner: "asus",
+    strip: {
+        none: true,
+    },
+    target: {
+        android_arm: {
+            srcs: ["proprietary/vendor/lib/libchromatix_hi846_kingcome_front_cpp_hfr_60.so"],
+        },
+    },
+    compile_multilib: "32",
+    check_elf_files: false,
+    prefer: true,
+    vendor: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "libchromatix_hi846_kingcome_front_cpp_hfr_90",
+    owner: "asus",
+    strip: {
+        none: true,
+    },
+    target: {
+        android_arm: {
+            srcs: ["proprietary/vendor/lib/libchromatix_hi846_kingcome_front_cpp_hfr_90.so"],
+        },
+    },
+    compile_multilib: "32",
+    check_elf_files: false,
+    prefer: true,
+    vendor: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "libchromatix_hi846_kingcome_front_cpp_liveshot",
+    owner: "asus",
+    strip: {
+        none: true,
+    },
+    target: {
+        android_arm: {
+            srcs: ["proprietary/vendor/lib/libchromatix_hi846_kingcome_front_cpp_liveshot.so"],
+        },
+    },
+    compile_multilib: "32",
+    check_elf_files: false,
+    prefer: true,
+    vendor: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "libchromatix_hi846_kingcome_front_cpp_preview",
+    owner: "asus",
+    strip: {
+        none: true,
+    },
+    target: {
+        android_arm: {
+            srcs: ["proprietary/vendor/lib/libchromatix_hi846_kingcome_front_cpp_preview.so"],
+        },
+    },
+    compile_multilib: "32",
+    check_elf_files: false,
+    prefer: true,
+    vendor: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "libchromatix_hi846_kingcome_front_cpp_snapshot",
+    owner: "asus",
+    strip: {
+        none: true,
+    },
+    target: {
+        android_arm: {
+            srcs: ["proprietary/vendor/lib/libchromatix_hi846_kingcome_front_cpp_snapshot.so"],
+        },
+    },
+    compile_multilib: "32",
+    check_elf_files: false,
+    prefer: true,
+    vendor: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "libchromatix_hi846_kingcome_front_cpp_us_chromatix",
+    owner: "asus",
+    strip: {
+        none: true,
+    },
+    target: {
+        android_arm: {
+            srcs: ["proprietary/vendor/lib/libchromatix_hi846_kingcome_front_cpp_us_chromatix.so"],
+        },
+    },
+    compile_multilib: "32",
+    check_elf_files: false,
+    prefer: true,
+    vendor: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "libchromatix_hi846_kingcome_front_cpp_video",
+    owner: "asus",
+    strip: {
+        none: true,
+    },
+    target: {
+        android_arm: {
+            srcs: ["proprietary/vendor/lib/libchromatix_hi846_kingcome_front_cpp_video.so"],
+        },
+    },
+    compile_multilib: "32",
+    check_elf_files: false,
+    prefer: true,
+    vendor: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "libchromatix_hi846_kingcome_front_default_video",
+    owner: "asus",
+    strip: {
+        none: true,
+    },
+    target: {
+        android_arm: {
+            srcs: ["proprietary/vendor/lib/libchromatix_hi846_kingcome_front_default_video.so"],
+        },
+    },
+    compile_multilib: "32",
+    check_elf_files: false,
+    prefer: true,
+    vendor: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "libchromatix_hi846_kingcome_front_hfr_120",
+    owner: "asus",
+    strip: {
+        none: true,
+    },
+    target: {
+        android_arm: {
+            srcs: ["proprietary/vendor/lib/libchromatix_hi846_kingcome_front_hfr_120.so"],
+        },
+    },
+    compile_multilib: "32",
+    check_elf_files: false,
+    prefer: true,
+    vendor: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "libchromatix_hi846_kingcome_front_hfr_60",
+    owner: "asus",
+    strip: {
+        none: true,
+    },
+    target: {
+        android_arm: {
+            srcs: ["proprietary/vendor/lib/libchromatix_hi846_kingcome_front_hfr_60.so"],
+        },
+    },
+    compile_multilib: "32",
+    check_elf_files: false,
+    prefer: true,
+    vendor: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "libchromatix_hi846_kingcome_front_hfr_90",
+    owner: "asus",
+    strip: {
+        none: true,
+    },
+    target: {
+        android_arm: {
+            srcs: ["proprietary/vendor/lib/libchromatix_hi846_kingcome_front_hfr_90.so"],
+        },
+    },
+    compile_multilib: "32",
+    check_elf_files: false,
+    prefer: true,
+    vendor: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "libchromatix_hi846_kingcome_front_liveshot",
+    owner: "asus",
+    strip: {
+        none: true,
+    },
+    target: {
+        android_arm: {
+            srcs: ["proprietary/vendor/lib/libchromatix_hi846_kingcome_front_liveshot.so"],
+        },
+    },
+    compile_multilib: "32",
+    check_elf_files: false,
+    prefer: true,
+    vendor: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "libchromatix_hi846_kingcome_front_postproc",
+    owner: "asus",
+    strip: {
+        none: true,
+    },
+    target: {
+        android_arm: {
+            srcs: ["proprietary/vendor/lib/libchromatix_hi846_kingcome_front_postproc.so"],
+        },
+    },
+    compile_multilib: "32",
+    check_elf_files: false,
+    prefer: true,
+    vendor: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "libchromatix_hi846_kingcome_front_preview",
+    owner: "asus",
+    strip: {
+        none: true,
+    },
+    target: {
+        android_arm: {
+            srcs: ["proprietary/vendor/lib/libchromatix_hi846_kingcome_front_preview.so"],
+        },
+    },
+    compile_multilib: "32",
+    check_elf_files: false,
+    prefer: true,
+    vendor: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "libchromatix_hi846_kingcome_front_snapshot",
+    owner: "asus",
+    strip: {
+        none: true,
+    },
+    target: {
+        android_arm: {
+            srcs: ["proprietary/vendor/lib/libchromatix_hi846_kingcome_front_snapshot.so"],
+        },
+    },
+    compile_multilib: "32",
+    check_elf_files: false,
+    prefer: true,
+    vendor: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "libchromatix_hi846_kingcome_front_zsl_preview",
+    owner: "asus",
+    strip: {
+        none: true,
+    },
+    target: {
+        android_arm: {
+            srcs: ["proprietary/vendor/lib/libchromatix_hi846_kingcome_front_zsl_preview.so"],
+        },
+    },
+    compile_multilib: "32",
+    check_elf_files: false,
+    prefer: true,
+    vendor: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "libchromatix_hi846_kingcome_front_zsl_video",
+    owner: "asus",
+    strip: {
+        none: true,
+    },
+    target: {
+        android_arm: {
+            srcs: ["proprietary/vendor/lib/libchromatix_hi846_kingcome_front_zsl_video.so"],
+        },
+    },
+    compile_multilib: "32",
+    check_elf_files: false,
+    prefer: true,
+    vendor: true,
+}
+
+// ==============================================================
+// IMX486 Qtech Chromatix (альтернативный модуль)
+// ==============================================================
+cc_prebuilt_library_shared {
+    name: "libchromatix_imx486_qtech_common",
+    owner: "asus",
+    strip: {
+        none: true,
+    },
+    target: {
+        android_arm: {
+            srcs: ["proprietary/vendor/lib/libchromatix_imx486_qtech_common.so"],
+        },
+    },
+    compile_multilib: "32",
+    check_elf_files: false,
+    prefer: true,
+    vendor: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "libchromatix_imx486_qtech_cpp_hfr_120",
+    owner: "asus",
+    strip: {
+        none: true,
+    },
+    target: {
+        android_arm: {
+            srcs: ["proprietary/vendor/lib/libchromatix_imx486_qtech_cpp_hfr_120.so"],
+        },
+    },
+    compile_multilib: "32",
+    check_elf_files: false,
+    prefer: true,
+    vendor: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "libchromatix_imx486_qtech_cpp_hfr_60",
+    owner: "asus",
+    strip: {
+        none: true,
+    },
+    target: {
+        android_arm: {
+            srcs: ["proprietary/vendor/lib/libchromatix_imx486_qtech_cpp_hfr_60.so"],
+        },
+    },
+    compile_multilib: "32",
+    check_elf_files: false,
+    prefer: true,
+    vendor: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "libchromatix_imx486_qtech_cpp_hfr_90",
+    owner: "asus",
+    strip: {
+        none: true,
+    },
+    target: {
+        android_arm: {
+            srcs: ["proprietary/vendor/lib/libchromatix_imx486_qtech_cpp_hfr_90.so"],
+        },
+    },
+    compile_multilib: "32",
+    check_elf_files: false,
+    prefer: true,
+    vendor: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "libchromatix_imx486_qtech_cpp_liveshot",
+    owner: "asus",
+    strip: {
+        none: true,
+    },
+    target: {
+        android_arm: {
+            srcs: ["proprietary/vendor/lib/libchromatix_imx486_qtech_cpp_liveshot.so"],
+        },
+    },
+    compile_multilib: "32",
+    check_elf_files: false,
+    prefer: true,
+    vendor: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "libchromatix_imx486_qtech_cpp_preview",
+    owner: "asus",
+    strip: {
+        none: true,
+    },
+    target: {
+        android_arm: {
+            srcs: ["proprietary/vendor/lib/libchromatix_imx486_qtech_cpp_preview.so"],
+        },
+    },
+    compile_multilib: "32",
+    check_elf_files: false,
+    prefer: true,
+    vendor: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "libchromatix_imx486_qtech_cpp_snapshot",
+    owner: "asus",
+    strip: {
+        none: true,
+    },
+    target: {
+        android_arm: {
+            srcs: ["proprietary/vendor/lib/libchromatix_imx486_qtech_cpp_snapshot.so"],
+        },
+    },
+    compile_multilib: "32",
+    check_elf_files: false,
+    prefer: true,
+    vendor: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "libchromatix_imx486_qtech_cpp_video",
+    owner: "asus",
+    strip: {
+        none: true,
+    },
+    target: {
+        android_arm: {
+            srcs: ["proprietary/vendor/lib/libchromatix_imx486_qtech_cpp_video.so"],
+        },
+    },
+    compile_multilib: "32",
+    check_elf_files: false,
+    prefer: true,
+    vendor: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "libchromatix_imx486_qtech_default_preview_3a",
+    owner: "asus",
+    strip: {
+        none: true,
+    },
+    target: {
+        android_arm: {
+            srcs: ["proprietary/vendor/lib/libchromatix_imx486_qtech_default_preview_3a.so"],
+        },
+    },
+    compile_multilib: "32",
+    check_elf_files: false,
+    prefer: true,
+    vendor: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "libchromatix_imx486_qtech_default_video",
+    owner: "asus",
+    strip: {
+        none: true,
+    },
+    target: {
+        android_arm: {
+            srcs: ["proprietary/vendor/lib/libchromatix_imx486_qtech_default_video.so"],
+        },
+    },
+    compile_multilib: "32",
+    check_elf_files: false,
+    prefer: true,
+    vendor: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "libchromatix_imx486_qtech_default_video_3a",
+    owner: "asus",
+    strip: {
+        none: true,
+    },
+    target: {
+        android_arm: {
+            srcs: ["proprietary/vendor/lib/libchromatix_imx486_qtech_default_video_3a.so"],
+        },
+    },
+    compile_multilib: "32",
+    check_elf_files: false,
+    prefer: true,
+    vendor: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "libchromatix_imx486_qtech_hfr_120",
+    owner: "asus",
+    strip: {
+        none: true,
+    },
+    target: {
+        android_arm: {
+            srcs: ["proprietary/vendor/lib/libchromatix_imx486_qtech_hfr_120.so"],
+        },
+    },
+    compile_multilib: "32",
+    check_elf_files: false,
+    prefer: true,
+    vendor: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "libchromatix_imx486_qtech_hfr_120_3a",
+    owner: "asus",
+    strip: {
+        none: true,
+    },
+    target: {
+        android_arm: {
+            srcs: ["proprietary/vendor/lib/libchromatix_imx486_qtech_hfr_120_3a.so"],
+        },
+    },
+    compile_multilib: "32",
+    check_elf_files: false,
+    prefer: true,
+    vendor: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "libchromatix_imx486_qtech_hfr_60",
+    owner: "asus",
+    strip: {
+        none: true,
+    },
+    target: {
+        android_arm: {
+            srcs: ["proprietary/vendor/lib/libchromatix_imx486_qtech_hfr_60.so"],
+        },
+    },
+    compile_multilib: "32",
+    check_elf_files: false,
+    prefer: true,
+    vendor: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "libchromatix_imx486_qtech_hfr_60_3a",
+    owner: "asus",
+    strip: {
+        none: true,
+    },
+    target: {
+        android_arm: {
+            srcs: ["proprietary/vendor/lib/libchromatix_imx486_qtech_hfr_60_3a.so"],
+        },
+    },
+    compile_multilib: "32",
+    check_elf_files: false,
+    prefer: true,
+    vendor: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "libchromatix_imx486_qtech_hfr_90",
+    owner: "asus",
+    strip: {
+        none: true,
+    },
+    target: {
+        android_arm: {
+            srcs: ["proprietary/vendor/lib/libchromatix_imx486_qtech_hfr_90.so"],
+        },
+    },
+    compile_multilib: "32",
+    check_elf_files: false,
+    prefer: true,
+    vendor: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "libchromatix_imx486_qtech_hfr_90_3a",
+    owner: "asus",
+    strip: {
+        none: true,
+    },
+    target: {
+        android_arm: {
+            srcs: ["proprietary/vendor/lib/libchromatix_imx486_qtech_hfr_90_3a.so"],
+        },
+    },
+    compile_multilib: "32",
+    check_elf_files: false,
+    prefer: true,
+    vendor: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "libchromatix_imx486_qtech_liveshot",
+    owner: "asus",
+    strip: {
+        none: true,
+    },
+    target: {
+        android_arm: {
+            srcs: ["proprietary/vendor/lib/libchromatix_imx486_qtech_liveshot.so"],
+        },
+    },
+    compile_multilib: "32",
+    check_elf_files: false,
+    prefer: true,
+    vendor: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "libchromatix_imx486_qtech_postproc",
+    owner: "asus",
+    strip: {
+        none: true,
+    },
+    target: {
+        android_arm: {
+            srcs: ["proprietary/vendor/lib/libchromatix_imx486_qtech_postproc.so"],
+        },
+    },
+    compile_multilib: "32",
+    check_elf_files: false,
+    prefer: true,
+    vendor: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "libchromatix_imx486_qtech_preview",
+    owner: "asus",
+    strip: {
+        none: true,
+    },
+    target: {
+        android_arm: {
+            srcs: ["proprietary/vendor/lib/libchromatix_imx486_qtech_preview.so"],
+        },
+    },
+    compile_multilib: "32",
+    check_elf_files: false,
+    prefer: true,
+    vendor: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "libchromatix_imx486_qtech_snapshot",
+    owner: "asus",
+    strip: {
+        none: true,
+    },
+    target: {
+        android_arm: {
+            srcs: ["proprietary/vendor/lib/libchromatix_imx486_qtech_snapshot.so"],
+        },
+    },
+    compile_multilib: "32",
+    check_elf_files: false,
+    prefer: true,
+    vendor: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "libchromatix_imx486_qtech_zsl_preview_3a",
+    owner: "asus",
+    strip: {
+        none: true,
+    },
+    target: {
+        android_arm: {
+            srcs: ["proprietary/vendor/lib/libchromatix_imx486_qtech_zsl_preview_3a.so"],
+        },
+    },
+    compile_multilib: "32",
+    check_elf_files: false,
+    prefer: true,
+    vendor: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "libchromatix_imx486_qtech_zsl_video_3a",
+    owner: "asus",
+    strip: {
+        none: true,
+    },
+    target: {
+        android_arm: {
+            srcs: ["proprietary/vendor/lib/libchromatix_imx486_qtech_zsl_video_3a.so"],
+        },
+    },
+    compile_multilib: "32",
+    check_elf_files: false,
+    prefer: true,
+    vendor: true,
+}
+
+// ==============================================================
+// Sensor Drivers & EEPROMs (новые сенсоры)
+// ==============================================================
+cc_prebuilt_library_shared {
+    name: "libmmcamera_gc8034",
+    owner: "asus",
+    strip: {
+        none: true,
+    },
+    target: {
+        android_arm: {
+            srcs: ["proprietary/vendor/lib/libmmcamera_gc8034.so"],
+        },
+    },
+    compile_multilib: "32",
+    check_elf_files: false,
+    prefer: true,
+    vendor: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "libmmcamera_gc8034_eeprom",
+    owner: "asus",
+    strip: {
+        none: true,
+    },
+    target: {
+        android_arm: {
+            srcs: ["proprietary/vendor/lib/libmmcamera_gc8034_eeprom.so"],
+        },
+    },
+    compile_multilib: "32",
+    check_elf_files: false,
+    prefer: true,
+    vendor: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "libmmcamera_hi846_holitech_front_eeprom",
+    owner: "asus",
+    strip: {
+        none: true,
+    },
+    target: {
+        android_arm: {
+            srcs: ["proprietary/vendor/lib/libmmcamera_hi846_holitech_front_eeprom.so"],
+        },
+    },
+    compile_multilib: "32",
+    check_elf_files: false,
+    prefer: true,
+    vendor: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "libmmcamera_hi846_kingcome_front",
+    owner: "asus",
+    strip: {
+        none: true,
+    },
+    target: {
+        android_arm: {
+            srcs: ["proprietary/vendor/lib/libmmcamera_hi846_kingcome_front.so"],
+        },
+    },
+    compile_multilib: "32",
+    check_elf_files: false,
+    prefer: true,
+    vendor: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "libmmcamera_imx486_qtech",
+    owner: "asus",
+    strip: {
+        none: true,
+    },
+    target: {
+        android_arm: {
+            srcs: ["proprietary/vendor/lib/libmmcamera_imx486_qtech.so"],
+        },
+    },
+    compile_multilib: "32",
+    check_elf_files: false,
+    prefer: true,
+    vendor: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "libmmcamera_imx486_qtech_eeprom",
+    owner: "asus",
+    strip: {
+        none: true,
+    },
+    target: {
+        android_arm: {
+            srcs: ["proprietary/vendor/lib/libmmcamera_imx486_qtech_eeprom.so"],
+        },
+    },
+    compile_multilib: "32",
+    check_elf_files: false,
+    prefer: true,
+    vendor: true,
 }
